@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Heart, Target, Users, Lightbulb, Rocket, Shield, Code, Globe, Award, Star, TrendingUp } from "lucide-react"
+import { ArrowRight, Heart, Target, Users, Lightbulb, Shield, Code, Globe, TrendingUp } from "lucide-react"
 import { Metadata } from "next"
 import Link from "next/link"
+import CTASection from '@/components/cta-section'
 
 export const metadata: Metadata = {
     title: "About Us | Tara Solutions",
@@ -98,19 +99,19 @@ const stats = [
 
 const teamMembers = [
     {
-        name: "Abbas Aliyev",
+        name: "Rustam Hussaini",
         role: "Founder & CEO",
-        image: "/team/abbas.jpg",
+        image: "/team/abbas-avatar.png",
         description: "Visionary leader with extensive experience in technology and business transformation.",
     },
     {
-        name: "Ahsen Saeed",
+        name: "Abbas Ataie",
         role: "CTO",
-        image: "/team/ahsen.jpg",
+        image: "/team/abbas-avatar.png",
         description: "Technical expert specializing in cloud architecture and enterprise solutions.",
     },
     {
-        name: "Hakima Sherzad",
+        name: "Hakima Merzayee",
         role: "Lead Developer",
         image: "/team/hakima.jpg",
         description: "Full-stack developer with expertise in modern web technologies.",
@@ -135,8 +136,8 @@ const milestones = [
     },
     {
         year: "2023",
-        title: "500+ Projects",
-        description: "Achieved milestone of successfully delivering over 500 projects.",
+        title: "50+ Projects",
+        description: "Achieved milestone of successfully delivering over 50 projects.",
     },
 ]
 
@@ -286,29 +287,7 @@ export default function About() {
                             </div>
                         </section>
 
-                        {/* CTA Section */}
-                        <section className="container">
-                            <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-12 text-center">
-                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Join Our Journey</h2>
-                                <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                                    Ready to work with a team that's passionate about your success? Let's create something amazing together.
-                                </p>
-                                <div className="flex justify-center gap-4">
-                                    <Link href="/contact">
-                                        <Button className="relative group px-8 py-6 text-lg bg-gradient-to-r from-primary to-purple-500 hover:opacity-90">
-                                            <span className="relative z-10">Get in Touch</span>
-                                            <div className="absolute inset-0 bg-white/20 blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
-                                        </Button>
-                                    </Link>
-                                    <Link href="/work">
-                                        <Button variant="outline" className="px-8 py-6 text-lg">
-                                            View Our Work
-                                            <ArrowRight className="ml-2 h-4 w-4" />
-                                        </Button>
-                                    </Link>
-                                </div>
-                            </div>
-                        </section>
+                        <CTASection />
                     </div>
                 </div>
             </div>

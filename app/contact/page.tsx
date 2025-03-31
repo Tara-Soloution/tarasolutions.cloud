@@ -1,3 +1,4 @@
+import CTASection from "@/components/cta-section"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -174,6 +175,7 @@ export default function ContactPage() {
                     </Link>
                 </div>
             </section>
+            <CTASection />
         </div>
     )
 } 

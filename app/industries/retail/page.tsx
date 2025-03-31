@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, CheckCircle2, LineChart, Package, ShoppingBag, Store } from "lucide-react"
 import Link from "next/link"
 import BackButton from "@/components/back-button"
+import CTASection from "@/components/cta-section"
 
 const features = [
     {
@@ -97,20 +98,7 @@ export default function RetailPage() {
                 </section>
 
                 {/* CTA Section */}
-                <section className="container py-24">
-                    <div className="rounded-lg border bg-card p-8 text-center md:p-12">
-                        <h2 className="text-3xl font-bold tracking-tight">Ready to Transform Your Retail Business?</h2>
-                        <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-                            Let's discuss how our retail solutions can help you increase sales and improve operational efficiency.
-                        </p>
-                        <div className="mt-8 flex justify-center gap-4">
-                            <Button size="lg" asChild>
-                                <Link href="/contact">Contact Us</Link>
-                            </Button>
-                            <Button size="lg" variant="outline">Schedule Demo</Button>
-                        </div>
-                    </div>
-                </section>
+                <CTASection />
             </div>
         </div>
     )

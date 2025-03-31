@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Star, Award, Target, Users, CheckCircle2, TrendingUp, Zap, Shield, Laptop, Database, Briefcase, Rocket, Lightbulb } from "lucide-react"
 import { Metadata } from "next"
 import Link from "next/link"
+import CTASection from '@/components/cta-section'
 
 export const metadata: Metadata = {
     title: "Our Work | Portfolio",
@@ -250,20 +251,7 @@ export default function Work() {
                         </section>
 
                         {/* CTA Section */}
-                        <section className="container">
-                            <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-12 text-center">
-                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Ready to Start Your Project?</h2>
-                                <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                                    Let's create something amazing together. Our team is ready to bring your vision to life.
-                                </p>
-                                <Link href="/contact">
-                                    <Button className="relative group px-8 py-6 text-lg bg-gradient-to-r from-primary to-purple-500 hover:opacity-90">
-                                        <span className="relative z-10">Start Your Project</span>
-                                        <div className="absolute inset-0 bg-white/20 blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
-                                    </Button>
-                                </Link>
-                            </div>
-                        </section>
+                        <CTASection />
                     </div>
                 </div>
             </div>

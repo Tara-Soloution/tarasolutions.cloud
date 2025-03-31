@@ -1,10 +1,9 @@
-import Image from 'next/image'
-import Navbar from "@/components/navbar"
-import Footer from "@/components/footer"
+
 import { Button } from "@/components/ui/button"
-import { Calendar, ArrowRight, Smartphone, Cloud, Code, Sparkles, CheckCircle2, Users, TrendingUp, Zap, Shield, Laptop, Database } from "lucide-react"
+import { ArrowRight, Smartphone, Cloud, Code, Sparkles, CheckCircle2, Users, TrendingUp, Zap, Shield, Laptop, Database } from "lucide-react"
 import { Metadata } from "next"
 import Link from "next/link"
+import CTASection from '@/components/cta-section'
 
 export const metadata: Metadata = {
     title: "Enterprise Solutions",
@@ -266,28 +265,7 @@ export default function Solutions() {
                         </section>
 
                         {/* CTA Section */}
-                        <section className="container">
-                            <div className="rounded-3xl border bg-gradient-to-r from-primary/10 to-purple-500/10 p-12 text-center backdrop-blur-sm">
-                                <h2 className="text-4xl font-bold tracking-tight mb-4">Ready to Transform Your Business?</h2>
-                                <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground mb-8">
-                                    Let's discuss how our technology solutions can help you achieve your business goals.
-                                </p>
-                                <div className="flex justify-center gap-4">
-                                    <Link href="/contact">
-                                        <Button
-                                            size="lg"
-                                            className="group relative overflow-hidden rounded-full bg-gradient-to-r from-primary to-purple-500 transition-all hover:opacity-90"
-                                        >
-                                            <span className="relative z-10 flex items-center text-lg">
-                                                Book Your Free Session
-                                                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                                            </span>
-                                            <div className="absolute inset-0 -z-10 bg-white/20 opacity-0 blur-lg transition-all group-hover:opacity-100 group-hover:blur-xl" />
-                                        </Button>
-                                    </Link>
-                                </div>
-                            </div>
-                        </section>
+                        <CTASection />
                     </div>
                 </div>
             </div>

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Building2, Factory, GraduationCap, Hospital, ShoppingBag, Wallet, CheckCircle2, Sparkles, Users, TrendingUp } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import CTASection from "@/components/cta-section"
 
 const industries = [
     {
@@ -193,28 +194,7 @@ export default function IndustriesPage() {
                         </section>
 
                         {/* CTA Section */}
-                        <section className="container">
-                            <div className="rounded-3xl border bg-gradient-to-r from-primary/10 to-purple-500/10 p-12 text-center backdrop-blur-sm">
-                                <h2 className="text-4xl font-bold tracking-tight mb-4">Ready to Transform Your Industry?</h2>
-                                <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground mb-8">
-                                    Let's discuss how our industry-specific solutions can help you achieve your business goals.
-                                </p>
-                                <div className="flex justify-center gap-4">
-                                    <Link href="/contact">
-                                        <Button
-                                            size="lg"
-                                            className="group relative overflow-hidden rounded-full bg-gradient-to-r from-primary to-purple-500 transition-all hover:opacity-90"
-                                        >
-                                            <span className="relative z-10 flex items-center text-lg">
-                                                Book Your Free Session
-                                                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                                            </span>
-                                            <div className="absolute inset-0 -z-10 bg-white/20 opacity-0 blur-lg transition-all group-hover:opacity-100 group-hover:blur-xl" />
-                                        </Button>
-                                    </Link>
-                                </div>
-                            </div>
-                        </section>
+                        <CTASection />
                     </div>
                 </div>
             </div>

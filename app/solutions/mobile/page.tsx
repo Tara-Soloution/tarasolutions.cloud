@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Metadata } from "next"
 import BackButton from "@/components/back-button"
 import { WaveIllustration } from "@/components/wave-illustration"
+import CTASection from "@/components/cta-section"
 
 export const metadata: Metadata = {
     title: "Mobile Development Solutions",
@@ -271,28 +272,7 @@ export default function MobilePage() {
                         </section>
 
                         {/* CTA Section */}
-                        <section className="container space-y-16 py-24 md:py-32">
-                            <div className="mx-auto max-w-[58rem] text-center">
-                                <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-5xl">Ready to Build Your Mobile App?</h2>
-                                <p className="mt-4 text-muted-foreground sm:text-lg">
-                                    Let's discuss how our mobile development solutions can help you achieve your goals
-                                </p>
-                            </div>
-                            <div className="flex justify-center">
-                                <Link href="/contact">
-                                    <Button
-                                        size="lg"
-                                        className="group relative overflow-hidden rounded-full bg-primary transition-all hover:bg-primary/90"
-                                    >
-                                        <span className="relative z-10 flex items-center">
-                                            Schedule a Consultation
-                                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                                        </span>
-                                        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 opacity-0 transition-opacity group-hover:opacity-100" />
-                                    </Button>
-                                </Link>
-                            </div>
-                        </section>
+                        <CTASection />
                     </div>
                 </div>
             </div>

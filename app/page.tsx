@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, CheckCircle2, Code2, Globe2, Shield, Zap, Users, Building2, Briefcase, Rocket, Cloud, Code, Smartphone } from "lucide-react"
+import CTASection from "@/components/cta-section"
 
 export default function Home() {
   return (
@@ -480,28 +481,7 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="container mx-auto px-4 py-16">
-          <div className="rounded-3xl border bg-gradient-to-r from-primary/10 to-purple-500/10 p-12 text-center backdrop-blur-sm">
-            <h2 className="text-4xl font-bold tracking-tight mb-4">Ready to Transform Your Business?</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground mb-8">
-              Let's discuss how our technology solutions can help you achieve your business goals.
-            </p>
-            <div className="flex justify-center gap-4">
-              <Link href="/contact">
-                <Button
-                  size="lg"
-                  className="group relative overflow-hidden rounded-full bg-gradient-to-r from-primary to-purple-500 transition-all hover:opacity-90"
-                >
-                  <span className="relative z-10 flex items-center text-lg">
-                    Book Your Free Session
-                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                  </span>
-                  <div className="absolute inset-0 -z-10 bg-white/20 opacity-0 blur-lg transition-all group-hover:opacity-100 group-hover:blur-xl" />
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
+        <CTASection />
 
       </div>
     </div>
