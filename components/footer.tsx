@@ -1,6 +1,7 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Github, Twitter } from "lucide-react"
+import { Github, Twitter, Mail, Phone, MapPin } from "lucide-react"
 import Copyright from "./copyright"
 
 interface FooterProps {
@@ -10,73 +11,103 @@ interface FooterProps {
 export default function Footer({ className = "" }: FooterProps) {
   return (
     <footer className={`border-t bg-background relative z-10 ${className}`}>
-      <div className="container flex flex-col gap-8 py-8 md:flex-row md:py-12">
-        <div className="flex-1 space-y-4">
-          <h2 className="font-bold">Tara Solutions</h2>
-          <p className="text-sm text-muted-foreground">Pioneering software solutions for the digital age.</p>
-        </div>
-        <div className="flex flex-col gap-4">
-          <h3 className="font-medium">Company</h3>
-          <div className="flex flex-col gap-2">
-            <Link href="/about" className="text-sm text-muted-foreground hover:text-primary">
-              About Us
-            </Link>
-            <Link href="/careers" className="text-sm text-muted-foreground hover:text-primary">
-              Careers
-            </Link>
-            <Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">
-              Contact
-            </Link>
-          </div>
-        </div>
-        <div className="flex flex-col gap-4">
-          <h3 className="font-medium">Resources</h3>
-          <div className="flex flex-col gap-2">
-            <Link href="/blog" className="text-sm text-muted-foreground hover:text-primary">
-              Blog
-            </Link>
-            <Link href="/documentation" className="text-sm text-muted-foreground hover:text-primary">
-              Documentation
-            </Link>
-            <Link href="/support" className="text-sm text-muted-foreground hover:text-primary">
-              Support
-            </Link>
-          </div>
-        </div>
-        <div className="flex flex-col gap-4">
-          <h3 className="font-medium">Legal</h3>
-          <div className="flex flex-col gap-2">
-            <Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-sm text-muted-foreground hover:text-primary">
-              Terms of Service
-            </Link>
-            <Link href="/security" className="text-sm text-muted-foreground hover:text-primary">
-              Security
-            </Link>
-          </div>
-        </div>
-        <div className="flex flex-col gap-4">
-          <h3 className="font-medium">Connect</h3>
-          <div className="flex gap-4">
-            <Link href="https://github.com/amanesoft" target="_blank" rel="noreferrer">
-              <Button variant="ghost" size="icon">
-                <Github className="h-4 w-4" />
-                <span className="sr-only">GitHub</span>
-              </Button>
-            </Link>
-            <Link href="https://twitter.com/amanesoft" target="_blank" rel="noreferrer">
-              <Button variant="ghost" size="icon">
-                <Twitter className="h-4 w-4" />
-                <span className="sr-only">Twitter</span>
-              </Button>
-            </Link>
-          </div>
-        </div>
+      {/* Background gradients */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
+        <div className="absolute right-0 top-0 h-[500px] w-[500px] bg-blue-500/10 blur-[100px]" />
+        <div className="absolute bottom-0 left-0 h-[500px] w-[500px] bg-purple-500/10 blur-[100px]" />
       </div>
-      <div className="container border-t py-6">
-        <Copyright />
+
+      <div className="container mx-auto px-4 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-16">
+          {/* Company Info */}
+          <div className="space-y-6">
+            <div className="relative w-16 h-16">
+              <Image
+                src="/tara.png"
+                alt="Tara Solutions Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <p className="text-muted-foreground leading-relaxed">
+              Pioneering software solutions for the digital age. We help businesses transform through innovative technology.
+            </p>
+
+          </div>
+
+          {/* Quick Links */}
+          <div className="space-y-6">
+            <h3 className="text-lg font-semibold">Quick Links</h3>
+            <div className="flex flex-col space-y-3">
+              <Link href="/solutions" className="text-muted-foreground hover:text-primary transition-colors">
+                Solutions
+              </Link>
+              <Link href="/industries" className="text-muted-foreground hover:text-primary transition-colors">
+                Industries
+              </Link>
+              <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                About Us
+              </Link>
+              <Link href="/work" className="text-muted-foreground hover:text-primary transition-colors">
+                Our Work
+              </Link>
+            </div>
+          </div>
+
+          {/* Resources */}
+          <div className="space-y-6">
+            <h3 className="text-lg font-semibold">Resources</h3>
+            <div className="flex flex-col space-y-3">
+              <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+                Blog
+              </Link>
+              <Link href="/documentation" className="text-muted-foreground hover:text-primary transition-colors">
+                Documentation
+              </Link>
+              <Link href="/support" className="text-muted-foreground hover:text-primary transition-colors">
+                Support
+              </Link>
+            </div>
+          </div>
+
+          {/* Contact Info */}
+          <div className="space-y-6">
+            <h3 className="text-lg font-semibold">Contact Us</h3>
+            <div className="flex flex-col space-y-4">
+              <div className="flex items-center space-x-3 text-muted-foreground">
+                <Mail className="h-5 w-5" />
+                <span>info@tarasolutions.cloud</span>
+              </div>
+              <div className="flex items-center space-x-3 text-muted-foreground">
+                <Phone className="h-5 w-5" />
+                <span>+93 70 306 4120</span>
+              </div>
+              <div className="flex items-center space-x-3 text-muted-foreground">
+                <MapPin className="h-5 w-5" />
+                <span>Shar-e-naw, Kabul,Afghanistan</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-border/40 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <Copyright />
+            <div className="flex space-x-6 text-sm text-muted-foreground">
+              <Link href="/privacy" className="hover:text-primary transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="hover:text-primary transition-colors">
+                Terms of Service
+              </Link>
+              <Link href="/security" className="hover:text-primary transition-colors">
+                Security
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   )

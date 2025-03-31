@@ -12,8 +12,8 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 flex h-24 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-4">
-          <div className="relative w-14 h-14">
+        <Link href="/" className="flex items-center">
+          <div className="relative w-16 h-16">
             <Image
               src="/tara.png"
               alt="Tara Solutions Logo"
@@ -22,9 +22,6 @@ export default function Navbar() {
               priority
             />
           </div>
-          <span className="text-2xl font-bold bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
-            Tara Solutions
-          </span>
         </Link>
 
         {/* Desktop Navigation */}
