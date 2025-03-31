@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     description: "Transform your business with innovative technology solutions. We specialize in cloud, mobile, and web development.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Tara Solutions"
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Tara Solutions - Pioneering Software Solutions",
     description: "Transform your business with innovative technology solutions. We specialize in cloud, mobile, and web development.",
-    images: ["/og-image.jpg"]
+    images: ["/og-image.png"]
   },
   robots: {
     index: true,
