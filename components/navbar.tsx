@@ -3,119 +3,427 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Github, Menu } from "lucide-react"
+import { Menu, X, ChevronDown, Building2, Briefcase, Rocket, Heart, Wallet, ShoppingBag, Cpu, Building, Users, FileText, Image as ImageIcon, MessageSquare, Cloud, Code, Lightbulb, Smartphone, Globe, Factory, GraduationCap } from "lucide-react"
 import { useState } from "react"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4 flex h-24 items-center justify-between">
-        <Link href="/" className="flex items-center">
-          <div className="relative w-16 h-16">
-            <Image
-              src="/tara.png"
-              alt="Tara Solutions Logo"
-              fill
-              className="object-contain"
-              priority
-            />
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2 group">
+            <div className="relative p-2 rounded-xl bg-gradient-to-br from-primary/10 to-purple-500/10 group-hover:from-primary/20 group-hover:to-purple-500/20 transition-all duration-300">
+              <div className="relative w-8 h-8">
+                <Image
+                  src="/tara.png"
+                  alt="Tara Solutions Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
+            <span className="text-xl font-semibold">Tara Solutions</span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {/* Solutions Dropdown */}
+            <div className="relative group">
+              <Link href="/solutions" className="flex items-center space-x-1 text-muted-foreground hover:text-primary transition-colors">
+                <span>Solutions</span>
+                <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform duration-300" />
+              </Link>
+              <div className="absolute top-full left-0 mt-2 w-64 rounded-xl border bg-card shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                <div className="p-4">
+                  <div className="mb-4">
+                    <h3 className="text-sm font-semibold text-primary mb-2">Our Solutions</h3>
+                    <p className="text-xs text-muted-foreground">Comprehensive solutions for every business need</p>
+                  </div>
+                  <div className="space-y-1">
+                    <Link href="/solutions/cloud" className="flex items-center space-x-3 px-4 py-3 rounded-lg text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors">
+                      <div className="p-2 rounded-lg bg-blue-500/10">
+                        <Cloud className="h-4 w-4 text-blue-500" />
+                      </div>
+                      <div>
+                        <div className="font-medium">Cloud Solutions</div>
+                        <div className="text-xs text-muted-foreground">Scalable cloud infrastructure</div>
+                      </div>
+                    </Link>
+                    <Link href="/solutions/mobile" className="flex items-center space-x-3 px-4 py-3 rounded-lg text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors">
+                      <div className="p-2 rounded-lg bg-purple-500/10">
+                        <Smartphone className="h-4 w-4 text-purple-500" />
+                      </div>
+                      <div>
+                        <div className="font-medium">Mobile Solutions</div>
+                        <div className="text-xs text-muted-foreground">Native & cross-platform apps</div>
+                      </div>
+                    </Link>
+                    <Link href="/solutions/web" className="flex items-center space-x-3 px-4 py-3 rounded-lg text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors">
+                      <div className="p-2 rounded-lg bg-green-500/10">
+                        <Globe className="h-4 w-4 text-green-500" />
+                      </div>
+                      <div>
+                        <div className="font-medium">Web Solutions</div>
+                        <div className="text-xs text-muted-foreground">Modern web applications</div>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Industries Dropdown */}
+            <div className="relative group">
+              <Link href="/industries" className="flex items-center space-x-1 text-muted-foreground hover:text-primary transition-colors">
+                <span>Industries</span>
+                <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform duration-300" />
+              </Link>
+              <div className="absolute top-full left-0 mt-2 w-64 rounded-xl border bg-card shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                <div className="p-4">
+                  <div className="mb-4">
+                    <h3 className="text-sm font-semibold text-primary mb-2">Industries We Serve</h3>
+                    <p className="text-xs text-muted-foreground">Specialized solutions for different sectors</p>
+                  </div>
+                  <div className="space-y-1">
+                    <Link href="/industries/education" className="flex items-center space-x-3 px-4 py-3 rounded-lg text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors">
+                      <div className="p-2 rounded-lg bg-blue-500/10">
+                        <GraduationCap className="h-4 w-4 text-blue-500" />
+                      </div>
+                      <div>
+                        <div className="font-medium">Education</div>
+                        <div className="text-xs text-muted-foreground">Educational institutions</div>
+                      </div>
+                    </Link>
+                    <Link href="/industries/enterprise" className="flex items-center space-x-3 px-4 py-3 rounded-lg text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors">
+                      <div className="p-2 rounded-lg bg-purple-500/10">
+                        <Building2 className="h-4 w-4 text-purple-500" />
+                      </div>
+                      <div>
+                        <div className="font-medium">Enterprise</div>
+                        <div className="text-xs text-muted-foreground">Large organizations</div>
+                      </div>
+                    </Link>
+                    <Link href="/industries/financial-services" className="flex items-center space-x-3 px-4 py-3 rounded-lg text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors">
+                      <div className="p-2 rounded-lg bg-green-500/10">
+                        <Wallet className="h-4 w-4 text-green-500" />
+                      </div>
+                      <div>
+                        <div className="font-medium">Financial Services</div>
+                        <div className="text-xs text-muted-foreground">Banking & finance</div>
+                      </div>
+                    </Link>
+                    <Link href="/industries/healthcare" className="flex items-center space-x-3 px-4 py-3 rounded-lg text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors">
+                      <div className="p-2 rounded-lg bg-red-500/10">
+                        <Heart className="h-4 w-4 text-red-500" />
+                      </div>
+                      <div>
+                        <div className="font-medium">Healthcare</div>
+                        <div className="text-xs text-muted-foreground">Healthcare & medical</div>
+                      </div>
+                    </Link>
+                    <Link href="/industries/manufacturing" className="flex items-center space-x-3 px-4 py-3 rounded-lg text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors">
+                      <div className="p-2 rounded-lg bg-orange-500/10">
+                        <Factory className="h-4 w-4 text-orange-500" />
+                      </div>
+                      <div>
+                        <div className="font-medium">Manufacturing</div>
+                        <div className="text-xs text-muted-foreground">Industrial & manufacturing</div>
+                      </div>
+                    </Link>
+                    <Link href="/industries/retail" className="flex items-center space-x-3 px-4 py-3 rounded-lg text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors">
+                      <div className="p-2 rounded-lg bg-yellow-500/10">
+                        <ShoppingBag className="h-4 w-4 text-yellow-500" />
+                      </div>
+                      <div>
+                        <div className="font-medium">Retail</div>
+                        <div className="text-xs text-muted-foreground">Retail & e-commerce</div>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* About Us Dropdown */}
+            <div className="relative group">
+              <Link href="/about" className="flex items-center space-x-1 text-muted-foreground hover:text-primary transition-colors">
+                <span>About Us</span>
+                <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform duration-300" />
+              </Link>
+              <div className="absolute top-full left-0 mt-2 w-64 rounded-xl border bg-card shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                <div className="p-4">
+                  <div className="mb-4">
+                    <h3 className="text-sm font-semibold text-primary mb-2">About Tara Solutions</h3>
+                    <p className="text-xs text-muted-foreground">Learn more about our company</p>
+                  </div>
+                  <div className="space-y-1">
+                    <Link href="/about/company" className="flex items-center space-x-3 px-4 py-3 rounded-lg text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors">
+                      <div className="p-2 rounded-lg bg-blue-500/10">
+                        <Building className="h-4 w-4 text-blue-500" />
+                      </div>
+                      <div>
+                        <div className="font-medium">Our Company</div>
+                        <div className="text-xs text-muted-foreground">Our story & mission</div>
+                      </div>
+                    </Link>
+                    <Link href="/about/team" className="flex items-center space-x-3 px-4 py-3 rounded-lg text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors">
+                      <div className="p-2 rounded-lg bg-purple-500/10">
+                        <Users className="h-4 w-4 text-purple-500" />
+                      </div>
+                      <div>
+                        <div className="font-medium">Our Team</div>
+                        <div className="text-xs text-muted-foreground">Meet our experts</div>
+                      </div>
+                    </Link>
+                    <Link href="/about/careers" className="flex items-center space-x-3 px-4 py-3 rounded-lg text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors">
+                      <div className="p-2 rounded-lg bg-green-500/10">
+                        <Briefcase className="h-4 w-4 text-green-500" />
+                      </div>
+                      <div>
+                        <div className="font-medium">Careers</div>
+                        <div className="text-xs text-muted-foreground">Join our team</div>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Our Work Dropdown */}
+            <div className="relative group">
+              <Link href="/work" className="flex items-center space-x-1 text-muted-foreground hover:text-primary transition-colors">
+                <span>Our Work</span>
+                <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform duration-300" />
+              </Link>
+              <div className="absolute top-full left-0 mt-2 w-64 rounded-xl border bg-card shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                <div className="p-4">
+                  <div className="mb-4">
+                    <h3 className="text-sm font-semibold text-primary mb-2">Our Work</h3>
+                    <p className="text-xs text-muted-foreground">Explore our success stories</p>
+                  </div>
+                  <div className="space-y-1">
+                    <Link href="/work/case-studies" className="flex items-center space-x-3 px-4 py-3 rounded-lg text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors">
+                      <div className="p-2 rounded-lg bg-blue-500/10">
+                        <FileText className="h-4 w-4 text-blue-500" />
+                      </div>
+                      <div>
+                        <div className="font-medium">Case Studies</div>
+                        <div className="text-xs text-muted-foreground">Detailed success stories</div>
+                      </div>
+                    </Link>
+                    <Link href="/work/portfolio" className="flex items-center space-x-3 px-4 py-3 rounded-lg text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors">
+                      <div className="p-2 rounded-lg bg-purple-500/10">
+                        <ImageIcon className="h-4 w-4 text-purple-500" />
+                      </div>
+                      <div>
+                        <div className="font-medium">Portfolio</div>
+                        <div className="text-xs text-muted-foreground">View our projects</div>
+                      </div>
+                    </Link>
+                    <Link href="/work/testimonials" className="flex items-center space-x-3 px-4 py-3 rounded-lg text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors">
+                      <div className="p-2 rounded-lg bg-green-500/10">
+                        <MessageSquare className="h-4 w-4 text-green-500" />
+                      </div>
+                      <div>
+                        <div className="font-medium">Testimonials</div>
+                        <div className="text-xs text-muted-foreground">Client feedback</div>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <Link href="/contact">
+              <Button className="relative group px-6 py-2 bg-gradient-to-r from-primary to-purple-500 hover:opacity-90">
+                <span className="relative z-10">Get Started</span>
+                <div className="absolute inset-0 bg-white/20 blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
+              </Button>
+            </Link>
           </div>
-        </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8 text-base font-medium">
-          <Link
-            href="/solutions"
-            className="transition-colors hover:text-primary relative group"
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2 rounded-lg hover:bg-primary/5 transition-colors"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            Solutions
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
-          </Link>
-          <Link
-            href="/industries"
-            className="transition-colors hover:text-primary relative group"
-          >
-            Industries
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
-          </Link>
-          <Link
-            href="/about"
-            className="transition-colors hover:text-primary relative group"
-          >
-            About Us
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
-          </Link>
-          <Link href="/work" className="transition-colors hover:text-primary relative group">
-            Our Work
-          </Link>
-        </nav>
-
-        {/* Desktop Actions */}
-        <div className="hidden md:flex items-center space-x-6">
-          <Link href="/contact">
-            <Button size="lg" className="text-base">
-              Contact us
-            </Button>
-          </Link>
+            {isMenuOpen ? (
+              <X className="h-6 w-6 text-muted-foreground" />
+            ) : (
+              <Menu className="h-6 w-6 text-muted-foreground" />
+            )}
+          </button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <Button
-          variant="ghost"
-          size="icon"
-          className="md:hidden h-12 w-12"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        {/* Mobile Navigation */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ${isMenuOpen ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"
+            }`}
         >
-          <Menu className="h-6 w-6" />
-          <span className="sr-only">Toggle menu</span>
-        </Button>
-      </div>
-
-      {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="md:hidden border-t border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <div className="container mx-auto px-4 py-4 space-y-4">
-            <nav className="flex flex-col space-y-4">
+          <div className="py-4 space-y-4">
+            {/* Solutions Section */}
+            <div className="space-y-2">
               <Link
                 href="/solutions"
-                className="text-base font-medium transition-colors hover:text-primary"
+                className="block px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Solutions
               </Link>
               <Link
+                href="/solutions/cloud"
+                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Cloud Solutions
+              </Link>
+              <Link
+                href="/solutions/mobile"
+                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Mobile Solutions
+              </Link>
+              <Link
+                href="/solutions/web"
+                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Web Solutions
+              </Link>
+            </div>
+
+            {/* Industries Section */}
+            <div className="space-y-2">
+              <Link
                 href="/industries"
-                className="text-base font-medium transition-colors hover:text-primary"
+                className="block px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Industries
               </Link>
               <Link
+                href="/industries/education"
+                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Education
+              </Link>
+              <Link
+                href="/industries/enterprise"
+                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Enterprise
+              </Link>
+              <Link
+                href="/industries/financial-services"
+                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Financial Services
+              </Link>
+              <Link
+                href="/industries/healthcare"
+                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Healthcare
+              </Link>
+              <Link
+                href="/industries/manufacturing"
+                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Manufacturing
+              </Link>
+              <Link
+                href="/industries/retail"
+                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Retail
+              </Link>
+            </div>
+
+            {/* About Us Section */}
+            <div className="space-y-2">
+              <Link
                 href="/about"
-                className="text-base font-medium transition-colors hover:text-primary"
+                className="block px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About Us
               </Link>
-            </nav>
-            <div className="flex flex-col space-y-2 pt-4 border-t border-border/40">
-              <Link href="/work">
-                <Button variant="ghost" className="w-full justify-start text-base" onClick={() => setIsMenuOpen(false)}>
-                  Our Work
-                </Button>
+              <Link
+                href="/about/company"
+                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Our Company
               </Link>
-              <Link href="/contact">
-                <Button className="w-full justify-start text-base" onClick={() => setIsMenuOpen(false)}>
-                  Contact us
-                </Button>
+              <Link
+                href="/about/team"
+                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Our Team
+              </Link>
+              <Link
+                href="/about/careers"
+                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Careers
               </Link>
             </div>
+
+            {/* Our Work Section */}
+            <div className="space-y-2">
+              <Link
+                href="/work"
+                className="block px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Our Work
+              </Link>
+              <Link
+                href="/work/case-studies"
+                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Case Studies
+              </Link>
+              <Link
+                href="/work/portfolio"
+                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Portfolio
+              </Link>
+              <Link
+                href="/work/testimonials"
+                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Testimonials
+              </Link>
+            </div>
+
+            <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+              <Button className="w-full relative group px-6 py-2 bg-gradient-to-r from-primary to-purple-500 hover:opacity-90">
+                <span className="relative z-10">Get Started</span>
+                <div className="absolute inset-0 bg-white/20 blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
+              </Button>
+            </Link>
           </div>
         </div>
-      )}
-    </header>
+      </div>
+    </nav>
   )
 }
 
