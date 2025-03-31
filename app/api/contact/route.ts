@@ -12,15 +12,42 @@ const transporter = nodemailer.createTransport({
     },
 });
 
+async function verifyCaptcha(token: string) {
+    try {
+        const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
+        });
+
+        const data = await response.json();
+        return data.success;
+    } catch (error) {
+        console.error('Error verifying CAPTCHA:', error);
+        return false;
+    }
+}
+
 export async function POST(request: Request) {
     try {
         const body = await request.json();
-        const { name, email, company, subject, message } = body;
+        const { name, email, company, subject, message, captchaToken } = body;
 
         // Validate required fields
-        if (!name || !email || !subject || !message) {
+        if (!name || !email || !subject || !message || !captchaToken) {
             return NextResponse.json(
                 { error: 'Missing required fields' },
+                { status: 400 }
+            );
+        }
+
+        // Verify CAPTCHA
+        const isValidCaptcha = await verifyCaptcha(captchaToken);
+        if (!isValidCaptcha) {
+            return NextResponse.json(
+                { error: 'Invalid CAPTCHA' },
                 { status: 400 }
             );
         }
