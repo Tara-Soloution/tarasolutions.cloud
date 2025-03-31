@@ -5,6 +5,7 @@ import type { Metadata } from "next"
 import MouseMoveEffect from "@/components/mouse-move-effect"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -94,16 +95,22 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} bg-background text-foreground antialiased`}>
-        <div className="relative flex min-h-screen flex-col">
-          <MouseMoveEffect />
-          <Navbar />
-          <main className="flex-1 w-full">
-            {children}
-          </main>
-          <Footer />
-        </div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={true}
+        >
+          <div className="relative flex min-h-screen flex-col">
+            <MouseMoveEffect />
+            <Navbar />
+            <main className="flex-1 w-full">
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   )

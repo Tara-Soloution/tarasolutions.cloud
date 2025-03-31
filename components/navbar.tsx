@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X, ChevronDown, Building2, Briefcase, Rocket, Heart, Wallet, ShoppingBag, Cpu, Building, Users, FileText, Image as ImageIcon, MessageSquare, Cloud, Code, Lightbulb, Smartphone, Globe, Factory, GraduationCap } from "lucide-react"
 import { useState } from "react"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -244,184 +245,52 @@ export default function Navbar() {
                 <div className="absolute inset-0 bg-white/20 blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
               </Button>
             </Link>
+
+            {/* Theme Toggle */}
+            <div className="ml-2">
+              <ThemeToggle />
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-primary/5 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 rounded-lg hover:bg-primary/5 transition-colors"
           >
             {isMenuOpen ? (
-              <X className="h-6 w-6 text-muted-foreground" />
+              <X className="h-6 w-6" />
             ) : (
-              <Menu className="h-6 w-6 text-muted-foreground" />
+              <Menu className="h-6 w-6" />
             )}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ${isMenuOpen ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"
-            }`}
-        >
-          <div className="py-4 space-y-4">
-            {/* Solutions Section */}
-            <div className="space-y-2">
-              <Link
-                href="/solutions"
-                className="block px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Solutions
-              </Link>
-              <Link
-                href="/solutions/cloud"
-                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Cloud Solutions
-              </Link>
-              <Link
-                href="/solutions/mobile"
-                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Mobile Solutions
-              </Link>
-              <Link
-                href="/solutions/web"
-                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Web Solutions
-              </Link>
-            </div>
-
-            {/* Industries Section */}
-            <div className="space-y-2">
-              <Link
-                href="/industries"
-                className="block px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Industries
-              </Link>
-              <Link
-                href="/industries/education"
-                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Education
-              </Link>
-              <Link
-                href="/industries/enterprise"
-                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Enterprise
-              </Link>
-              <Link
-                href="/industries/financial-services"
-                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Financial Services
-              </Link>
-              <Link
-                href="/industries/healthcare"
-                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Healthcare
-              </Link>
-              <Link
-                href="/industries/manufacturing"
-                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Manufacturing
-              </Link>
-              <Link
-                href="/industries/retail"
-                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Retail
-              </Link>
-            </div>
-
-            {/* About Us Section */}
-            <div className="space-y-2">
-              <Link
-                href="/about"
-                className="block px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About Us
-              </Link>
-              <Link
-                href="/about/company"
-                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Our Company
-              </Link>
-              <Link
-                href="/about/team"
-                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Our Team
-              </Link>
-              <Link
-                href="/about/careers"
-                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Careers
-              </Link>
-            </div>
-
-            {/* Our Work Section */}
-            <div className="space-y-2">
-              <Link
-                href="/work"
-                className="block px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Our Work
-              </Link>
-              <Link
-                href="/work/case-studies"
-                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Case Studies
-              </Link>
-              <Link
-                href="/work/portfolio"
-                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Portfolio
-              </Link>
-              <Link
-                href="/work/testimonials"
-                className="block px-4 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-primary transition-colors rounded-lg ml-4"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Testimonials
-              </Link>
-            </div>
-
-            <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 space-y-4">
+            <Link href="/solutions" className="block text-muted-foreground hover:text-primary transition-colors">
+              Solutions
+            </Link>
+            <Link href="/industries" className="block text-muted-foreground hover:text-primary transition-colors">
+              Industries
+            </Link>
+            <Link href="/about" className="block text-muted-foreground hover:text-primary transition-colors">
+              About Us
+            </Link>
+            <Link href="/work" className="block text-muted-foreground hover:text-primary transition-colors">
+              Our Work
+            </Link>
+            <Link href="/contact">
               <Button className="w-full relative group px-6 py-2 bg-gradient-to-r from-primary to-green-500 hover:opacity-90">
                 <span className="relative z-10">Get Started</span>
                 <div className="absolute inset-0 bg-white/20 blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
               </Button>
             </Link>
+            <div className="flex justify-center py-2">
+              <ThemeToggle />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </nav>
   )
