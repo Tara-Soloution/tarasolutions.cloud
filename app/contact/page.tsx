@@ -138,7 +138,7 @@ export default function ContactPage() {
                                         <Map className="h-8 w-8 text-primary" />
                                     </div>
                                     <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
-                                    <p className="text-muted-foreground">Kabul, Shar-e-Naw</p>
+                                    <p className="text-muted-foreground">Kabul, Shar-e-Naw, Behind Etisalat Tower</p>
                                 </div>
                             </div>
                         </section>
@@ -249,7 +249,7 @@ export default function ContactPage() {
 
                                     <div className="rounded-lg border bg-card p-8">
                                         <iframe
-                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.828104348517!2d69.17052531545678!3d34.528189979999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d171b9f4f2c3c1%3A0x38d171b9f4f2c3c1!2sShar-e-Naw%2C%20Kabul%2C%20Afghanistan!5e0!3m2!1sen!2s!4v1648640000000!5m2!1sen!2s"
+                                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3286.520120951034!2d69.16825143623834!3d34.54038409772013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssg!4v1743443092911!5m2!1sen!2ssg"
                                             width="100%"
                                             height="450"
                                             style={{ border: 0 }}
