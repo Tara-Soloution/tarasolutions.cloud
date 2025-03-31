@@ -26,7 +26,7 @@ export default function Navbar() {
                 />
               </div>
             </div>
-            <span className="text-xl font-semibold">Tara Solutions</span>
+            <span className="text-xl font-semibold bg-gradient-to-r from-primary to-green-500 bg-clip-text text-transparent">Tara Solutions</span>
           </Link>
 
           {/* Desktop Navigation */}
