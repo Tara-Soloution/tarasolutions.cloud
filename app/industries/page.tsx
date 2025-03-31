@@ -174,7 +174,7 @@ export default function IndustriesPage() {
                             <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-12">
                                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-primary mb-2">100+</div>
+                                        <div className="text-4xl font-bold text-primary mb-2">20+</div>
                                         <div className="text-muted-foreground">Projects Delivered</div>
                                     </div>
                                     <div className="text-center">
@@ -186,7 +186,7 @@ export default function IndustriesPage() {
                                         <div className="text-muted-foreground">Expert Support</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-primary mb-2">95%</div>
+                                        <div className="text-4xl font-bold text-primary mb-2">99%</div>
                                         <div className="text-muted-foreground">Client Satisfaction</div>
                                     </div>
                                 </div>

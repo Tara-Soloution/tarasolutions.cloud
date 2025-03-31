@@ -45,32 +45,6 @@ export const metadata: Metadata = {
     },
 }
 
-const featuredWork = [
-    {
-        title: "Cloud Station",
-        description: "A powerful cloud deployment platform enabling developers to launch their applications with ease and efficiency. Built with modern cloud technologies and developer experience in mind.",
-        image: "/projects/cloud-station.jpg",
-        category: "Cloud Solutions",
-        tags: ["Cloud", "DevOps", "Deployment", "Infrastructure"],
-        href: "https://cloud-station.io",
-    },
-    {
-        title: "Ahsen Elite",
-        description: "A modern web application platform offering innovative solutions for businesses and organizations. Built with cutting-edge technologies and focused on user experience.",
-        image: "/projects/ahsen-elite.png",
-        category: "Web Development",
-        tags: ["Web Application", "Business Solutions", "Enterprise Software"],
-        href: "https://ahsenelite.com",
-    },
-    {
-        title: "Teacher Guide",
-        description: "An educational platform designed to help teachers manage their classes and resources efficiently. Streamlining the educational process with modern technology.",
-        image: "/projects/teacher-guide.png",
-        category: "Education",
-        tags: ["Education", "Web Platform", "Teacher Tools"],
-        href: "https://play.google.com/store/apps/details?id=af.hakima.teacher_guide",
-    },
-]
 
 const workCategories = [
     {
@@ -102,28 +76,6 @@ const workCategories = [
     }
 ]
 
-const achievements = [
-    {
-        title: "Client Satisfaction",
-        description: "98% client satisfaction rate across all projects",
-        icon: Star,
-    },
-    {
-        title: "Project Success",
-        description: "200+ successful project deliveries",
-        icon: Award,
-    },
-    {
-        title: "Team Expertise",
-        description: "50+ expert developers and designers",
-        icon: Users,
-    },
-    {
-        title: "Innovation Rate",
-        description: "85% of projects include innovative solutions",
-        icon: Lightbulb,
-    },
-]
 
 const benefits = [
     {
@@ -238,7 +190,7 @@ export default function Work() {
                             <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-12">
                                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-primary mb-2">150+</div>
+                                        <div className="text-4xl font-bold text-primary mb-2">20+</div>
                                         <div className="text-muted-foreground">Projects Completed</div>
                                     </div>
                                     <div className="text-center">
@@ -246,11 +198,11 @@ export default function Work() {
                                         <div className="text-muted-foreground">Happy Clients</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-primary mb-2">98%</div>
+                                        <div className="text-4xl font-bold text-primary mb-2">99%</div>
                                         <div className="text-muted-foreground">Client Satisfaction</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-primary mb-2">15+</div>
+                                        <div className="text-4xl font-bold text-primary mb-2">5+</div>
                                         <div className="text-muted-foreground">Years Experience</div>
                                     </div>
                                 </div>

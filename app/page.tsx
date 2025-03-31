@@ -1,5 +1,6 @@
 import { ArrowRight, CheckCircle2, Code2, Globe2, Shield, Zap, Users, Cloud, Code, Smartphone, Star, Award, Target, Clock } from "lucide-react"
 import CTASection from "@/components/cta-section"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -50,15 +51,15 @@ export default function Home() {
         <section id="stats" className="container mx-auto px-4 py-24">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center space-y-2 group cursor-pointer hover:scale-105 transition-transform duration-300">
-              <div className="text-4xl font-bold text-primary">100+</div>
+              <div className="text-4xl font-bold text-primary">10+</div>
               <div className="text-muted-foreground">Enterprise Clients</div>
             </div>
             <div className="text-center space-y-2 group cursor-pointer hover:scale-105 transition-transform duration-300">
-              <div className="text-4xl font-bold text-primary">200+</div>
+              <div className="text-4xl font-bold text-primary">20+</div>
               <div className="text-muted-foreground">Projects Delivered</div>
             </div>
             <div className="text-center space-y-2 group cursor-pointer hover:scale-105 transition-transform duration-300">
-              <div className="text-4xl font-bold text-primary">10+</div>
+              <div className="text-4xl font-bold text-primary">5+</div>
               <div className="text-muted-foreground">Years Experience</div>
             </div>
             <div className="text-center space-y-2 group cursor-pointer hover:scale-105 transition-transform duration-300">
@@ -154,10 +155,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-auto">
-                  <div className="flex items-center justify-center w-full px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500/10 to-blue-600/10 hover:from-blue-500/20 hover:to-blue-600/20 transition-all duration-300 group">
-                    <span className="text-primary font-medium group-hover:text-blue-600 transition-colors">Learn More</span>
-                    <ArrowRight className="ml-2 h-4 w-4 text-primary group-hover:text-blue-600 transition-all group-hover:translate-x-1" />
-                  </div>
+                  <Link href="/solutions/cloud">
+                    <div className="flex items-center justify-center w-full px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500/10 to-blue-600/10 hover:from-blue-500/20 hover:to-blue-600/20 transition-all duration-300 group">
+                      <span className="text-primary font-medium group-hover:text-blue-600 transition-colors">Learn More</span>
+                      <ArrowRight className="ml-2 h-4 w-4 text-primary group-hover:text-blue-600 transition-all group-hover:translate-x-1" />
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -191,10 +194,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-auto">
-                  <div className="flex items-center justify-center w-full px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500/10 to-purple-600/10 hover:from-purple-500/20 hover:to-purple-600/20 transition-all duration-300 group">
-                    <span className="text-primary font-medium group-hover:text-purple-600 transition-colors">Learn More</span>
-                    <ArrowRight className="ml-2 h-4 w-4 text-primary group-hover:text-purple-600 transition-all group-hover:translate-x-1" />
-                  </div>
+                  <Link href="/solutions/web">
+                    <div className="flex items-center justify-center w-full px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500/10 to-purple-600/10 hover:from-purple-500/20 hover:to-purple-600/20 transition-all duration-300 group">
+                      <span className="text-primary font-medium group-hover:text-purple-600 transition-colors">Learn More</span>
+                      <ArrowRight className="ml-2 h-4 w-4 text-primary group-hover:text-purple-600 transition-all group-hover:translate-x-1" />
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -228,10 +233,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-auto">
-                  <div className="flex items-center justify-center w-full px-6 py-3 rounded-xl bg-gradient-to-r from-green-500/10 to-green-600/10 hover:from-green-500/20 hover:to-green-600/20 transition-all duration-300 group">
-                    <span className="text-primary font-medium group-hover:text-green-600 transition-colors">Learn More</span>
-                    <ArrowRight className="ml-2 h-4 w-4 text-primary group-hover:text-green-600 transition-all group-hover:translate-x-1" />
-                  </div>
+                  <Link href="/solutions/mobile">
+                    <div className="flex items-center justify-center w-full px-6 py-3 rounded-xl bg-gradient-to-r from-green-500/10 to-green-600/10 hover:from-green-500/20 hover:to-green-600/20 transition-all duration-300 group">
+                      <span className="text-primary font-medium group-hover:text-green-600 transition-colors">Learn More</span>
+                      <ArrowRight className="ml-2 h-4 w-4 text-primary group-hover:text-green-600 transition-all group-hover:translate-x-1" />
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>

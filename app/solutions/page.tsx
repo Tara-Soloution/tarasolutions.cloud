@@ -245,11 +245,11 @@ export default function Solutions() {
                             <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-12">
                                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-primary mb-2">500+</div>
+                                        <div className="text-4xl font-bold text-primary mb-2">20+</div>
                                         <div className="text-muted-foreground">Projects Completed</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-primary mb-2">50+</div>
+                                        <div className="text-4xl font-bold text-primary mb-2">10+</div>
                                         <div className="text-muted-foreground">Expert Developers</div>
                                     </div>
                                     <div className="text-center">

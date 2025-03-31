@@ -76,22 +76,22 @@ const values = [
 
 const stats = [
     {
-        number: "500+",
+        number: "20+",
         label: "Projects Completed",
         icon: Code,
     },
     {
-        number: "50+",
+        number: "10+",
         label: "Team Members",
         icon: Users,
     },
     {
-        number: "15+",
+        number: "3+",
         label: "Countries Served",
         icon: Globe,
     },
     {
-        number: "98%",
+        number: "99%",
         label: "Client Satisfaction",
         icon: Heart,
     },
@@ -136,8 +136,8 @@ const milestones = [
     },
     {
         year: "2023",
-        title: "50+ Projects",
-        description: "Achieved milestone of successfully delivering over 50 projects.",
+        title: "20+ Projects",
+        description: "Achieved milestone of successfully delivering over 20 projects.",
     },
 ]
 
