@@ -1,8 +1,5 @@
-import Navbar from "@/components/navbar"
-import Footer from "@/components/footer"
-import ScrollButton from "@/components/scroll-button"
-import Image from "next/image"
-import { ArrowRight, CheckCircle2, Code2, Globe2, Shield, Zap, Users, Building2, Briefcase, Rocket, Cloud, Code, Smartphone } from "lucide-react"
+
+import { ArrowRight, CheckCircle2, Code2, Globe2, Shield, Zap, Users, Cloud, Code, Smartphone } from "lucide-react"
 import CTASection from "@/components/cta-section"
 
 export default function Home() {
