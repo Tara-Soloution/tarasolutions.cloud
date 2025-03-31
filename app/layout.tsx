@@ -89,7 +89,8 @@ export default function RootLayout({
           <MouseMoveEffect />
           <Navbar />
           <main className="flex-1 w-full">
-            {children}</main>
+            {children}
+          </main>
           <Footer />
         </div>
       </body>
