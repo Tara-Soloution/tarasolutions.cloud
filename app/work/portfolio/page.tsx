@@ -19,25 +19,18 @@ const portfolioCategories = [
         bgColor: "bg-blue-500/10",
         projects: [
             {
-                title: "E-commerce Platform",
-                description: "A modern e-commerce platform with advanced features and seamless user experience.",
-                image: "/portfolio/ecommerce.jpg",
+                title: "Ahsen Elite",
+                description: "A modern e-commerce platform for luxury products with advanced features and seamless user experience.",
+                image: "/case-studies/ecommerce.jpg",
                 tags: ["React", "Node.js", "MongoDB", "AWS"],
-                link: "/work/case-studies#ecommerce"
+                link: "http://ahsenelite.com/"
             },
             {
-                title: "Healthcare Dashboard",
-                description: "A comprehensive healthcare management dashboard for medical professionals.",
-                image: "/portfolio/healthcare.jpg",
+                title: "Daweo Management System",
+                description: "A comprehensive management system for business operations and analytics.",
+                image: "/case-studies/healthcare.jpg",
                 tags: ["Vue.js", "Python", "PostgreSQL", "GCP"],
-                link: "/work/case-studies#healthcare"
-            },
-            {
-                title: "Learning Platform",
-                description: "An interactive learning platform for online education and training.",
-                image: "/portfolio/education.jpg",
-                tags: ["React", "Django", "MongoDB", "DigitalOcean"],
-                link: "/work/case-studies#education"
+                link: "http://daweo.online/"
             }
         ]
     },
@@ -65,18 +58,11 @@ const portfolioCategories = [
         bgColor: "bg-green-500/10",
         projects: [
             {
-                title: "Inventory Management",
-                description: "An enterprise-level inventory management system for a manufacturing company.",
-                image: "/portfolio/inventory.jpg",
-                tags: ["Angular", "Java", "MySQL", "AWS"],
-                link: "/work/case-studies#inventory"
-            },
-            {
-                title: "Analytics Dashboard",
-                description: "A powerful analytics dashboard for business intelligence and reporting.",
+                title: "Cloud Station",
+                description: "A comprehensive cloud management platform for enterprise infrastructure and services.",
                 image: "/portfolio/analytics.jpg",
-                tags: ["React", "Python", "PostgreSQL", "AWS"],
-                link: "/work/case-studies#analytics"
+                tags: ["React", "Node.js", "AWS", "Docker"],
+                link: "https://cloud-station.io"
             }
         ]
     }

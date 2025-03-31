@@ -14,7 +14,7 @@ const downloadImage = (url, filename) => {
     return new Promise((resolve, reject) => {
         https.get(url, (response) => {
             if (response.statusCode === 200) {
-                const fileStream = fs.createWriteStream(path.join(__dirname, '../public/portfolio', filename));
+                const fileStream = fs.createWriteStream(path.join(__dirname, '../public/case-studies', filename));
                 response.pipe(fileStream);
                 fileStream.on('finish', () => {
                     fileStream.close();
