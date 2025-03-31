@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Building2, Factory, GraduationCap, Hospital, ShoppingBag, Wallet } from "lucide-react"
+import { ArrowRight, Building2, Factory, GraduationCap, Hospital, ShoppingBag, Wallet, CheckCircle2, Sparkles, Users, TrendingUp } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 const industries = [
     {
@@ -53,6 +54,29 @@ const industries = [
     },
 ]
 
+const benefits = [
+    {
+        title: "Industry-Specific Expertise",
+        description: "Deep understanding of your sector's unique challenges and requirements",
+        icon: Sparkles,
+    },
+    {
+        title: "Proven Track Record",
+        description: "Successfully delivered solutions across multiple industries",
+        icon: CheckCircle2,
+    },
+    {
+        title: "Dedicated Support",
+        description: "24/7 expert assistance and continuous improvement",
+        icon: Users,
+    },
+    {
+        title: "Measurable Results",
+        description: "Track and optimize your ROI with detailed analytics",
+        icon: TrendingUp,
+    },
+]
+
 export default function IndustriesPage() {
     return (
         <div className="relative min-h-screen">
@@ -65,20 +89,22 @@ export default function IndustriesPage() {
 
             <div className="relative z-10">
                 <div className="container mx-auto px-4 pt-24 pb-20">
-                    <div className="space-y-16">
+                    <div className="space-y-32">
                         {/* Hero Section */}
                         <div className="relative pt-32 pb-20 sm:pt-40 sm:pb-24">
                             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                                 <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
                                     Industry Solutions
                                     <br />
-                                    <span className="text-gray-400">tailored to your sector</span>
+                                    <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
+                                        tailored to your sector
+                                    </span>
                                 </h1>
-                                <p className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 mb-10">
+                                <p className="max-w-2xl mx-auto text-lg sm:text-xl text-muted-foreground mb-10">
                                     Discover specialized technology solutions designed for your industry's unique challenges and opportunities.
                                 </p>
                                 <Link href="/contact">
-                                    <Button className="relative group px-8 py-6 text-lg bg-gradient-to-r from-primary to-accent hover:opacity-90">
+                                    <Button className="relative group px-8 py-6 text-lg bg-gradient-to-r from-primary to-purple-500 hover:opacity-90">
                                         <span className="relative z-10">Contact Us</span>
                                         <div className="absolute inset-0 bg-white/20 blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
                                     </Button>
@@ -86,37 +112,52 @@ export default function IndustriesPage() {
                             </div>
                         </div>
 
-                        {/* Subtitle before grid */}
-                        <div className="container text-center">
-                            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Our Industry Expertise</h2>
-                            <p className="mx-auto mt-4 max-w-[42rem] text-muted-foreground">
-                                Comprehensive solutions tailored for diverse industry needs
-                            </p>
-                        </div>
-
-                        {/* Industries Grid */}
+                        {/* Benefits Section */}
                         <section className="container">
+                            <div className="text-center mb-16">
+                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Why Choose Our Solutions?</h2>
+                                <p className="text-lg text-muted-foreground">Experience the difference of industry-focused expertise</p>
+                            </div>
+                            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                                {benefits.map((benefit) => (
+                                    <div key={benefit.title} className="group relative overflow-hidden rounded-2xl border bg-card p-6 transition-all hover:shadow-lg hover:shadow-primary/20">
+                                        <div className="mb-4">
+                                            <benefit.icon className="h-8 w-8 text-primary" />
+                                        </div>
+                                        <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
+                                        <p className="text-muted-foreground">{benefit.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* Industries Section */}
+                        <section className="container">
+                            <div className="text-center mb-16">
+                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Industry Expertise</h2>
+                                <p className="text-lg text-muted-foreground">Comprehensive solutions tailored for diverse industry needs</p>
+                            </div>
                             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                                 {industries.map((industry) => (
                                     <div
                                         key={industry.title}
-                                        className="group relative flex flex-col overflow-hidden rounded-lg border bg-card p-6 transition-colors hover:bg-accent"
+                                        className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20"
                                     >
-                                        <div className={`mb-4 inline-flex rounded-lg p-3 ${industry.bgColor}`}>
-                                            <industry.icon className={`h-6 w-6 ${industry.color}`} />
+                                        <div className={`mb-6 inline-flex rounded-xl p-4 ${industry.bgColor}`}>
+                                            <industry.icon className={`h-8 w-8 ${industry.color}`} />
                                         </div>
-                                        <h3 className="mb-2 text-xl font-semibold">{industry.title}</h3>
-                                        <p className="mb-4 text-sm text-muted-foreground">{industry.description}</p>
-                                        <div className="mb-4 flex flex-wrap gap-2">
+                                        <h3 className="mb-3 text-2xl font-semibold">{industry.title}</h3>
+                                        <p className="mb-6 text-muted-foreground">{industry.description}</p>
+                                        <div className="mb-6 flex flex-wrap gap-2">
                                             {industry.features.map((feature) => (
-                                                <span key={feature} className="rounded-full bg-accent px-3 py-1 text-xs">
+                                                <span key={feature} className="rounded-full bg-accent/50 px-4 py-1.5 text-sm">
                                                     {feature}
                                                 </span>
                                             ))}
                                         </div>
                                         <div className="mt-auto">
                                             <Link href={`/industries/${industry.title.toLowerCase().replace(/\s+/g, '-')}`}>
-                                                <Button variant="ghost" className="group-hover:bg-accent-foreground group-hover:text-accent">
+                                                <Button variant="ghost" className="group-hover:bg-primary group-hover:text-primary-foreground">
                                                     Learn more
                                                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                                                 </Button>
@@ -127,24 +168,48 @@ export default function IndustriesPage() {
                             </div>
                         </section>
 
+                        {/* Stats Section */}
+                        <section className="container">
+                            <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-12">
+                                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                                    <div className="text-center">
+                                        <div className="text-4xl font-bold text-primary mb-2">100+</div>
+                                        <div className="text-muted-foreground">Projects Delivered</div>
+                                    </div>
+                                    <div className="text-center">
+                                        <div className="text-4xl font-bold text-primary mb-2">6+</div>
+                                        <div className="text-muted-foreground">Industries Served</div>
+                                    </div>
+                                    <div className="text-center">
+                                        <div className="text-4xl font-bold text-primary mb-2">24/7</div>
+                                        <div className="text-muted-foreground">Expert Support</div>
+                                    </div>
+                                    <div className="text-center">
+                                        <div className="text-4xl font-bold text-primary mb-2">95%</div>
+                                        <div className="text-muted-foreground">Client Satisfaction</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
                         {/* CTA Section */}
                         <section className="container">
-                            <div className="rounded-lg border bg-card p-8 text-center md:p-12">
-                                <h2 className="text-3xl font-bold tracking-tight">Ready to Transform Your Industry?</h2>
-                                <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+                            <div className="rounded-3xl border bg-gradient-to-r from-primary/10 to-purple-500/10 p-12 text-center backdrop-blur-sm">
+                                <h2 className="text-4xl font-bold tracking-tight mb-4">Ready to Transform Your Industry?</h2>
+                                <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground mb-8">
                                     Let's discuss how our industry-specific solutions can help you achieve your business goals.
                                 </p>
-                                <div className="mt-8 flex justify-center gap-4">
+                                <div className="flex justify-center gap-4">
                                     <Link href="/contact">
                                         <Button
                                             size="lg"
-                                            className="group relative overflow-hidden rounded-full bg-primary transition-all hover:bg-primary/90"
+                                            className="group relative overflow-hidden rounded-full bg-gradient-to-r from-primary to-purple-500 transition-all hover:opacity-90"
                                         >
-                                            <span className="relative z-10 flex items-center">
+                                            <span className="relative z-10 flex items-center text-lg">
                                                 Book Your Free Session
-                                                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                                             </span>
-                                            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 opacity-0 transition-opacity group-hover:opacity-100" />
+                                            <div className="absolute inset-0 -z-10 bg-white/20 opacity-0 blur-lg transition-all group-hover:opacity-100 group-hover:blur-xl" />
                                         </Button>
                                     </Link>
                                 </div>
