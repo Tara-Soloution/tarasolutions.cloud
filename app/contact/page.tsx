@@ -27,10 +27,14 @@ export default function ContactPage() {
         setIsSubmitting(true)
 
         try {
-            const captchaToken = await recaptchaRef.current?.executeAsync()
+            if (!recaptchaRef.current) {
+                throw new Error("reCAPTCHA not initialized")
+            }
+
+            const captchaToken = await recaptchaRef.current.executeAsync()
 
             if (!captchaToken) {
-                throw new Error("Please complete the CAPTCHA verification")
+                throw new Error("Failed to get CAPTCHA token")
             }
 
             const response = await fetch("/api/contact", {
@@ -63,8 +67,9 @@ export default function ContactPage() {
                 subject: "",
                 message: ""
             })
-            recaptchaRef.current?.reset()
+            recaptchaRef.current.reset()
         } catch (error) {
+            console.error("Form submission error:", error)
             toast({
                 title: "Error",
                 description: error instanceof Error ? error.message : "Failed to send message",
@@ -244,6 +249,13 @@ export default function ContactPage() {
                                                     ref={recaptchaRef}
                                                     sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
                                                     size="invisible"
+                                                    onError={() => {
+                                                        toast({
+                                                            title: "Error",
+                                                            description: "Failed to initialize CAPTCHA. Please try again.",
+                                                            variant: "destructive",
+                                                        })
+                                                    }}
                                                 />
                                             </div>
 

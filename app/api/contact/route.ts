@@ -14,6 +14,11 @@ const transporter = nodemailer.createTransport({
 
 async function verifyCaptcha(token: string) {
     try {
+        if (!process.env.RECAPTCHA_SECRET_KEY) {
+            console.error('RECAPTCHA_SECRET_KEY is not set')
+            return false
+        }
+
         const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
             method: 'POST',
             headers: {
@@ -23,7 +28,13 @@ async function verifyCaptcha(token: string) {
         });
 
         const data = await response.json();
-        return data.success;
+
+        if (!data.success) {
+            console.error('CAPTCHA verification failed:', data['error-codes'])
+            return false
+        }
+
+        return true
     } catch (error) {
         console.error('Error verifying CAPTCHA:', error);
         return false;
@@ -47,7 +58,7 @@ export async function POST(request: Request) {
         const isValidCaptcha = await verifyCaptcha(captchaToken);
         if (!isValidCaptcha) {
             return NextResponse.json(
-                { error: 'Invalid CAPTCHA' },
+                { error: 'Invalid CAPTCHA. Please try again.' },
                 { status: 400 }
             );
         }
