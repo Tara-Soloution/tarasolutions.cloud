@@ -29,13 +29,12 @@ export default function Home() {
             <p className="max-w-2xl mx-auto text-lg sm:text-xl text-muted-foreground mb-10">
               Transform your business with cutting-edge technology solutions designed for the modern digital landscape.
             </p>
-            <ScrollButton
-              targetId="contact"
-              className="relative group px-8 py-6 text-lg bg-gradient-to-r from-primary to-green-500 hover:opacity-90"
+            <a
+              href="/contact"
+              className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-to-r from-primary to-green-500 text-base font-medium hover:opacity-90 transition-opacity"
             >
-              <span className="relative z-10">Get Started</span>
-              <div className="absolute inset-0 bg-white/20 blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
-            </ScrollButton>
+              Get Started
+            </a>
           </div>
         </div>
 
@@ -43,7 +42,7 @@ export default function Home() {
         <section id="stats" className="container mx-auto px-4 py-24">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center space-y-2 group cursor-pointer hover:scale-105 transition-transform duration-300">
-              <div className="text-4xl font-bold text-primary">100+</div>
+              <div className="text-4xl font-bold text-primary">50+</div>
               <div className="text-muted-foreground">Projects Completed</div>
             </div>
             <div className="text-center space-y-2 group cursor-pointer hover:scale-105 transition-transform duration-300">
