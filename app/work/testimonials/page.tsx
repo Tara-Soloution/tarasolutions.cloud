@@ -10,36 +10,38 @@ export const metadata: Metadata = {
     description: "Read what our clients say about working with Tara Solutions. Discover how we've helped businesses achieve their goals.",
 }
 
+// Function to generate avatar URL
+const getAvatarUrl = (name: string, size: number = 200) => {
+    return `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&size=${size}&background=random&color=fff&bold=true&font-size=0.5`
+}
+
 const testimonials = [
     {
-        name: "Sarah Johnson",
-        role: "CTO at TechCorp",
-        company: "TechCorp Inc.",
-        image: "/images/testimonials/sarah.jpg",
-        content: "Working with Tara Solutions has been transformative for our business. Their expertise in cloud architecture and scalable solutions helped us achieve unprecedented growth.",
+        name: "Hessam",
+        role: "HR Manager",
+        company: "DAWEO.ORG",
+        content: "Tara Solutions transformed our HR processes with their innovative HR management system. Their attention to detail and understanding of HR compliance requirements made the transition seamless.",
+        rating: 5,
+        industry: "Non-Profit",
+        project: "HR Management System"
+    },
+    {
+        name: "Nazir Bahaduri",
+        role: "Senior Frontend Developer",
+        company: "Netlinks LTD",
+        content: "As a senior frontend developer, I've been impressed by Tara Solutions' modern tech stack and component architecture. Their React-based solutions are performant, maintainable, and follow best practices. The team's expertise in creating responsive and accessible interfaces has been invaluable.",
         rating: 5,
         industry: "Technology",
-        project: "Cloud Migration"
+        project: "Frontend Development"
     },
     {
-        name: "Michael Chen",
-        role: "Product Manager",
-        company: "HealthCare Plus",
-        image: "/images/testimonials/michael.jpg",
-        content: "The team's dedication to understanding our healthcare domain and implementing HIPAA-compliant solutions was impressive. They delivered beyond our expectations.",
+        name: "Ahmad",
+        role: "Full Stack Developer",
+        company: "Innovation Labs",
+        content: "As a developer, I appreciate the clean code and well-documented APIs provided by Tara Solutions. Their development practices and technical excellence have set new standards for our team.",
         rating: 5,
-        industry: "Healthcare",
-        project: "Healthcare Management System"
-    },
-    {
-        name: "Emily Rodriguez",
-        role: "Operations Director",
-        company: "Global Retail Co.",
-        image: "/images/testimonials/emily.jpg",
-        content: "Their e-commerce solution revolutionized our online presence. The platform's performance and user experience have significantly increased our sales.",
-        rating: 5,
-        industry: "Retail",
-        project: "E-commerce Platform"
+        industry: "Software Development",
+        project: "API Development"
     }
 ]
 
@@ -151,17 +153,17 @@ export default function TestimonialsPage() {
                                         className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card p-6 transition-all hover:shadow-lg hover:shadow-primary/20"
                                     >
                                         <div className="flex items-center gap-4 mb-6">
-                                            <div className="relative h-12 w-12 overflow-hidden rounded-full">
+                                            <div className="relative h-16 w-16 overflow-hidden rounded-full bg-gradient-to-br from-primary/20 to-green-500/20">
                                                 <Image
-                                                    src={testimonial.image}
+                                                    src={getAvatarUrl(testimonial.name)}
                                                     alt={testimonial.name}
                                                     fill
                                                     className="object-cover"
                                                 />
                                             </div>
                                             <div>
-                                                <h3 className="font-semibold">{testimonial.name}</h3>
-                                                <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                                                <h3 className="font-semibold text-lg">{testimonial.name}</h3>
+                                                <p className="text-sm text-primary">{testimonial.role}</p>
                                                 <p className="text-sm text-muted-foreground">{testimonial.company}</p>
                                             </div>
                                         </div>
