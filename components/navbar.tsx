@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Github, Menu } from "lucide-react"
 import { useState } from "react"
@@ -10,9 +11,18 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-20 max-w-screen-2xl items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
+      <div className="container mx-auto px-4 flex h-24 items-center justify-between">
+        <Link href="/" className="flex items-center space-x-4">
+          <div className="relative w-14 h-14">
+            <Image
+              src="/tara.png"
+              alt="Tara Solutions Logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+          <span className="text-2xl font-bold bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
             Tara Solutions
           </span>
         </Link>
@@ -40,21 +50,13 @@ export default function Navbar() {
             About Us
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
           </Link>
+          <Link href="/work" className="transition-colors hover:text-primary relative group">
+            Our Work
+          </Link>
         </nav>
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center space-x-6">
-          <Link href="https://github.com/tara-Soloution/" target="_blank" rel="noreferrer">
-            <Button variant="ghost" size="icon" className="h-10 w-10">
-              <Github className="h-5 w-5" />
-              <span className="sr-only">GitHub</span>
-            </Button>
-          </Link>
-          <Link href="/work">
-            <Button variant="ghost" size="lg" className="text-base">
-              Our Work
-            </Button>
-          </Link>
           <Link href="/contact">
             <Button size="lg" className="text-base">
               Contact us
@@ -66,10 +68,10 @@ export default function Navbar() {
         <Button
           variant="ghost"
           size="icon"
-          className="md:hidden h-10 w-10"
+          className="md:hidden h-12 w-12"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <Menu className="h-5 w-5" />
+          <Menu className="h-6 w-6" />
           <span className="sr-only">Toggle menu</span>
         </Button>
       </div>
@@ -77,7 +79,7 @@ export default function Navbar() {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden border-t border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <div className="container py-4 space-y-4">
+          <div className="container mx-auto px-4 py-4 space-y-4">
             <nav className="flex flex-col space-y-4">
               <Link
                 href="/solutions"
