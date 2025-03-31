@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Star, Award, Target, Users, CheckCircle2, TrendingUp, Zap, Shield, Laptop, Database, Briefcase, Rocket, Lightbulb } from "lucide-react"
+import { ArrowRight, Star, Award, Target, Users, CheckCircle2, TrendingUp, Zap, Shield, Laptop, Database, Briefcase, Rocket, Lightbulb, Code2 } from "lucide-react"
 import { Metadata } from "next"
 import Link from "next/link"
 import CTASection from '@/components/cta-section'
@@ -74,29 +74,32 @@ const featuredWork = [
 
 const workCategories = [
     {
-        title: "Web Applications",
-        description: "Modern web applications built with cutting-edge technologies",
-        icon: Laptop,
+        title: "Case Studies",
+        description: "Explore detailed success stories and transformative projects we've delivered across various industries.",
+        icon: Briefcase,
         color: "text-blue-500",
         bgColor: "bg-blue-500/10",
-        count: "25+",
+        features: ["Project Overview", "Challenges & Solutions", "Results & Impact", "Client Testimonials"],
+        link: "/work/case-studies"
     },
     {
-        title: "Mobile Apps",
-        description: "Cross-platform mobile applications for iOS and Android",
-        icon: Briefcase,
+        title: "Portfolio",
+        description: "Browse through our collection of innovative projects and digital solutions.",
+        icon: Code2,
         color: "text-purple-500",
         bgColor: "bg-purple-500/10",
-        count: "15+",
+        features: ["Web Applications", "Mobile Apps", "Enterprise Solutions", "Cloud Services"],
+        link: "/work/portfolio"
     },
     {
-        title: "Cloud Solutions",
-        description: "Scalable cloud infrastructure and management platforms",
-        icon: Rocket,
-        color: "text-green-500",
-        bgColor: "bg-green-500/10",
-        count: "20+",
-    },
+        title: "Testimonials",
+        description: "Read what our clients have to say about their experience working with us.",
+        icon: Star,
+        color: "text-yellow-500",
+        bgColor: "bg-yellow-500/10",
+        features: ["Client Reviews", "Success Stories", "Industry Impact", "Long-term Partnerships"],
+        link: "/work/testimonials"
+    }
 ]
 
 const achievements = [
@@ -122,6 +125,29 @@ const achievements = [
     },
 ]
 
+const benefits = [
+    {
+        title: "Innovative Solutions",
+        description: "Cutting-edge technology and creative problem-solving approaches",
+        icon: Lightbulb,
+    },
+    {
+        title: "Proven Excellence",
+        description: "Consistently delivering high-quality results across projects",
+        icon: CheckCircle2,
+    },
+    {
+        title: "Client-Centric",
+        description: "Tailored solutions that meet specific business needs",
+        icon: Users,
+    },
+    {
+        title: "Growth Focused",
+        description: "Solutions that drive business growth and transformation",
+        icon: Rocket,
+    },
+]
+
 export default function Work() {
     return (
         <div className="relative min-h-screen">
@@ -142,63 +168,29 @@ export default function Work() {
                                     Our Work
                                     <br />
                                     <span className="bg-gradient-to-r from-primary to-green-500 bg-clip-text text-transparent">
-                                        Success Stories
+                                        transforming ideas into reality
                                     </span>
                                 </h1>
                                 <p className="max-w-2xl mx-auto text-lg sm:text-xl text-muted-foreground mb-10">
-                                    Discover how we've helped businesses transform digitally through innovative solutions and cutting-edge technology.
+                                    Explore our portfolio of successful projects, case studies, and client testimonials that showcase our expertise and commitment to excellence.
                                 </p>
                             </div>
                         </div>
 
-                        {/* Featured Work Section */}
+                        {/* Benefits Section */}
                         <section className="container">
                             <div className="text-center mb-16">
-                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Featured Projects</h2>
-                                <p className="text-lg text-muted-foreground">Explore our most impactful work</p>
+                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Why Choose Our Work?</h2>
+                                <p className="text-lg text-muted-foreground">Experience the difference of our proven approach</p>
                             </div>
-                            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                                {featuredWork.map((project) => (
-                                    <div
-                                        key={project.title}
-                                        className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card transition-all hover:shadow-lg hover:shadow-primary/20"
-                                    >
-                                        <Link href={project.href} className="relative h-48 overflow-hidden">
-                                            <Image
-                                                src={project.image}
-                                                alt={project.title}
-                                                fill
-                                                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                                            />
-                                        </Link>
-                                        <div className="flex flex-col flex-1 p-6">
-                                            <div className="flex-1">
-                                                <Link href={project.href} className="block group">
-                                                    <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
-                                                        {project.category}
-                                                    </span>
-                                                    <h3 className="text-2xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                                                        {project.title}
-                                                    </h3>
-                                                </Link>
-                                                <p className="text-muted-foreground mb-4">{project.description}</p>
-                                                <div className="flex flex-wrap gap-2 mb-6">
-                                                    {project.tags.map((tag) => (
-                                                        <span key={tag} className="rounded-full bg-accent/50 px-3 py-1 text-sm">
-                                                            {tag}
-                                                        </span>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                            <div className="mt-auto">
-                                                <Link href={project.href}>
-                                                    <Button variant="ghost" className="w-full group-hover:bg-primary group-hover:text-primary-foreground">
-                                                        View Case Study
-                                                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                                                    </Button>
-                                                </Link>
-                                            </div>
+                            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                                {benefits.map((benefit) => (
+                                    <div key={benefit.title} className="group relative overflow-hidden rounded-2xl border bg-card p-6 transition-all hover:shadow-lg hover:shadow-primary/20">
+                                        <div className="mb-4">
+                                            <benefit.icon className="h-8 w-8 text-primary" />
                                         </div>
+                                        <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
+                                        <p className="text-muted-foreground">{benefit.description}</p>
                                     </div>
                                 ))}
                             </div>
@@ -207,8 +199,8 @@ export default function Work() {
                         {/* Work Categories Section */}
                         <section className="container">
                             <div className="text-center mb-16">
-                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Work Categories</h2>
-                                <p className="text-lg text-muted-foreground">Explore different types of projects we've delivered</p>
+                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Explore Our Work</h2>
+                                <p className="text-lg text-muted-foreground">Discover our diverse portfolio of successful projects</p>
                             </div>
                             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                                 {workCategories.map((category) => (
@@ -219,34 +211,49 @@ export default function Work() {
                                         <div className={`mb-6 inline-flex rounded-xl p-4 ${category.bgColor}`}>
                                             <category.icon className={`h-8 w-8 ${category.color}`} />
                                         </div>
-                                        <h3 className="text-2xl font-semibold mb-2">{category.title}</h3>
-                                        <p className="text-muted-foreground mb-4">{category.description}</p>
-                                        <div className="text-3xl font-bold text-primary">{category.count}</div>
-                                        <div className="text-sm text-muted-foreground">Projects Completed</div>
+                                        <h3 className="mb-3 text-2xl font-semibold">{category.title}</h3>
+                                        <p className="mb-6 text-muted-foreground">{category.description}</p>
+                                        <div className="mb-6 flex flex-wrap gap-2">
+                                            {category.features.map((feature) => (
+                                                <span key={feature} className="rounded-full bg-accent/50 px-4 py-1.5 text-sm">
+                                                    {feature}
+                                                </span>
+                                            ))}
+                                        </div>
+                                        <div className="mt-auto">
+                                            <Link href={category.link}>
+                                                <Button variant="ghost" className="group-hover:bg-primary group-hover:text-primary-foreground">
+                                                    Explore {category.title}
+                                                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                                </Button>
+                                            </Link>
+                                        </div>
                                     </div>
                                 ))}
                             </div>
                         </section>
 
-                        {/* Achievements Section */}
+                        {/* Stats Section */}
                         <section className="container">
-                            <div className="text-center mb-16">
-                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Achievements</h2>
-                                <p className="text-lg text-muted-foreground">Numbers that speak for themselves</p>
-                            </div>
-                            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-                                {achievements.map((achievement) => (
-                                    <div
-                                        key={achievement.title}
-                                        className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20"
-                                    >
-                                        <div className="mb-6 inline-flex rounded-xl p-4 bg-primary/10">
-                                            <achievement.icon className="h-8 w-8 text-primary" />
-                                        </div>
-                                        <h3 className="text-xl font-semibold mb-2">{achievement.title}</h3>
-                                        <p className="text-muted-foreground">{achievement.description}</p>
+                            <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-12">
+                                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                                    <div className="text-center">
+                                        <div className="text-4xl font-bold text-primary mb-2">150+</div>
+                                        <div className="text-muted-foreground">Projects Completed</div>
                                     </div>
-                                ))}
+                                    <div className="text-center">
+                                        <div className="text-4xl font-bold text-primary mb-2">50+</div>
+                                        <div className="text-muted-foreground">Happy Clients</div>
+                                    </div>
+                                    <div className="text-center">
+                                        <div className="text-4xl font-bold text-primary mb-2">98%</div>
+                                        <div className="text-muted-foreground">Client Satisfaction</div>
+                                    </div>
+                                    <div className="text-center">
+                                        <div className="text-4xl font-bold text-primary mb-2">15+</div>
+                                        <div className="text-muted-foreground">Years Experience</div>
+                                    </div>
+                                </div>
                             </div>
                         </section>
 

@@ -1,4 +1,9 @@
 import { Metadata } from "next"
+import { Button } from "@/components/ui/button"
+import { ArrowRight, Briefcase, CheckCircle2, Clock, Target, Users } from "lucide-react"
+import Link from "next/link"
+import Image from "next/image"
+import CTASection from "@/components/cta-section"
 
 export const metadata: Metadata = {
     title: "Case Studies | Tara Solutions",
@@ -7,122 +12,193 @@ export const metadata: Metadata = {
 
 const caseStudies = [
     {
-        title: "Global E-commerce Platform Transformation",
-        client: "Retail Giant Inc.",
-        industry: "Retail",
-        challenge: "A traditional retail company needed to modernize their e-commerce platform to compete in the digital market.",
-        solution: "We developed a scalable cloud-based e-commerce solution with advanced features and seamless integration.",
-        results: [
-            "200% increase in online sales",
-            "50% reduction in page load time",
-            "Improved customer satisfaction",
-            "Expanded to 5 new markets",
-        ],
-        image: "/case-studies/ecommerce.jpg",
-    },
-    {
         title: "Healthcare Management System",
-        client: "HealthCare Plus",
-        industry: "Healthcare",
-        challenge: "A healthcare provider needed a comprehensive system to manage patient records and appointments.",
-        solution: "We created a secure, HIPAA-compliant healthcare management system with advanced features.",
+        description: "Transformed a healthcare provider's operations with a comprehensive management system.",
+        category: "Healthcare",
+        image: "/images/case-studies/healthcare.jpg",
+        duration: "6 months",
+        team: "8 members",
         results: [
             "40% reduction in administrative time",
-            "99.9% system uptime",
-            "Enhanced patient care",
-            "Improved data security",
+            "Improved patient satisfaction by 60%",
+            "Streamlined appointment scheduling",
+            "Enhanced data security and compliance"
         ],
-        image: "/case-studies/healthcare.jpg",
+        tags: ["Healthcare", "Enterprise Software", "Cloud Computing", "Security"],
+        href: "/work/case-studies/healthcare-management"
     },
     {
-        title: "Financial Services Platform",
-        client: "FinTech Solutions",
-        industry: "Financial Services",
-        challenge: "A financial services company needed a modern platform for their digital banking services.",
-        solution: "We developed a secure, scalable financial platform with real-time processing capabilities.",
+        title: "E-commerce Platform Modernization",
+        description: "Revamped an outdated e-commerce platform with modern technology stack.",
+        category: "Retail",
+        image: "/images/case-studies/ecommerce.jpg",
+        duration: "8 months",
+        team: "12 members",
         results: [
-            "300% increase in digital transactions",
-            "Zero security incidents",
-            "Reduced operational costs",
-            "Enhanced user experience",
+            "200% increase in online sales",
+            "50% faster page load times",
+            "Enhanced mobile experience",
+            "Improved inventory management"
         ],
-        image: "/case-studies/finance.jpg",
+        tags: ["E-commerce", "Web Development", "Mobile Optimization", "Performance"],
+        href: "/work/case-studies/ecommerce-modernization"
     },
+    {
+        title: "Manufacturing Analytics Dashboard",
+        description: "Developed a real-time analytics dashboard for manufacturing operations.",
+        category: "Manufacturing",
+        image: "/images/case-studies/manufacturing.jpg",
+        duration: "4 months",
+        team: "6 members",
+        results: [
+            "30% increase in production efficiency",
+            "Reduced downtime by 25%",
+            "Better resource allocation",
+            "Real-time monitoring capabilities"
+        ],
+        tags: ["Manufacturing", "Data Analytics", "IoT", "Dashboard"],
+        href: "/work/case-studies/manufacturing-analytics"
+    }
+]
+
+const metrics = [
+    {
+        title: "Project Success Rate",
+        value: "98%",
+        icon: CheckCircle2,
+        description: "Of projects delivered on time and within scope"
+    },
+    {
+        title: "Average Duration",
+        value: "6 months",
+        icon: Clock,
+        description: "For complex enterprise solutions"
+    },
+    {
+        title: "Team Size",
+        value: "8-12",
+        icon: Users,
+        description: "Members per project on average"
+    },
+    {
+        title: "Client Satisfaction",
+        value: "95%",
+        icon: Target,
+        description: "Based on client feedback"
+    }
 ]
 
 export default function CaseStudiesPage() {
     return (
-        <div className="min-h-screen pt-24 pb-16">
-            {/* Hero Section */}
-            <div className="container mx-auto px-4 mb-16">
-                <div className="max-w-3xl mx-auto text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-green-500 bg-clip-text text-transparent">
-                        Case Studies
-                    </h1>
-                    <p className="text-xl text-muted-foreground">
-                        Real results from our client success stories
-                    </p>
-                </div>
+        <div className="relative min-h-screen">
+            {/* Background gradients */}
+            <div className="pointer-events-none fixed inset-0">
+                <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
+                <div className="absolute right-0 top-0 h-[500px] w-[500px] bg-blue-500/10 blur-[100px]" />
+                <div className="absolute bottom-0 left-0 h-[500px] w-[500px] bg-purple-500/10 blur-[100px]" />
             </div>
 
-            {/* Case Studies Grid */}
-            <div className="container mx-auto px-4">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {caseStudies.map((study, index) => (
-                        <div
-                            key={index}
-                            className="group rounded-2xl overflow-hidden bg-gradient-to-br from-primary/5 to-green-500/5 border hover:from-primary/10 hover:to-green-500/10 transition-all duration-300"
-                        >
-                            <div className="relative h-48">
-                                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-green-500/20" />
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className="text-4xl font-bold text-primary">
-                                        {study.title.charAt(0)}
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="p-6">
-                                <div className="mb-4">
-                                    <h3 className="text-xl font-bold mb-2">{study.title}</h3>
-                                    <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-                                        <span>{study.client}</span>
-                                        <span>•</span>
-                                        <span>{study.industry}</span>
-                                    </div>
-                                </div>
-                                <div className="mb-4">
-                                    <h4 className="font-semibold mb-2">Challenge</h4>
-                                    <p className="text-muted-foreground">{study.challenge}</p>
-                                </div>
-                                <div className="mb-4">
-                                    <h4 className="font-semibold mb-2">Solution</h4>
-                                    <p className="text-muted-foreground">{study.solution}</p>
-                                </div>
-                                <div>
-                                    <h4 className="font-semibold mb-2">Results</h4>
-                                    <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                                        {study.results.map((result, i) => (
-                                            <li key={i}>{result}</li>
-                                        ))}
-                                    </ul>
-                                </div>
+            <div className="relative z-10">
+                <div className="container mx-auto px-4 pt-24 pb-20">
+                    <div className="space-y-32">
+                        {/* Hero Section */}
+                        <div className="relative pt-32 pb-20 sm:pt-40 sm:pb-24">
+                            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
+                                    Case Studies
+                                    <br />
+                                    <span className="bg-gradient-to-r from-primary to-green-500 bg-clip-text text-transparent">
+                                        success stories in action
+                                    </span>
+                                </h1>
+                                <p className="max-w-2xl mx-auto text-lg sm:text-xl text-muted-foreground mb-10">
+                                    Explore detailed accounts of how we've helped businesses transform through innovative technology solutions.
+                                </p>
                             </div>
                         </div>
-                    ))}
-                </div>
 
-                {/* CTA Section */}
-                <div className="text-center mt-16">
-                    <h2 className="text-3xl font-bold mb-6">Ready to Start Your Success Story?</h2>
-                    <p className="text-xl text-muted-foreground mb-8">
-                        Let's create something amazing together
-                    </p>
-                    <a
-                        href="/contact"
-                        className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-to-r from-primary to-green-500 text-white font-medium hover:opacity-90 transition-opacity"
-                    >
-                        Get Started
-                    </a>
+                        {/* Metrics Section */}
+                        <section className="container">
+                            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                                {metrics.map((metric) => (
+                                    <div key={metric.title} className="group relative overflow-hidden rounded-2xl border bg-card p-6 transition-all hover:shadow-lg hover:shadow-primary/20">
+                                        <div className="mb-4">
+                                            <metric.icon className="h-8 w-8 text-primary" />
+                                        </div>
+                                        <div className="text-3xl font-bold text-primary mb-2">{metric.value}</div>
+                                        <h3 className="text-xl font-semibold mb-2">{metric.title}</h3>
+                                        <p className="text-muted-foreground">{metric.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* Case Studies Grid */}
+                        <section className="container">
+                            <div className="text-center mb-16">
+                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Featured Case Studies</h2>
+                                <p className="text-lg text-muted-foreground">Explore our most impactful projects</p>
+                            </div>
+                            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                                {caseStudies.map((study) => (
+                                    <div
+                                        key={study.title}
+                                        className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card transition-all hover:shadow-lg hover:shadow-primary/20"
+                                    >
+                                        <Link href={study.href} className="relative h-48 overflow-hidden">
+                                            <Image
+                                                src={study.image}
+                                                alt={study.title}
+                                                fill
+                                                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                            />
+                                        </Link>
+                                        <div className="flex flex-col flex-1 p-6">
+                                            <div className="flex-1">
+                                                <Link href={study.href} className="block group">
+                                                    <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
+                                                        {study.category}
+                                                    </span>
+                                                    <h3 className="text-2xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                                                        {study.title}
+                                                    </h3>
+                                                </Link>
+                                                <p className="text-muted-foreground mb-4">{study.description}</p>
+                                                <div className="flex flex-wrap gap-2 mb-6">
+                                                    {study.tags.map((tag) => (
+                                                        <span key={tag} className="rounded-full bg-accent/50 px-3 py-1 text-sm">
+                                                            {tag}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                                <div className="grid grid-cols-2 gap-4 mb-6">
+                                                    <div>
+                                                        <div className="text-sm text-muted-foreground">Duration</div>
+                                                        <div className="font-semibold">{study.duration}</div>
+                                                    </div>
+                                                    <div>
+                                                        <div className="text-sm text-muted-foreground">Team Size</div>
+                                                        <div className="font-semibold">{study.team}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="mt-auto">
+                                                <Link href={study.href}>
+                                                    <Button variant="ghost" className="w-full group-hover:bg-primary group-hover:text-primary-foreground">
+                                                        View Case Study
+                                                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                                    </Button>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* CTA Section */}
+                        <CTASection />
+                    </div>
                 </div>
             </div>
         </div>
