@@ -1,13 +1,21 @@
 import "./globals.css"
 import { Inter } from "next/font/google"
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import MouseMoveEffect from "@/components/mouse-move-effect"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: "#000000"
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://tarasolutions.cloud'),
@@ -33,13 +41,6 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
     title: "Tara Solutions"
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false
-  },
-  themeColor: "#000000",
   authors: [{ name: "Tara Solutions" }],
   creator: "Tara Solutions",
   publisher: "Tara Solutions",
