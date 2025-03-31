@@ -1,11 +1,76 @@
+"use client"
+
 import CTASection from "@/components/cta-section"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, Phone, MapPin, ArrowRight, MessageSquare, Globe, Building2, MessageCircle, Map } from "lucide-react"
 import Link from "next/link"
+import { useState } from "react"
+import { useToast } from "@/components/ui/use-toast"
 
 export default function ContactPage() {
+    const { toast } = useToast()
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        company: "",
+        subject: "",
+        message: ""
+    })
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault()
+        setIsSubmitting(true)
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            })
+
+            const data = await response.json()
+
+            if (!response.ok) {
+                throw new Error(data.error || "Failed to send message")
+            }
+
+            toast({
+                title: "Success!",
+                description: "Your message has been sent successfully.",
+            })
+
+            // Reset form
+            setFormData({
+                name: "",
+                email: "",
+                company: "",
+                subject: "",
+                message: ""
+            })
+        } catch (error) {
+            toast({
+                title: "Error",
+                description: error instanceof Error ? error.message : "Failed to send message",
+                variant: "destructive",
+            })
+        } finally {
+            setIsSubmitting(false)
+        }
+    }
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }))
+    }
+
     return (
         <div className="relative min-h-screen">
             {/* Background gradients */}
@@ -90,33 +155,61 @@ export default function ContactPage() {
                                     </div>
 
                                     <div className="rounded-lg border bg-card p-8">
-                                        <form className="space-y-6">
+                                        <form onSubmit={handleSubmit} className="space-y-6">
                                             <div className="space-y-2">
                                                 <label htmlFor="name" className="text-sm font-medium">
                                                     Name
                                                 </label>
-                                                <Input id="name" placeholder="John Doe" />
+                                                <Input
+                                                    id="name"
+                                                    name="name"
+                                                    value={formData.name}
+                                                    onChange={handleChange}
+                                                    placeholder="John Doe"
+                                                    required
+                                                />
                                             </div>
 
                                             <div className="space-y-2">
                                                 <label htmlFor="email" className="text-sm font-medium">
                                                     Email
                                                 </label>
-                                                <Input id="email" type="email" placeholder="john@example.com" />
+                                                <Input
+                                                    id="email"
+                                                    name="email"
+                                                    type="email"
+                                                    value={formData.email}
+                                                    onChange={handleChange}
+                                                    placeholder="john@example.com"
+                                                    required
+                                                />
                                             </div>
 
                                             <div className="space-y-2">
                                                 <label htmlFor="company" className="text-sm font-medium">
                                                     Company
                                                 </label>
-                                                <Input id="company" placeholder="Acme Inc." />
+                                                <Input
+                                                    id="company"
+                                                    name="company"
+                                                    value={formData.company}
+                                                    onChange={handleChange}
+                                                    placeholder="Acme Inc."
+                                                />
                                             </div>
 
                                             <div className="space-y-2">
                                                 <label htmlFor="subject" className="text-sm font-medium">
                                                     Subject
                                                 </label>
-                                                <Input id="subject" placeholder="How can we help?" />
+                                                <Input
+                                                    id="subject"
+                                                    name="subject"
+                                                    value={formData.subject}
+                                                    onChange={handleChange}
+                                                    placeholder="How can we help?"
+                                                    required
+                                                />
                                             </div>
 
                                             <div className="space-y-2">
@@ -125,12 +218,22 @@ export default function ContactPage() {
                                                 </label>
                                                 <Textarea
                                                     id="message"
+                                                    name="message"
+                                                    value={formData.message}
+                                                    onChange={handleChange}
                                                     placeholder="Tell us about your project or question..."
                                                     className="min-h-[150px]"
+                                                    required
                                                 />
                                             </div>
 
-                                            <Button className="w-full">Send Message</Button>
+                                            <Button
+                                                type="submit"
+                                                className="w-full"
+                                                disabled={isSubmitting}
+                                            >
+                                                {isSubmitting ? "Sending..." : "Send Message"}
+                                            </Button>
                                         </form>
                                     </div>
                                 </div>
