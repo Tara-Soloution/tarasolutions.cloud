@@ -18,7 +18,6 @@ A modern, responsive website built with Next.js 15, TypeScript, and Tailwind CSS
 - Date picking with React Day Picker
 - Form validation with Zod
 
-
 ## 🛠️ Tech Stack
 
 - **Framework:** Next.js 15
