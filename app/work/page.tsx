@@ -51,7 +51,7 @@ const featuredWork = [
         image: "/projects/cloud-station.jpg",
         category: "Cloud Solutions",
         tags: ["Cloud", "DevOps", "Deployment", "Infrastructure"],
-        href: "/work/cloud-station",
+        href: "https://cloud-station.io",
     },
     {
         title: "Ahsen Elite",
@@ -59,7 +59,7 @@ const featuredWork = [
         image: "/projects/ahsen-elite.png",
         category: "Web Development",
         tags: ["Web Application", "Business Solutions", "Enterprise Software"],
-        href: "/work/ahsen-elite",
+        href: "https://ahsenelite.com",
     },
     {
         title: "Teacher Guide",
@@ -67,7 +67,7 @@ const featuredWork = [
         image: "/projects/teacher-guide.png",
         category: "Education",
         tags: ["Education", "Web Platform", "Teacher Tools"],
-        href: "/work/teacher-guide",
+        href: "https://play.google.com/store/apps/details?id=af.hakima.teacher_guide",
     },
 ]
 
@@ -162,33 +162,41 @@ export default function Work() {
                                         key={project.title}
                                         className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card transition-all hover:shadow-lg hover:shadow-primary/20"
                                     >
-                                        <div className="relative h-48 overflow-hidden">
+                                        <Link href={project.href} className="relative h-48 overflow-hidden">
                                             <Image
                                                 src={project.image}
                                                 alt={project.title}
                                                 fill
                                                 className="object-cover transition-transform duration-300 group-hover:scale-105"
                                             />
-                                        </div>
-                                        <div className="p-6">
-                                            <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
-                                                {project.category}
-                                            </span>
-                                            <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
-                                            <p className="text-muted-foreground mb-4">{project.description}</p>
-                                            <div className="flex flex-wrap gap-2 mb-6">
-                                                {project.tags.map((tag) => (
-                                                    <span key={tag} className="rounded-full bg-accent/50 px-3 py-1 text-sm">
-                                                        {tag}
+                                        </Link>
+                                        <div className="flex flex-col flex-1 p-6">
+                                            <div className="flex-1">
+                                                <Link href={project.href} className="block group">
+                                                    <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
+                                                        {project.category}
                                                     </span>
-                                                ))}
+                                                    <h3 className="text-2xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                                                        {project.title}
+                                                    </h3>
+                                                </Link>
+                                                <p className="text-muted-foreground mb-4">{project.description}</p>
+                                                <div className="flex flex-wrap gap-2 mb-6">
+                                                    {project.tags.map((tag) => (
+                                                        <span key={tag} className="rounded-full bg-accent/50 px-3 py-1 text-sm">
+                                                            {tag}
+                                                        </span>
+                                                    ))}
+                                                </div>
                                             </div>
-                                            <Link href={project.href}>
-                                                <Button variant="ghost" className="group-hover:bg-primary group-hover:text-primary-foreground">
-                                                    View Case Study
-                                                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                                                </Button>
-                                            </Link>
+                                            <div className="mt-auto">
+                                                <Link href={project.href}>
+                                                    <Button variant="ghost" className="w-full group-hover:bg-primary group-hover:text-primary-foreground">
+                                                        View Case Study
+                                                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                                    </Button>
+                                                </Link>
+                                            </div>
                                         </div>
                                     </div>
                                 ))}
