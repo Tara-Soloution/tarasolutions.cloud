@@ -31,7 +31,6 @@ A modern, responsive website built with Next.js 15, TypeScript, and Tailwind CSS
 - **Icons:** Lucide React
 - **Animations:** tailwindcss-animate
 
-
 ## 📦 Project Structure
 
 ```
