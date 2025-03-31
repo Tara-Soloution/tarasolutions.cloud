@@ -243,61 +243,96 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <div className="flex items-start space-x-4">
-                <CheckCircle2 className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h3 className="font-semibold mb-2">Expert Team</h3>
-                  <p className="text-muted-foreground">
-                    Our team of experienced developers and designers brings years of expertise to every project.
-                  </p>
+            <div className="space-y-6">
+              <div className="group relative p-6 rounded-2xl border bg-card hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-[180px] flex flex-col">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative flex items-start space-x-4 flex-grow">
+                  <div className="p-3 rounded-xl bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors duration-300">
+                    <Users className="h-6 w-6 text-blue-500" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Expert Team</h3>
+                    <p className="text-muted-foreground">
+                      Our team of experienced developers and designers brings years of expertise to every project.
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <CheckCircle2 className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h3 className="font-semibold mb-2">Quality Assurance</h3>
-                  <p className="text-muted-foreground">
-                    Rigorous testing and quality control processes ensure reliable and bug-free solutions.
-                  </p>
+
+              <div className="group relative p-6 rounded-2xl border bg-card hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-[180px] flex flex-col">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative flex items-start space-x-4 flex-grow">
+                  <div className="p-3 rounded-xl bg-purple-500/10 group-hover:bg-purple-500/20 transition-colors duration-300">
+                    <Shield className="h-6 w-6 text-purple-500" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Quality Assurance</h3>
+                    <p className="text-muted-foreground">
+                      Rigorous testing and quality control processes ensure reliable and bug-free solutions.
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <CheckCircle2 className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h3 className="font-semibold mb-2">24/7 Support</h3>
-                  <p className="text-muted-foreground">
-                    Round-the-clock technical support to help you with any issues or questions.
-                  </p>
+
+              <div className="group relative p-6 rounded-2xl border bg-card hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-[180px] flex flex-col">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative flex items-start space-x-4 flex-grow">
+                  <div className="p-3 rounded-xl bg-green-500/10 group-hover:bg-green-500/20 transition-colors duration-300">
+                    <Zap className="h-6 w-6 text-green-500" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>
+                    <p className="text-muted-foreground">
+                      Round-the-clock technical support to help you with any issues or questions.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-4">
-                <CheckCircle2 className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h3 className="font-semibold mb-2">Innovative Solutions</h3>
-                  <p className="text-muted-foreground">
-                    We stay ahead of the curve with the latest technologies and best practices.
-                  </p>
+
+            <div className="space-y-6">
+              <div className="group relative p-6 rounded-2xl border bg-card hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-[180px] flex flex-col">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-red-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative flex items-start space-x-4 flex-grow">
+                  <div className="p-3 rounded-xl bg-orange-500/10 group-hover:bg-orange-500/20 transition-colors duration-300">
+                    <Code2 className="h-6 w-6 text-orange-500" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Innovative Solutions</h3>
+                    <p className="text-muted-foreground">
+                      We stay ahead of the curve with the latest technologies and best practices.
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <CheckCircle2 className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h3 className="font-semibold mb-2">Cost-Effective</h3>
-                  <p className="text-muted-foreground">
-                    Competitive pricing and efficient development processes for maximum value.
-                  </p>
+
+              <div className="group relative p-6 rounded-2xl border bg-card hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-[180px] flex flex-col">
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/5 to-amber-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative flex items-start space-x-4 flex-grow">
+                  <div className="p-3 rounded-xl bg-yellow-500/10 group-hover:bg-yellow-500/20 transition-colors duration-300">
+                    <Globe2 className="h-6 w-6 text-yellow-500" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Cost-Effective</h3>
+                    <p className="text-muted-foreground">
+                      Competitive pricing and efficient development processes for maximum value.
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <CheckCircle2 className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h3 className="font-semibold mb-2">On-Time Delivery</h3>
-                  <p className="text-muted-foreground">
-                    We respect deadlines and ensure timely delivery of all projects.
-                  </p>
+
+              <div className="group relative p-6 rounded-2xl border bg-card hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-[180px] flex flex-col">
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-violet-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative flex items-start space-x-4 flex-grow">
+                  <div className="p-3 rounded-xl bg-indigo-500/10 group-hover:bg-indigo-500/20 transition-colors duration-300">
+                    <CheckCircle2 className="h-6 w-6 text-indigo-500" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">On-Time Delivery</h3>
+                    <p className="text-muted-foreground">
+                      We respect deadlines and ensure timely delivery of all projects.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
