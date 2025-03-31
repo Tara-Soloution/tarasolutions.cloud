@@ -22,7 +22,7 @@ export default function Home() {
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
               Technology Solutions
               <br />
-              <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary to-green-500 bg-clip-text text-transparent">
                 that drive innovation
               </span>
             </h1>
@@ -31,7 +31,7 @@ export default function Home() {
             </p>
             <ScrollButton
               targetId="contact"
-              className="relative group px-8 py-6 text-lg bg-gradient-to-r from-primary to-purple-500 hover:opacity-90"
+              className="relative group px-8 py-6 text-lg bg-gradient-to-r from-primary to-green-500 hover:opacity-90"
             >
               <span className="relative z-10">Get Started</span>
               <div className="absolute inset-0 bg-white/20 blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
@@ -71,7 +71,7 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="group relative p-8 rounded-2xl border bg-card hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col cursor-pointer">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-green-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative flex flex-col flex-grow">
                 <div className="mb-6 p-3 w-fit rounded-xl bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors duration-300">
                   <Cloud className="h-8 w-8 text-blue-500" />
@@ -194,7 +194,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="group relative p-6 rounded-2xl border bg-card hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-[180px] flex flex-col cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-green-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="relative flex items-start space-x-4 flex-grow">
                   <div className="p-3 rounded-xl bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors duration-300">
                     <Users className="h-6 w-6 text-blue-500" />

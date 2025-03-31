@@ -141,7 +141,7 @@ export default function Work() {
                                 <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
                                     Our Work
                                     <br />
-                                    <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
+                                    <span className="bg-gradient-to-r from-primary to-green-500 bg-clip-text text-transparent">
                                         Success Stories
                                     </span>
                                 </h1>

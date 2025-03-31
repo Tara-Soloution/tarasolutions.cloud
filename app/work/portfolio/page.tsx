@@ -62,7 +62,7 @@ export default function PortfolioPage() {
             {/* Hero Section */}
             <div className="container mx-auto px-4 mb-16">
                 <div className="max-w-3xl mx-auto text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-green-500 bg-clip-text text-transparent">
                         Our Portfolio
                     </h1>
                     <p className="text-xl text-muted-foreground">
@@ -77,10 +77,10 @@ export default function PortfolioPage() {
                     {portfolioItems.map((item, index) => (
                         <div
                             key={index}
-                            className="group rounded-2xl overflow-hidden bg-gradient-to-br from-primary/5 to-purple-500/5 border hover:from-primary/10 hover:to-purple-500/10 transition-all duration-300"
+                            className="group rounded-2xl overflow-hidden bg-gradient-to-br from-primary/5 to-green-500/5 border hover:from-primary/10 hover:to-green-500/10 transition-all duration-300"
                         >
                             <div className="relative h-48">
-                                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20" />
+                                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-green-500/20" />
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <div className="text-4xl font-bold text-primary">
                                         {item.title.charAt(0)}
@@ -110,7 +110,7 @@ export default function PortfolioPage() {
                                 </div>
                                 <a
                                     href={item.link}
-                                    className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-gradient-to-r from-primary to-purple-500 text-white font-medium hover:opacity-90 transition-opacity"
+                                    className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-gradient-to-r from-primary to-green-500 text-white font-medium hover:opacity-90 transition-opacity"
                                 >
                                     View Case Study
                                 </a>
@@ -127,7 +127,7 @@ export default function PortfolioPage() {
                     </p>
                     <a
                         href="/contact"
-                        className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-to-r from-primary to-purple-500 text-white font-medium hover:opacity-90 transition-opacity"
+                        className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-to-r from-primary to-green-500 text-white font-medium hover:opacity-90 transition-opacity"
                     >
                         Get Started
                     </a>

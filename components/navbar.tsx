@@ -15,7 +15,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <div className="relative p-2 rounded-xl bg-gradient-to-br from-primary/10 to-purple-500/10 group-hover:from-primary/20 group-hover:to-purple-500/20 transition-all duration-300">
+            <div className="relative p-2 rounded-xl bg-gradient-to-br from-primary/10 to-green-500/10 group-hover:from-primary/20 group-hover:to-green-500/20 transition-all duration-300">
               <div className="relative w-8 h-8">
                 <Image
                   src="/tara.png"
@@ -239,7 +239,7 @@ export default function Navbar() {
             </div>
 
             <Link href="/contact">
-              <Button className="relative group px-6 py-2 bg-gradient-to-r from-primary to-purple-500 hover:opacity-90">
+              <Button className="relative group px-6 py-2 bg-gradient-to-r from-primary to-green-500 hover:opacity-90">
                 <span className="relative z-10">Get Started</span>
                 <div className="absolute inset-0 bg-white/20 blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
               </Button>
@@ -415,7 +415,7 @@ export default function Navbar() {
             </div>
 
             <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-              <Button className="w-full relative group px-6 py-2 bg-gradient-to-r from-primary to-purple-500 hover:opacity-90">
+              <Button className="w-full relative group px-6 py-2 bg-gradient-to-r from-primary to-green-500 hover:opacity-90">
                 <span className="relative z-10">Get Started</span>
                 <div className="absolute inset-0 bg-white/20 blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
               </Button>

@@ -11,7 +11,7 @@ export default function CompanyPage() {
             {/* Hero Section */}
             <div className="container mx-auto px-4 mb-16">
                 <div className="max-w-3xl mx-auto text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-green-500 bg-clip-text text-transparent">
                         Our Story
                     </h1>
                     <p className="text-xl text-muted-foreground">
@@ -33,7 +33,7 @@ export default function CompanyPage() {
                         </p>
                     </div>
                     <div className="relative h-[400px] rounded-2xl overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-green-500/20" />
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="text-center p-8">
                                 <div className="text-6xl font-bold text-primary mb-4">2018</div>
@@ -45,13 +45,13 @@ export default function CompanyPage() {
 
                 {/* Mission & Vision */}
                 <div className="grid md:grid-cols-2 gap-8 mb-16">
-                    <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-purple-500/5 border">
+                    <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-green-500/5 border">
                         <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
                         <p className="text-muted-foreground">
                             To empower businesses with innovative technology solutions that drive growth, efficiency, and success in the digital era.
                         </p>
                     </div>
-                    <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-purple-500/5 border">
+                    <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-green-500/5 border">
                         <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
                         <p className="text-muted-foreground">
                             To be the global leader in technology solutions, setting new standards for innovation and client success.
@@ -63,19 +63,19 @@ export default function CompanyPage() {
                 <div className="mb-16">
                     <h2 className="text-3xl font-bold mb-8 text-center">Our Core Values</h2>
                     <div className="grid md:grid-cols-3 gap-8">
-                        <div className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-purple-500/5 border">
+                        <div className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-green-500/5 border">
                             <h3 className="text-xl font-semibold mb-3">Innovation</h3>
                             <p className="text-muted-foreground">
                                 We constantly push boundaries and explore new technologies to deliver cutting-edge solutions.
                             </p>
                         </div>
-                        <div className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-purple-500/5 border">
+                        <div className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-green-500/5 border">
                             <h3 className="text-xl font-semibold mb-3">Excellence</h3>
                             <p className="text-muted-foreground">
                                 We maintain the highest standards in everything we do, from code quality to client service.
                             </p>
                         </div>
-                        <div className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-purple-500/5 border">
+                        <div className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-green-500/5 border">
                             <h3 className="text-xl font-semibold mb-3">Integrity</h3>
                             <p className="text-muted-foreground">
                                 We operate with transparency and honesty, building trust with our clients and partners.
@@ -92,7 +92,7 @@ export default function CompanyPage() {
                     </p>
                     <a
                         href="/contact"
-                        className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-to-r from-primary to-purple-500 text-white font-medium hover:opacity-90 transition-opacity"
+                        className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-to-r from-primary to-green-500 text-white font-medium hover:opacity-90 transition-opacity"
                     >
                         Get Started
                     </a>

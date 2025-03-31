@@ -146,7 +146,7 @@ export default function Solutions() {
                                 <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
                                     Technology Solutions
                                     <br />
-                                    <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
+                                    <span className="bg-gradient-to-r from-primary to-green-500 bg-clip-text text-transparent">
                                         that drive innovation
                                     </span>
                                 </h1>
@@ -154,7 +154,7 @@ export default function Solutions() {
                                     Transform your business with cutting-edge technology solutions designed for the modern digital landscape.
                                 </p>
                                 <Link href="/contact">
-                                    <Button className="relative group px-8 py-6 text-lg bg-gradient-to-r from-primary to-purple-500 hover:opacity-90">
+                                    <Button className="relative group px-8 py-6 text-lg bg-gradient-to-r from-primary to-green-500 hover:opacity-90">
                                         <span className="relative z-10">Get Started</span>
                                         <div className="absolute inset-0 bg-white/20 blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
                                     </Button>

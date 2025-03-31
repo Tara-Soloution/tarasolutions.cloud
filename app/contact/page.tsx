@@ -21,7 +21,7 @@ export default function ContactPage() {
                         {/* Hero Section */}
                         <div className="relative pt-32 pb-20 sm:pt-40 sm:pb-24">
                             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                                <h1 className="tracking-tight bg-gradient-to-r from-primary to-purple-300 bg-clip-text text-transparent text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
+                                <h1 className="tracking-tight bg-gradient-to-r from-primary to-green-500 bg-clip-text text-transparent text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
                                     Let's Create Together
                                 </h1>
                                 <p className="max-w-2xl mx-auto text-lg sm:text-xl text-muted-foreground mb-10">
@@ -29,7 +29,7 @@ export default function ContactPage() {
                                     Our team of experts is ready to guide you through your digital journey.
                                 </p>
                                 <Link href="/work">
-                                    <Button className="relative group px-8 py-6 text-lg bg-gradient-to-r from-primary to-purple-500 hover:opacity-90">
+                                    <Button className="relative group px-8 py-6 text-lg bg-gradient-to-r from-primary to-green-500 hover:opacity-90">
                                         <span className="relative z-10">View Our Work</span>
                                         <div className="absolute inset-0 bg-white/20 blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
                                     </Button>

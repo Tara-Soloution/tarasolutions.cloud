@@ -53,7 +53,7 @@ export default function CareersPage() {
             {/* Hero Section */}
             <div className="container mx-auto px-4 mb-16">
                 <div className="max-w-3xl mx-auto text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-green-500 bg-clip-text text-transparent">
                         Join Our Team
                     </h1>
                     <p className="text-xl text-muted-foreground">
@@ -66,19 +66,19 @@ export default function CareersPage() {
             <div className="container mx-auto px-4 mb-16">
                 <h2 className="text-3xl font-bold mb-8 text-center">Why Join Tara Solutions?</h2>
                 <div className="grid md:grid-cols-3 gap-8">
-                    <div className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-purple-500/5 border">
+                    <div className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-green-500/5 border">
                         <h3 className="text-xl font-semibold mb-3">Growth & Learning</h3>
                         <p className="text-muted-foreground">
                             Continuous learning opportunities and career development programs to help you grow professionally.
                         </p>
                     </div>
-                    <div className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-purple-500/5 border">
+                    <div className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-green-500/5 border">
                         <h3 className="text-xl font-semibold mb-3">Work-Life Balance</h3>
                         <p className="text-muted-foreground">
                             Flexible working hours and remote work options to maintain a healthy work-life balance.
                         </p>
                     </div>
-                    <div className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-purple-500/5 border">
+                    <div className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-green-500/5 border">
                         <h3 className="text-xl font-semibold mb-3">Competitive Benefits</h3>
                         <p className="text-muted-foreground">
                             Comprehensive health insurance, competitive salary, and other benefits to support your well-being.
@@ -94,7 +94,7 @@ export default function CareersPage() {
                     {openPositions.map((position, index) => (
                         <div
                             key={index}
-                            className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-purple-500/5 border hover:from-primary/10 hover:to-purple-500/10 transition-all duration-300"
+                            className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-green-500/5 border hover:from-primary/10 hover:to-green-500/10 transition-all duration-300"
                         >
                             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                                 <h3 className="text-xl font-bold">{position.title}</h3>
@@ -116,7 +116,7 @@ export default function CareersPage() {
                             <div className="mt-6">
                                 <a
                                     href={`/contact?position=${encodeURIComponent(position.title)}`}
-                                    className="inline-flex items-center justify-center px-6 py-2 rounded-lg bg-gradient-to-r from-primary to-purple-500 text-white font-medium hover:opacity-90 transition-opacity"
+                                    className="inline-flex items-center justify-center px-6 py-2 rounded-lg bg-gradient-to-r from-primary to-green-500 text-white font-medium hover:opacity-90 transition-opacity"
                                 >
                                     Apply Now
                                 </a>

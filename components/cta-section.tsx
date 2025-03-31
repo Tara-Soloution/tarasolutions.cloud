@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react'
 function CTASection() {
     return (
         <section className="container mx-auto px-4 py-16">
-            <div className="rounded-3xl border bg-gradient-to-r from-primary/10 to-purple-500/10 p-12 text-center backdrop-blur-sm">
+            <div className="rounded-3xl border bg-gradient-to-r from-primary/10 to-green-500/10 p-12 text-center backdrop-blur-sm">
                 <h2 className="text-4xl font-bold tracking-tight mb-4">Ready to Transform Your Business?</h2>
                 <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground mb-8">
                     Let's discuss how our technology solutions can help you achieve your business goals.
@@ -15,7 +15,7 @@ function CTASection() {
                     <Link href="/contact">
                         <Button
                             size="lg"
-                            className="group relative overflow-hidden rounded-full bg-gradient-to-r from-primary to-purple-500 transition-all hover:opacity-90"
+                            className="group relative overflow-hidden rounded-full bg-gradient-to-r from-primary to-green-500 transition-all hover:opacity-90"
                         >
                             <span className="relative z-10 flex items-center text-lg">
                                 Book Your Free Session

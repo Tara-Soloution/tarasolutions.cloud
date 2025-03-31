@@ -51,7 +51,7 @@ export default function TeamPage() {
             {/* Hero Section */}
             <div className="container mx-auto px-4 mb-16">
                 <div className="max-w-3xl mx-auto text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-green-500 bg-clip-text text-transparent">
                         Meet Our Team
                     </h1>
                     <p className="text-xl text-muted-foreground">
@@ -66,10 +66,10 @@ export default function TeamPage() {
                     {teamMembers.map((member, index) => (
                         <div
                             key={index}
-                            className="group p-6 rounded-2xl bg-gradient-to-br from-primary/5 to-purple-500/5 border hover:from-primary/10 hover:to-purple-500/10 transition-all duration-300"
+                            className="group p-6 rounded-2xl bg-gradient-to-br from-primary/5 to-green-500/5 border hover:from-primary/10 hover:to-green-500/10 transition-all duration-300"
                         >
                             <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20" />
+                                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-green-500/20" />
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <div className="text-4xl font-bold text-primary">
                                         {member.name.charAt(0)}
@@ -91,7 +91,7 @@ export default function TeamPage() {
                     </p>
                     <a
                         href="/about/careers"
-                        className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-to-r from-primary to-purple-500 text-white font-medium hover:opacity-90 transition-opacity"
+                        className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-to-r from-primary to-green-500 text-white font-medium hover:opacity-90 transition-opacity"
                     >
                         View Open Positions
                     </a>
