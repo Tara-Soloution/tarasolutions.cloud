@@ -5,6 +5,7 @@ import type { Metadata, Viewport } from "next"
 import MouseMoveEffect from "@/components/mouse-move-effect"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 
@@ -112,6 +113,8 @@ export default function RootLayout({
             </main>
             <Footer />
             <Toaster />
+            <SpeedInsights />
+
           </div>
         </ThemeProvider>
       </body>
