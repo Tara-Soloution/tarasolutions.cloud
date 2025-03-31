@@ -1,9 +1,15 @@
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Users, UserCircle, Building2, Globe, Award, Brain, Rocket, GraduationCap, Mail } from "lucide-react"
-import { Metadata } from "next"
 import Link from "next/link"
-import CTASection from '@/components/cta-section'
 import Image from 'next/image'
+import { Metadata } from "next"
+import { Users, UserCircle, Globe, Award, Brain, Rocket, Mail, Code, Cloud } from "lucide-react"
+
+import { Button } from "@/components/ui/button"
+import CTASection from '@/components/cta-section'
+
+// Function to generate avatar URL
+const getAvatarUrl = (name: string, size: number = 200) => {
+    return `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&size=${size}&background=random&color=fff&bold=true&font-size=0.5`
+}
 
 export const metadata: Metadata = {
     title: "Our Team | Tara Solutions",
@@ -43,60 +49,81 @@ export const metadata: Metadata = {
 
 const leadership = [
     {
-        name: "Sarah Johnson",
+        name: "Abbas Ataie",
         role: "CEO & Founder",
-        bio: "Tech visionary with 15+ years of experience in cloud computing and digital transformation.",
-        image: "/team/sarah.jpg",
-        linkedin: "https://linkedin.com/in/sarah-johnson",
-        email: "sarah@tarasolutions.cloud",
+        bio: "Tech visionary with 6+ years of experience in cloud computing and digital transformation.",
+        image: "/team/abbas-avatar.png",
+        linkedin: "https://www.linkedin.com/in/abbas-ataie-72a4431b9/",
+        twitter: "https://twitter.com/abbasataie",
+        github: "https://github.com/abbasatayee",
+        email: "abbas@tarasolutions.cloud",
+        expertise: ["Cloud Computing", "Digital Transformation", "Leadership"],
     },
     {
-        name: "Michael Chen",
+        name: "Rustam Hussaini",
         role: "CTO",
         bio: "Expert in scalable architecture and cloud-native solutions with a passion for innovation.",
-        image: "/team/michael.jpg",
-        linkedin: "https://linkedin.com/in/michael-chen",
-        email: "michael@tarasolutions.cloud",
+        image: getAvatarUrl("Rustam Hussaini"),
+        linkedin: "https://www.linkedin.com/in/rustam-hussaini-b717101b9/",
+        twitter: "https://twitter.com/rustamhussaini",
+        github: "https://github.com/rustamhussaini",
+        email: "ahmad@tarasolutions.cloud",
+        expertise: ["Cloud Architecture", "System Design", "Innovation"],
     },
     {
-        name: "Emily Rodriguez",
+        name: "Fatima Zahra",
         role: "COO",
         bio: "Operations specialist focused on building efficient, scalable business processes.",
-        image: "/team/emily.jpg",
-        linkedin: "https://linkedin.com/in/emily-rodriguez",
-        email: "emily@tarasolutions.cloud",
+        image: getAvatarUrl("Fatima Zahra"),
+        linkedin: "https://linkedin.com/in/fatima-zahra",
+        twitter: "https://twitter.com/fatimazahra",
+        github: "https://github.com/fatimazahra",
+        email: "fatima@tarasolutions.cloud",
+        expertise: ["Operations", "Process Optimization", "Business Strategy"],
     },
 ]
 
 const departments = [
     {
         name: "Engineering",
-        lead: "David Kim",
+        lead: "Mohammad Hassan",
         role: "Head of Engineering",
+        description: "Building scalable and innovative solutions",
+        icon: Code,
+        color: "text-blue-500",
+        bgColor: "bg-blue-500/10",
         members: [
-            { name: "Alex Thompson", role: "Senior Full Stack Developer" },
-            { name: "Lisa Wang", role: "Cloud Architect" },
-            { name: "James Wilson", role: "DevOps Engineer" },
+            { name: "Zahidullah", role: "Senior Full Stack Developer", expertise: ["React", "Node.js", "AWS"], image: getAvatarUrl("Zahidullah") },
+            { name: "Sara", role: "Cloud Architect", expertise: ["AWS", "Azure", "GCP"], image: getAvatarUrl("Sara") },
+            { name: "Khalid", role: "DevOps Engineer", expertise: ["Kubernetes", "Docker", "CI/CD"], image: getAvatarUrl("Khalid") },
         ],
     },
     {
         name: "Product",
-        lead: "Rachel Martinez",
+        lead: "Laila",
         role: "Head of Product",
+        description: "Creating exceptional user experiences",
+        icon: Brain,
+        color: "text-purple-500",
+        bgColor: "bg-purple-500/10",
         members: [
-            { name: "Tom Lee", role: "Product Manager" },
-            { name: "Sophie Chen", role: "UX Designer" },
-            { name: "Chris Anderson", role: "Product Analyst" },
+            { name: "Omar", role: "Product Manager", expertise: ["Product Strategy", "User Research"], image: getAvatarUrl("Omar") },
+            { name: "Yasmin", role: "UX Designer", expertise: ["UI/UX", "Design Systems"], image: getAvatarUrl("Yasmin") },
+            { name: "Karim", role: "Product Analyst", expertise: ["Data Analysis", "Metrics"], image: getAvatarUrl("Karim") },
         ],
     },
     {
         name: "Cloud Solutions",
-        lead: "Kevin Patel",
+        lead: "Rahim",
         role: "Head of Cloud Solutions",
+        description: "Delivering enterprise-grade cloud solutions",
+        icon: Cloud,
+        color: "text-green-500",
+        bgColor: "bg-green-500/10",
         members: [
-            { name: "Maria Garcia", role: "Cloud Architect" },
-            { name: "Ryan Murphy", role: "Solutions Engineer" },
-            { name: "Anna Smith", role: "Cloud Security Specialist" },
+            { name: "Maryam", role: "Cloud Architect", expertise: ["Cloud Architecture", "Security"], image: getAvatarUrl("Maryam") },
+            { name: "Nasir", role: "Solutions Engineer", expertise: ["Solution Design", "Integration"], image: getAvatarUrl("Nasir") },
+            { name: "Zainab", role: "Cloud Security Specialist", expertise: ["Security", "Compliance"], image: getAvatarUrl("Zainab") },
         ],
     },
 ]
@@ -104,7 +131,7 @@ const departments = [
 const teamStats = [
     {
         title: "Team Size",
-        value: "50+",
+        value: "10+",
         description: "Expert professionals",
         icon: Users,
         color: "text-blue-500",
@@ -112,7 +139,7 @@ const teamStats = [
     },
     {
         title: "Countries",
-        value: "12+",
+        value: "3+",
         description: "Global presence",
         icon: Globe,
         color: "text-green-500",
@@ -120,7 +147,7 @@ const teamStats = [
     },
     {
         title: "Experience",
-        value: "10+",
+        value: "5+",
         description: "Average years",
         icon: Award,
         color: "text-yellow-500",
@@ -128,7 +155,7 @@ const teamStats = [
     },
     {
         title: "Projects",
-        value: "200+",
+        value: "20+",
         description: "Completed",
         icon: Rocket,
         color: "text-purple-500",
