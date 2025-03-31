@@ -54,22 +54,6 @@ export default function Footer({ className = "" }: FooterProps) {
             </div>
           </div>
 
-          {/* Resources */}
-          <div className="space-y-4 sm:space-y-6">
-            <h3 className="text-base sm:text-lg font-semibold">Resources</h3>
-            <div className="flex flex-col space-y-2 sm:space-y-3">
-              <Link href="/blog" className="text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors">
-                Blog
-              </Link>
-              <Link href="/documentation" className="text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors">
-                Documentation
-              </Link>
-              <Link href="/support" className="text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors">
-                Support
-              </Link>
-            </div>
-          </div>
-
           {/* Contact Info */}
           <div className="space-y-4 sm:space-y-6">
             <h3 className="text-base sm:text-lg font-semibold">Contact Us</h3>
