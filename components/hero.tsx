@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export default function Hero() {
   return (
@@ -8,7 +9,7 @@ export default function Hero() {
         <h1 className="bg-gradient-to-br from-foreground from-30% via-foreground/90 to-foreground/70 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl lg:text-7xl">
           Innovate Faster with
           <br />
-          Amane Soft
+          Tara Solutions
         </h1>
         <p className="mx-auto max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
           Empowering businesses with cutting-edge software solutions. From AI-driven analytics to seamless cloud
@@ -16,13 +17,17 @@ export default function Hero() {
         </p>
       </div>
       <div className="flex gap-4">
-        <Button size="lg">
-          Explore Solutions
-          <ArrowRight className="ml-2 h-4 w-4" />
-        </Button>
-        <Button variant="outline" size="lg">
-          Schedule a Demo
-        </Button>
+        <Link href="/solutions">
+          <Button size="lg">
+            Explore Solutions
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
+        <Link href={process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/abbas-ataie-montazer/abbas_meet"} target="_blank" rel="noopener noreferrer">
+          <Button variant="outline" size="lg">
+            Schedule a Demo
+          </Button>
+        </Link>
       </div>
     </section>
   )
