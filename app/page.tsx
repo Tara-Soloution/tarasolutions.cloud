@@ -50,7 +50,7 @@ export default function Home() {
               <div className="text-muted-foreground">Happy Clients</div>
             </div>
             <div className="text-center space-y-2 group cursor-pointer hover:scale-105 transition-transform duration-300">
-              <div className="text-4xl font-bold text-primary">10+</div>
+              <div className="text-4xl font-bold text-primary">5+</div>
               <div className="text-muted-foreground">Years Experience</div>
             </div>
             <div className="text-center space-y-2 group cursor-pointer hover:scale-105 transition-transform duration-300">
