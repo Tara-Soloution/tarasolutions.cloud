@@ -188,47 +188,187 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* Clients Section */}
+        {/* Featured Case Studies Section */}
         <section className="container mx-auto px-4 py-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Trusted by Industry Leaders</h2>
+            <h2 className="text-3xl font-bold mb-4">Featured Case Studies</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              We work with businesses across various industries to deliver exceptional results
+              Discover how we've helped businesses transform their digital presence
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-6 rounded-lg border bg-card hover:shadow-lg transition-shadow">
-              <Building2 className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Enterprise Solutions</h3>
-              <p className="text-muted-foreground">
-                Comprehensive software solutions for large organizations, focusing on scalability and integration.
-              </p>
-              <div className="mt-4 flex items-center space-x-2">
-                <CheckCircle2 className="h-5 w-5 text-primary" />
-                <span className="text-sm text-muted-foreground">Custom Integration</span>
+            <div className="group relative overflow-hidden rounded-2xl border bg-card hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative p-6">
+                <div className="mb-6 flex items-center justify-between">
+                  <div className="p-3 rounded-xl bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors duration-300">
+                    <Building2 className="h-6 w-6 text-blue-500" />
+                  </div>
+                  <div className="px-3 py-1 rounded-full bg-blue-500/10 text-blue-500 text-sm font-medium">
+                    Enterprise
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Global E-commerce Platform</h3>
+                <p className="text-muted-foreground mb-6">
+                  Transformed a traditional retail business into a global e-commerce powerhouse.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center space-x-3">
+                    <div className="h-2 w-2 rounded-full bg-blue-500" />
+                    <span className="text-sm">300% increase in online sales</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="h-2 w-2 rounded-full bg-blue-500" />
+                    <span className="text-sm">Multi-language support</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="h-2 w-2 rounded-full bg-blue-500" />
+                    <span className="text-sm">Advanced analytics dashboard</span>
+                  </div>
+                </div>
+                <div className="mt-auto">
+                  <Link href="/case-studies/ecommerce" className="block w-full">
+                    <div className="flex items-center justify-center w-full px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500/10 to-blue-600/10 hover:from-blue-500/20 hover:to-blue-600/20 transition-all duration-300 group">
+                      <span className="text-primary font-medium group-hover:text-blue-600 transition-colors">View Case Study</span>
+                      <ArrowRight className="ml-2 h-4 w-4 text-primary group-hover:text-blue-600 transition-all group-hover:translate-x-1" />
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
-            <div className="p-6 rounded-lg border bg-card hover:shadow-lg transition-shadow">
-              <Briefcase className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Business Applications</h3>
-              <p className="text-muted-foreground">
-                Streamline your business operations with custom applications and automation tools.
-              </p>
-              <div className="mt-4 flex items-center space-x-2">
-                <CheckCircle2 className="h-5 w-5 text-primary" />
-                <span className="text-sm text-muted-foreground">Process Automation</span>
+
+            <div className="group relative overflow-hidden rounded-2xl border bg-card hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative p-6">
+                <div className="mb-6 flex items-center justify-between">
+                  <div className="p-3 rounded-xl bg-purple-500/10 group-hover:bg-purple-500/20 transition-colors duration-300">
+                    <Briefcase className="h-6 w-6 text-purple-500" />
+                  </div>
+                  <div className="px-3 py-1 rounded-full bg-purple-500/10 text-purple-500 text-sm font-medium">
+                    Business
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Workflow Automation System</h3>
+                <p className="text-muted-foreground mb-6">
+                  Streamlined operations with custom workflow automation solutions.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center space-x-3">
+                    <div className="h-2 w-2 rounded-full bg-purple-500" />
+                    <span className="text-sm">50% reduction in processing time</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="h-2 w-2 rounded-full bg-purple-500" />
+                    <span className="text-sm">Real-time task tracking</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="h-2 w-2 rounded-full bg-purple-500" />
+                    <span className="text-sm">Automated reporting system</span>
+                  </div>
+                </div>
+                <div className="mt-auto">
+                  <Link href="/case-studies/workflow" className="block w-full">
+                    <div className="flex items-center justify-center w-full px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500/10 to-purple-600/10 hover:from-purple-500/20 hover:to-purple-600/20 transition-all duration-300 group">
+                      <span className="text-primary font-medium group-hover:text-purple-600 transition-colors">View Case Study</span>
+                      <ArrowRight className="ml-2 h-4 w-4 text-primary group-hover:text-purple-600 transition-all group-hover:translate-x-1" />
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
-            <div className="p-6 rounded-lg border bg-card hover:shadow-lg transition-shadow">
-              <Rocket className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Startup Solutions</h3>
-              <p className="text-muted-foreground">
-                Rapid development and deployment of innovative solutions for growing businesses.
+
+            <div className="group relative overflow-hidden rounded-2xl border bg-card hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative p-6">
+                <div className="mb-6 flex items-center justify-between">
+                  <div className="p-3 rounded-xl bg-green-500/10 group-hover:bg-green-500/20 transition-colors duration-300">
+                    <Rocket className="h-6 w-6 text-green-500" />
+                  </div>
+                  <div className="px-3 py-1 rounded-full bg-green-500/10 text-green-500 text-sm font-medium">
+                    Startup
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">FinTech Mobile App</h3>
+                <p className="text-muted-foreground mb-6">
+                  Launched a revolutionary fintech solution for modern banking needs.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center space-x-3">
+                    <div className="h-2 w-2 rounded-full bg-green-500" />
+                    <span className="text-sm">100k+ downloads in first month</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="h-2 w-2 rounded-full bg-green-500" />
+                    <span className="text-sm">Secure payment processing</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="h-2 w-2 rounded-full bg-green-500" />
+                    <span className="text-sm">AI-powered insights</span>
+                  </div>
+                </div>
+                <div className="mt-auto">
+                  <Link href="/case-studies/fintech" className="block w-full">
+                    <div className="flex items-center justify-center w-full px-6 py-3 rounded-xl bg-gradient-to-r from-green-500/10 to-green-600/10 hover:from-green-500/20 hover:to-green-600/20 transition-all duration-300 group">
+                      <span className="text-primary font-medium group-hover:text-green-600 transition-colors">View Case Study</span>
+                      <ArrowRight className="ml-2 h-4 w-4 text-primary group-hover:text-green-600 transition-all group-hover:translate-x-1" />
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Client Testimonials */}
+          <div className="mt-16">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl font-bold mb-4">What Our Clients Say</h3>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Hear from businesses that have transformed their digital presence with us
               </p>
-              <div className="mt-4 flex items-center space-x-2">
-                <CheckCircle2 className="h-5 w-5 text-primary" />
-                <span className="text-sm text-muted-foreground">Quick Deployment</span>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="group relative p-8 rounded-2xl border bg-card hover:shadow-xl transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative">
+                  <div className="flex items-center space-x-4 mb-6">
+                    <div className="h-12 w-12 rounded-full bg-blue-500/10 flex items-center justify-center">
+                      <Users className="h-6 w-6 text-blue-500" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">TechCorp Inc.</h4>
+                      <p className="text-sm text-muted-foreground">Enterprise Client</p>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground mb-6">
+                    "Tara Solutions transformed our business operations with their innovative cloud solutions. Their expertise and dedication to quality have been invaluable to our growth."
+                  </p>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle2 className="h-5 w-5 text-blue-500" />
+                    <span className="text-sm text-muted-foreground">Verified Client</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="group relative p-8 rounded-2xl border bg-card hover:shadow-xl transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative">
+                  <div className="flex items-center space-x-4 mb-6">
+                    <div className="h-12 w-12 rounded-full bg-purple-500/10 flex items-center justify-center">
+                      <Rocket className="h-6 w-6 text-purple-500" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">StartupX</h4>
+                      <p className="text-sm text-muted-foreground">Startup Client</p>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground mb-6">
+                    "The team at Tara Solutions helped us launch our MVP in record time. Their agile approach and technical expertise were exactly what we needed."
+                  </p>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle2 className="h-5 w-5 text-purple-500" />
+                    <span className="text-sm text-muted-foreground">Verified Client</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -340,7 +480,7 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="container">
+        <section className="container mx-auto px-4 py-16">
           <div className="rounded-3xl border bg-gradient-to-r from-primary/10 to-purple-500/10 p-12 text-center backdrop-blur-sm">
             <h2 className="text-4xl font-bold tracking-tight mb-4">Ready to Transform Your Business?</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground mb-8">
