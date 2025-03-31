@@ -88,7 +88,8 @@ export default function RootLayout({
         <div className="relative flex min-h-screen flex-col">
           <MouseMoveEffect />
           <Navbar />
-          <main className="flex-1 w-full">{children}</main>
+          <main className="flex-1 w-full">
+            {children}</main>
           <Footer />
         </div>
       </body>
