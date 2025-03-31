@@ -12,52 +12,52 @@ export const metadata: Metadata = {
 
 const caseStudies = [
     {
-        title: "Healthcare Management System",
-        description: "Transformed a healthcare provider's operations with a comprehensive management system.",
-        category: "Healthcare",
-        image: "/images/case-studies/healthcare.jpg",
+        title: "Enterprise CI/CD Pipeline",
+        description: "Implemented a robust CI/CD pipeline for a large enterprise, streamlining their development and deployment processes.",
+        category: "DevOps",
+        image: "/projects/cloud-station.jpg",
+        duration: "3 months",
+        team: "5 members",
+        results: [
+            "90% reduction in deployment time",
+            "Zero downtime deployments",
+            "Automated testing and validation",
+            "Enhanced security compliance"
+        ],
+        tags: ["CI/CD", "DevOps", "Automation", "Cloud Native"],
+        href: "https://cloud-station.io"
+    },
+    {
+        title: "Ahsen Elite E-commerce Platform",
+        description: "Developed a modern e-commerce platform for Ahsen Elite, delivering a seamless shopping experience.",
+        category: "E-commerce",
+        image: "/projects/ahsen-elite.png",
         duration: "6 months",
         team: "8 members",
         results: [
-            "40% reduction in administrative time",
-            "Improved patient satisfaction by 60%",
-            "Streamlined appointment scheduling",
-            "Enhanced data security and compliance"
+            "150% increase in online sales",
+            "40% faster checkout process",
+            "Mobile-first responsive design",
+            "Integrated payment solutions"
         ],
-        tags: ["Healthcare", "Enterprise Software", "Cloud Computing", "Security"],
-        href: "/work/case-studies/healthcare-management"
+        tags: ["E-commerce", "Web Development", "UI/UX", "Payment Integration"],
+        href: "http://ahsenelite.com/"
     },
     {
-        title: "E-commerce Platform Modernization",
-        description: "Revamped an outdated e-commerce platform with modern technology stack.",
-        category: "Retail",
-        image: "/images/case-studies/ecommerce.jpg",
-        duration: "8 months",
-        team: "12 members",
+        title: "Daweo Analytics Dashboard",
+        description: "Created a comprehensive analytics dashboard for Daweo Online, providing real-time insights and data visualization.",
+        category: "Analytics",
+        image: "/projects/daweo.png",
+        duration: "5 months",
+        team: "7 members",
         results: [
-            "200% increase in online sales",
-            "50% faster page load times",
-            "Enhanced mobile experience",
-            "Improved inventory management"
+            "Real-time data processing",
+            "Interactive visualizations",
+            "Custom reporting tools",
+            "Automated data collection"
         ],
-        tags: ["E-commerce", "Web Development", "Mobile Optimization", "Performance"],
-        href: "/work/case-studies/ecommerce-modernization"
-    },
-    {
-        title: "Manufacturing Analytics Dashboard",
-        description: "Developed a real-time analytics dashboard for manufacturing operations.",
-        category: "Manufacturing",
-        image: "/images/case-studies/manufacturing.jpg",
-        duration: "4 months",
-        team: "6 members",
-        results: [
-            "30% increase in production efficiency",
-            "Reduced downtime by 25%",
-            "Better resource allocation",
-            "Real-time monitoring capabilities"
-        ],
-        tags: ["Manufacturing", "Data Analytics", "IoT", "Dashboard"],
-        href: "/work/case-studies/manufacturing-analytics"
+        tags: ["Analytics", "Data Visualization", "Dashboard", "Real-time Processing"],
+        href: "http://daweo.online/"
     }
 ]
 
