@@ -28,7 +28,7 @@ export async function POST(request: Request) {
         // Email content
         const mailOptions = {
             from: process.env.SMTP_USER,
-            to: 'hr@tarasolutions.cloud',
+            to: 'info@tarasolutions.cloud',
             subject: `Contact Form: ${subject}`,
             html: `
         <h2>New Contact Form Submission</h2>
