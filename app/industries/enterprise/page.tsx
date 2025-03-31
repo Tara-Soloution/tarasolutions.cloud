@@ -142,19 +142,19 @@ export default function EnterprisePage() {
                             <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-12">
                                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-indigo-500 mb-2">1000+</div>
+                                        <div className="text-4xl font-bold text-indigo-500 mb-2">100+</div>
                                         <div className="text-muted-foreground">Enterprise Clients</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-indigo-500 mb-2">40%</div>
+                                        <div className="text-4xl font-bold text-indigo-500 mb-2">20%</div>
                                         <div className="text-muted-foreground">Efficiency Increase</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-indigo-500 mb-2">99.9%</div>
+                                        <div className="text-4xl font-bold text-indigo-500 mb-2">98%</div>
                                         <div className="text-muted-foreground">Uptime</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-indigo-500 mb-2">24/7</div>
+                                        <div className="text-4xl font-bold text-indigo-500 mb-2">12/7</div>
                                         <div className="text-muted-foreground">Technical Support</div>
                                     </div>
                                 </div>

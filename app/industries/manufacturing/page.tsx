@@ -142,19 +142,19 @@ export default function ManufacturingPage() {
                             <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-12">
                                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-orange-500 mb-2">200+</div>
+                                        <div className="text-4xl font-bold text-orange-500 mb-2">10+</div>
                                         <div className="text-muted-foreground">Manufacturing Facilities</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-orange-500 mb-2">30%</div>
+                                        <div className="text-4xl font-bold text-orange-500 mb-2">15%</div>
                                         <div className="text-muted-foreground">Efficiency Increase</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-orange-500 mb-2">99.9%</div>
+                                        <div className="text-4xl font-bold text-orange-500 mb-2">95%</div>
                                         <div className="text-muted-foreground">Quality Rate</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-orange-500 mb-2">24/7</div>
+                                        <div className="text-4xl font-bold text-orange-500 mb-2">12/7</div>
                                         <div className="text-muted-foreground">Technical Support</div>
                                     </div>
                                 </div>

@@ -142,19 +142,19 @@ export default function RetailPage() {
                             <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-12">
                                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-green-500 mb-2">500+</div>
+                                        <div className="text-4xl font-bold text-green-500 mb-2">50+</div>
                                         <div className="text-muted-foreground">Retail Locations</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-green-500 mb-2">25%</div>
+                                        <div className="text-4xl font-bold text-green-500 mb-2">10%</div>
                                         <div className="text-muted-foreground">Sales Increase</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-green-500 mb-2">99.9%</div>
+                                        <div className="text-4xl font-bold text-green-500 mb-2">98%</div>
                                         <div className="text-muted-foreground">Uptime</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-green-500 mb-2">24/7</div>
+                                        <div className="text-4xl font-bold text-green-500 mb-2">12/7</div>
                                         <div className="text-muted-foreground">Technical Support</div>
                                     </div>
                                 </div>
