@@ -10,23 +10,35 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://tarasolutions.cloud'),
-  title: {
-    default: "Tara Solutions - Enterprise Software Solutions",
-    template: "%s | Tara Solutions"
+  title: "Tara Solutions - Pioneering Software Solutions",
+  description: "Transform your business with innovative technology solutions. We specialize in cloud, mobile, and web development.",
+  keywords: "software solutions, cloud computing, mobile development, web development, technology consulting, digital transformation",
+  manifest: "/manifest.json",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/icon.svg", type: "image/svg+xml" }
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
+    ],
+    shortcut: ["/favicon.ico"]
   },
-  description: "Tara Solutions delivers innovative, high-performance software solutions for modern businesses. Specializing in cloud infrastructure, web development, and mobile applications.",
-  keywords: [
-    "software solutions",
-    "cloud infrastructure",
-    "web development",
-    "mobile applications",
-    "enterprise software",
-    "digital transformation",
-    "IT consulting",
-    "cloud services",
-    "software development",
-    "technology solutions"
-  ],
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Tara Solutions"
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false
+  },
+  themeColor: "#000000",
   authors: [{ name: "Tara Solutions" }],
   creator: "Tara Solutions",
   publisher: "Tara Solutions",
@@ -40,23 +52,22 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://tarasolutions.cloud",
     siteName: "Tara Solutions",
-    title: "Tara Solutions - Enterprise Software Solutions",
-    description: "Innovative software solutions for modern businesses. Cloud infrastructure, web development, and mobile applications.",
+    title: "Tara Solutions - Pioneering Software Solutions",
+    description: "Transform your business with innovative technology solutions. We specialize in cloud, mobile, and web development.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Tara Solutions",
-      },
-    ],
+        alt: "Tara Solutions"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tara Solutions - Enterprise Software Solutions",
-    description: "Innovative software solutions for modern businesses. Cloud infrastructure, web development, and mobile applications.",
-    images: ["/og-image.png"],
-    creator: "@tarasolutions",
+    title: "Tara Solutions - Pioneering Software Solutions",
+    description: "Transform your business with innovative technology solutions. We specialize in cloud, mobile, and web development.",
+    images: ["/og-image.jpg"]
   },
   robots: {
     index: true,
