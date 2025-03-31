@@ -40,35 +40,17 @@ export const metadata: Metadata = {
     },
 }
 
-const openPositions = [
-    {
-        title: "Senior Full Stack Developer",
-        department: "Engineering",
-        location: "Remote",
-        type: "Full-time",
-        description: "Join our engineering team to build scalable web applications and cloud solutions.",
-        requirements: ["5+ years experience", "React/Next.js", "Node.js", "Cloud platforms"],
-        href: "/careers/senior-full-stack-developer",
-    },
-    {
-        title: "Cloud Solutions Architect",
-        department: "Cloud",
-        location: "Remote",
-        type: "Full-time",
-        description: "Design and implement cloud infrastructure solutions for enterprise clients.",
-        requirements: ["AWS/Azure/GCP", "DevOps", "Infrastructure as Code", "Security"],
-        href: "/careers/cloud-solutions-architect",
-    },
-    {
-        title: "Product Manager",
-        department: "Product",
-        location: "Remote",
-        type: "Full-time",
-        description: "Lead product development and strategy for our technology solutions.",
-        requirements: ["3+ years PM experience", "Agile", "Technical background", "Analytics"],
-        href: "/careers/product-manager",
-    },
-]
+interface Position {
+    title: string;
+    department: string;
+    location: string;
+    type: string;
+    description: string;
+    requirements: string[];
+    href: string;
+}
+
+const openPositions: Position[] = []
 
 const benefits = [
     {
@@ -151,45 +133,58 @@ export default function Careers() {
                                 <p className="text-lg text-muted-foreground">Join us in building the future of technology</p>
                             </div>
                             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                                {openPositions.map((position) => (
-                                    <div
-                                        key={position.title}
-                                        className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20"
-                                    >
-                                        <h3 className="text-2xl font-semibold mb-2">{position.title}</h3>
-                                        <div className="flex flex-wrap gap-2 mb-4">
-                                            <span className="rounded-full bg-accent/50 px-4 py-1.5 text-sm">
-                                                {position.department}
-                                            </span>
-                                            <span className="rounded-full bg-accent/50 px-4 py-1.5 text-sm">
-                                                {position.location}
-                                            </span>
-                                            <span className="rounded-full bg-accent/50 px-4 py-1.5 text-sm">
-                                                {position.type}
-                                            </span>
+                                {openPositions.length === 0 ? (
+                                    <div className="col-span-full flex flex-col items-center justify-center py-12 px-4 text-center">
+                                        <div className="rounded-full bg-accent/50 p-4 mb-6">
+                                            <Briefcase className="h-8 w-8 text-muted-foreground" />
                                         </div>
-                                        <p className="text-muted-foreground mb-6">{position.description}</p>
-                                        <div className="mb-6">
-                                            <h4 className="font-semibold mb-2">Requirements:</h4>
-                                            <ul className="space-y-2">
-                                                {position.requirements.map((req) => (
-                                                    <li key={req} className="flex items-center text-muted-foreground">
-                                                        <span className="mr-2">•</span>
-                                                        {req}
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                        <div className="mt-auto">
-                                            <Link href={position.href}>
-                                                <Button variant="ghost" className="group-hover:bg-primary group-hover:text-primary-foreground">
-                                                    Apply Now
-                                                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                                                </Button>
-                                            </Link>
-                                        </div>
+                                        <h3 className="text-2xl font-semibold mb-2">No Open Positions</h3>
+                                        <p className="text-muted-foreground max-w-md">
+                                            We're not currently hiring, but we're always interested in connecting with talented individuals.
+                                            Feel free to reach out to us at careers@tarasolutions.cloud
+                                        </p>
                                     </div>
-                                ))}
+                                ) : (
+                                    openPositions.map((position: Position) => (
+                                        <div
+                                            key={position.title}
+                                            className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20"
+                                        >
+                                            <h3 className="text-2xl font-semibold mb-2">{position.title}</h3>
+                                            <div className="flex flex-wrap gap-2 mb-4">
+                                                <span className="rounded-full bg-accent/50 px-4 py-1.5 text-sm">
+                                                    {position.department}
+                                                </span>
+                                                <span className="rounded-full bg-accent/50 px-4 py-1.5 text-sm">
+                                                    {position.location}
+                                                </span>
+                                                <span className="rounded-full bg-accent/50 px-4 py-1.5 text-sm">
+                                                    {position.type}
+                                                </span>
+                                            </div>
+                                            <p className="text-muted-foreground mb-6">{position.description}</p>
+                                            <div className="mb-6">
+                                                <h4 className="font-semibold mb-2">Requirements:</h4>
+                                                <ul className="space-y-2">
+                                                    {position.requirements.map((req: string) => (
+                                                        <li key={req} className="flex items-center text-muted-foreground">
+                                                            <span className="mr-2">•</span>
+                                                            {req}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                            <div className="mt-auto">
+                                                <Link href={position.href}>
+                                                    <Button variant="ghost" className="group-hover:bg-primary group-hover:text-primary-foreground">
+                                                        Apply Now
+                                                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                                    </Button>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    ))
+                                )}
                             </div>
                         </section>
 

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Heart, Target, Users, Lightbulb, Shield, Code, Globe, TrendingUp } from "lucide-react"
+import { ArrowRight, Heart, Target, Users, Lightbulb, Shield, Code, Globe, TrendingUp, Zap, Brain, Rocket, Cpu, Network, Cloud } from "lucide-react"
 import { Metadata } from "next"
 import Link from "next/link"
 import CTASection from '@/components/cta-section'
@@ -97,24 +97,34 @@ const stats = [
     },
 ]
 
-const teamMembers = [
+const technologies = [
     {
-        name: "Rustam Hussaini",
-        role: "Founder & CEO",
-        image: "/team/abbas-avatar.png",
-        description: "Visionary leader with extensive experience in technology and business transformation.",
+        title: "Cloud Computing",
+        description: "Leveraging the power of cloud platforms for scalable and efficient solutions.",
+        icon: Cloud,
+        color: "text-blue-500",
+        bgColor: "bg-blue-500/10",
     },
     {
-        name: "Abbas Ataie",
-        role: "CTO",
-        image: "/team/abbas-avatar.png",
-        description: "Technical expert specializing in cloud architecture and enterprise solutions.",
+        title: "AI & Machine Learning",
+        description: "Implementing cutting-edge AI solutions for intelligent automation.",
+        icon: Brain,
+        color: "text-purple-500",
+        bgColor: "bg-purple-500/10",
     },
     {
-        name: "Hakima Merzayee",
-        role: "Lead Developer",
-        image: "/team/hakima.jpg",
-        description: "Full-stack developer with expertise in modern web technologies.",
+        title: "Edge Computing",
+        description: "Optimizing performance with distributed computing solutions.",
+        icon: Cpu,
+        color: "text-green-500",
+        bgColor: "bg-green-500/10",
+    },
+    {
+        title: "5G & IoT",
+        description: "Building connected solutions for the future of technology.",
+        icon: Network,
+        color: "text-orange-500",
+        bgColor: "bg-orange-500/10",
     },
 ]
 
@@ -220,6 +230,28 @@ export default function About() {
                             </div>
                         </section>
 
+                        {/* Technologies Section */}
+                        <section className="container">
+                            <div className="text-center mb-16">
+                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Technology Stack</h2>
+                                <p className="text-lg text-muted-foreground">Cutting-edge technologies we work with</p>
+                            </div>
+                            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                                {technologies.map((tech) => (
+                                    <div
+                                        key={tech.title}
+                                        className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20"
+                                    >
+                                        <div className={`mb-6 inline-flex rounded-xl p-4 ${tech.bgColor}`}>
+                                            <tech.icon className={`h-8 w-8 ${tech.color}`} />
+                                        </div>
+                                        <h3 className="text-xl font-semibold mb-2">{tech.title}</h3>
+                                        <p className="text-muted-foreground">{tech.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
                         {/* Stats Section */}
                         <section className="container">
                             <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-12">
@@ -237,56 +269,34 @@ export default function About() {
                             </div>
                         </section>
 
-                        {/* Team Section */}
-                        <section className="container">
-                            <div className="text-center mb-16">
-                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Team</h2>
-                                <p className="text-lg text-muted-foreground">Meet the people behind our success</p>
-                            </div>
-                            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                                {teamMembers.map((member) => (
-                                    <div
-                                        key={member.name}
-                                        className="group relative overflow-hidden rounded-2xl border bg-card transition-all hover:shadow-lg hover:shadow-primary/20"
-                                    >
-                                        <div className="relative h-64 overflow-hidden">
-                                            <Image
-                                                src={member.image}
-                                                alt={member.name}
-                                                fill
-                                                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                                            />
-                                        </div>
-                                        <div className="p-6">
-                                            <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
-                                            <div className="text-primary mb-3">{member.role}</div>
-                                            <p className="text-muted-foreground">{member.description}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </section>
-
-                        {/* Milestones Section */}
+                        {/* Timeline Section */}
                         <section className="container">
                             <div className="text-center mb-16">
                                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Journey</h2>
-                                <p className="text-lg text-muted-foreground">Key milestones in our growth</p>
+                                <p className="text-lg text-muted-foreground">Milestones that mark our growth</p>
                             </div>
-                            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-                                {milestones.map((milestone, index) => (
-                                    <div
-                                        key={milestone.year}
-                                        className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20"
-                                    >
-                                        <div className="text-3xl font-bold text-primary mb-4">{milestone.year}</div>
-                                        <h3 className="text-xl font-semibold mb-2">{milestone.title}</h3>
-                                        <p className="text-muted-foreground">{milestone.description}</p>
-                                    </div>
-                                ))}
+                            <div className="relative">
+                                <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border transform -translate-x-1/2" />
+                                <div className="space-y-12">
+                                    {milestones.map((milestone, index) => (
+                                        <div key={milestone.year} className="relative">
+                                            <div className={`flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
+                                                <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
+                                                    <div className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20">
+                                                        <div className="absolute right-0 top-0 h-4 w-4 bg-primary rounded-full transform translate-x-1/2 -translate-y-1/2" />
+                                                        <div className="text-sm font-semibold text-primary mb-2">{milestone.year}</div>
+                                                        <h3 className="text-xl font-semibold mb-2">{milestone.title}</h3>
+                                                        <p className="text-muted-foreground">{milestone.description}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </section>
 
+                        {/* CTA Section */}
                         <CTASection />
                     </div>
                 </div>

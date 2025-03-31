@@ -62,7 +62,7 @@ const milestones = [
     {
         year: "2023",
         title: "Team Growth",
-        description: "Our team grew to over 50 experts, serving 500+ clients globally.",
+        description: "Our team grew to over 10 experts, serving 50+ clients globally and delivering 20+ projects.",
         icon: Users,
     },
 ]
@@ -186,15 +186,15 @@ export default function Company() {
                             <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-12">
                                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-primary mb-2">500+</div>
+                                        <div className="text-4xl font-bold text-primary mb-2">20+</div>
                                         <div className="text-muted-foreground">Projects Completed</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-primary mb-2">50+</div>
+                                        <div className="text-4xl font-bold text-primary mb-2">10+</div>
                                         <div className="text-muted-foreground">Expert Team Members</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-primary mb-2">20+</div>
+                                        <div className="text-4xl font-bold text-primary mb-2">3+</div>
                                         <div className="text-muted-foreground">Countries Served</div>
                                     </div>
                                     <div className="text-center">
