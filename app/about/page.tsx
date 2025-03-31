@@ -1,0 +1,317 @@
+import Image from 'next/image'
+import { Button } from "@/components/ui/button"
+import { ArrowRight, Heart, Target, Users, Lightbulb, Rocket, Shield, Code, Globe, Award, Star, TrendingUp } from "lucide-react"
+import { Metadata } from "next"
+import Link from "next/link"
+
+export const metadata: Metadata = {
+    title: "About Us | Tara Solutions",
+    description: "Learn about Tara Solutions - a leading technology company delivering innovative solutions for modern businesses. Discover our mission, values, and the team behind our success.",
+    keywords: [
+        "about us",
+        "company profile",
+        "tech company",
+        "team",
+        "mission",
+        "values",
+        "technology solutions",
+        "innovation",
+        "digital transformation",
+        "software development"
+    ],
+    openGraph: {
+        title: "About Us | Tara Solutions",
+        description: "Learn about Tara Solutions - a leading technology company delivering innovative solutions for modern businesses.",
+        images: [
+            {
+                url: "/about-og.png",
+                width: 1200,
+                height: 630,
+                alt: "About Tara Solutions",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "About Us | Tara Solutions",
+        description: "Learn about Tara Solutions - a leading technology company delivering innovative solutions for modern businesses.",
+        images: ["/about-og.png"],
+    },
+    alternates: {
+        canonical: "https://tarasolutions.cloud/about",
+    },
+}
+
+const values = [
+    {
+        title: "Innovation First",
+        description: "We embrace cutting-edge technologies and creative solutions to solve complex challenges.",
+        icon: Lightbulb,
+        color: "text-yellow-500",
+        bgColor: "bg-yellow-500/10",
+    },
+    {
+        title: "Client Success",
+        description: "Your success is our success. We're committed to delivering exceptional results.",
+        icon: Target,
+        color: "text-green-500",
+        bgColor: "bg-green-500/10",
+    },
+    {
+        title: "Quality Driven",
+        description: "We maintain the highest standards in every project we undertake.",
+        icon: Shield,
+        color: "text-blue-500",
+        bgColor: "bg-blue-500/10",
+    },
+    {
+        title: "Global Reach",
+        description: "We serve clients worldwide with localized solutions and global expertise.",
+        icon: Globe,
+        color: "text-purple-500",
+        bgColor: "bg-purple-500/10",
+    },
+]
+
+const stats = [
+    {
+        number: "500+",
+        label: "Projects Completed",
+        icon: Code,
+    },
+    {
+        number: "50+",
+        label: "Team Members",
+        icon: Users,
+    },
+    {
+        number: "15+",
+        label: "Countries Served",
+        icon: Globe,
+    },
+    {
+        number: "98%",
+        label: "Client Satisfaction",
+        icon: Heart,
+    },
+]
+
+const teamMembers = [
+    {
+        name: "Abbas Aliyev",
+        role: "Founder & CEO",
+        image: "/team/abbas.jpg",
+        description: "Visionary leader with extensive experience in technology and business transformation.",
+    },
+    {
+        name: "Ahsen Saeed",
+        role: "CTO",
+        image: "/team/ahsen.jpg",
+        description: "Technical expert specializing in cloud architecture and enterprise solutions.",
+    },
+    {
+        name: "Hakima Sherzad",
+        role: "Lead Developer",
+        image: "/team/hakima.jpg",
+        description: "Full-stack developer with expertise in modern web technologies.",
+    },
+]
+
+const milestones = [
+    {
+        year: "2020",
+        title: "Company Founded",
+        description: "Tara Solutions was established with a vision to transform digital landscapes.",
+    },
+    {
+        year: "2021",
+        title: "Global Expansion",
+        description: "Extended our services to international markets and grew our team.",
+    },
+    {
+        year: "2022",
+        title: "Innovation Award",
+        description: "Recognized for outstanding contributions to technology innovation.",
+    },
+    {
+        year: "2023",
+        title: "500+ Projects",
+        description: "Achieved milestone of successfully delivering over 500 projects.",
+    },
+]
+
+export default function About() {
+    return (
+        <div className="relative min-h-screen">
+            {/* Background gradients */}
+            <div className="pointer-events-none fixed inset-0">
+                <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
+                <div className="absolute right-0 top-0 h-[500px] w-[500px] bg-blue-500/10 blur-[100px]" />
+                <div className="absolute bottom-0 left-0 h-[500px] w-[500px] bg-purple-500/10 blur-[100px]" />
+            </div>
+
+            <div className="relative z-10">
+                <div className="container mx-auto px-4 pt-24 pb-20">
+                    <div className="space-y-32">
+                        {/* Hero Section */}
+                        <div className="relative pt-32 pb-20 sm:pt-40 sm:pb-24">
+                            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
+                                    About Us
+                                    <br />
+                                    <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
+                                        Our Story
+                                    </span>
+                                </h1>
+                                <p className="max-w-2xl mx-auto text-lg sm:text-xl text-muted-foreground mb-10">
+                                    We're a team of passionate technologists dedicated to transforming businesses through innovative solutions.
+                                </p>
+                                <div className="flex justify-center gap-4">
+                                    <Link href="/contact">
+                                        <Button className="relative group px-8 py-6 text-lg bg-gradient-to-r from-primary to-purple-500 hover:opacity-90">
+                                            <span className="relative z-10">Get Started</span>
+                                            <div className="absolute inset-0 bg-white/20 blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
+                                        </Button>
+                                    </Link>
+                                    <Link href="/work">
+                                        <Button variant="outline" className="px-8 py-6 text-lg">
+                                            View Our Work
+                                            <ArrowRight className="ml-2 h-4 w-4" />
+                                        </Button>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Mission Section */}
+                        <section className="container">
+                            <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-12">
+                                <div className="max-w-3xl mx-auto text-center">
+                                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">Our Mission</h2>
+                                    <p className="text-lg text-muted-foreground leading-relaxed">
+                                        To empower businesses with cutting-edge technology solutions that drive growth,
+                                        innovation, and success in the digital age. We're committed to delivering
+                                        excellence through creativity, expertise, and unwavering dedication to our clients.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        {/* Values Section */}
+                        <section className="container">
+                            <div className="text-center mb-16">
+                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Values</h2>
+                                <p className="text-lg text-muted-foreground">The principles that guide everything we do</p>
+                            </div>
+                            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                                {values.map((value) => (
+                                    <div
+                                        key={value.title}
+                                        className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20"
+                                    >
+                                        <div className={`mb-6 inline-flex rounded-xl p-4 ${value.bgColor}`}>
+                                            <value.icon className={`h-8 w-8 ${value.color}`} />
+                                        </div>
+                                        <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
+                                        <p className="text-muted-foreground">{value.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* Stats Section */}
+                        <section className="container">
+                            <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-12">
+                                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                                    {stats.map((stat) => (
+                                        <div key={stat.label} className="text-center">
+                                            <div className="inline-flex rounded-xl p-4 bg-primary/10 mb-4">
+                                                <stat.icon className="h-8 w-8 text-primary" />
+                                            </div>
+                                            <div className="text-4xl font-bold text-primary mb-2">{stat.number}</div>
+                                            <div className="text-muted-foreground">{stat.label}</div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </section>
+
+                        {/* Team Section */}
+                        <section className="container">
+                            <div className="text-center mb-16">
+                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Team</h2>
+                                <p className="text-lg text-muted-foreground">Meet the people behind our success</p>
+                            </div>
+                            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                                {teamMembers.map((member) => (
+                                    <div
+                                        key={member.name}
+                                        className="group relative overflow-hidden rounded-2xl border bg-card transition-all hover:shadow-lg hover:shadow-primary/20"
+                                    >
+                                        <div className="relative h-64 overflow-hidden">
+                                            <Image
+                                                src={member.image}
+                                                alt={member.name}
+                                                fill
+                                                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                            />
+                                        </div>
+                                        <div className="p-6">
+                                            <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
+                                            <div className="text-primary mb-3">{member.role}</div>
+                                            <p className="text-muted-foreground">{member.description}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* Milestones Section */}
+                        <section className="container">
+                            <div className="text-center mb-16">
+                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Journey</h2>
+                                <p className="text-lg text-muted-foreground">Key milestones in our growth</p>
+                            </div>
+                            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                                {milestones.map((milestone, index) => (
+                                    <div
+                                        key={milestone.year}
+                                        className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20"
+                                    >
+                                        <div className="text-3xl font-bold text-primary mb-4">{milestone.year}</div>
+                                        <h3 className="text-xl font-semibold mb-2">{milestone.title}</h3>
+                                        <p className="text-muted-foreground">{milestone.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* CTA Section */}
+                        <section className="container">
+                            <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-12 text-center">
+                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Join Our Journey</h2>
+                                <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+                                    Ready to work with a team that's passionate about your success? Let's create something amazing together.
+                                </p>
+                                <div className="flex justify-center gap-4">
+                                    <Link href="/contact">
+                                        <Button className="relative group px-8 py-6 text-lg bg-gradient-to-r from-primary to-purple-500 hover:opacity-90">
+                                            <span className="relative z-10">Get in Touch</span>
+                                            <div className="absolute inset-0 bg-white/20 blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
+                                        </Button>
+                                    </Link>
+                                    <Link href="/work">
+                                        <Button variant="outline" className="px-8 py-6 text-lg">
+                                            View Our Work
+                                            <ArrowRight className="ml-2 h-4 w-4" />
+                                        </Button>
+                                    </Link>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+} 
