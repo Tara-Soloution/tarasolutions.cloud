@@ -1,101 +1,213 @@
+import { Button } from "@/components/ui/button"
+import { ArrowRight, Target, Heart, Lightbulb, Users, Building2, Globe, Award, Clock } from "lucide-react"
 import { Metadata } from "next"
+import Link from "next/link"
+import CTASection from '@/components/cta-section'
 
 export const metadata: Metadata = {
-    title: "Our Company | Tara Solutions",
-    description: "Learn about Tara Solutions' story, mission, and values. Discover how we're shaping the future of technology solutions.",
+    title: "About Our Company | Tara Solutions",
+    description: "Learn about Tara Solutions' journey since 2020, our mission, values, and commitment to delivering exceptional technology solutions.",
+    keywords: [
+        "about Tara Solutions",
+        "company history",
+        "tech company",
+        "enterprise solutions",
+        "digital transformation",
+        "technology innovation",
+        "company mission",
+        "company values"
+    ],
+    openGraph: {
+        title: "About Our Company | Tara Solutions",
+        description: "Learn about Tara Solutions' journey since 2020, our mission, values, and commitment to delivering exceptional technology solutions.",
+        images: [
+            {
+                url: "/company-og.png",
+                width: 1200,
+                height: 630,
+                alt: "About Tara Solutions",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "About Our Company | Tara Solutions",
+        description: "Learn about Tara Solutions' journey since 2020, our mission, values, and commitment to delivering exceptional technology solutions.",
+        images: ["/company-og.png"],
+    },
+    alternates: {
+        canonical: "https://tarasolutions.cloud/about/company",
+    },
 }
 
-export default function CompanyPage() {
+const milestones = [
+    {
+        year: "2020",
+        title: "Company Founded",
+        description: "Tara Solutions was established with a vision to transform businesses through innovative technology solutions.",
+        icon: Building2,
+    },
+    {
+        year: "2021",
+        title: "Global Expansion",
+        description: "Expanded operations to serve clients worldwide with our cloud and development solutions.",
+        icon: Globe,
+    },
+    {
+        year: "2022",
+        title: "Industry Recognition",
+        description: "Received multiple awards for innovation and excellence in technology solutions.",
+        icon: Award,
+    },
+    {
+        year: "2023",
+        title: "Team Growth",
+        description: "Our team grew to over 50 experts, serving 500+ clients globally.",
+        icon: Users,
+    },
+]
+
+const values = [
+    {
+        title: "Innovation First",
+        description: "We constantly push boundaries to deliver cutting-edge solutions",
+        icon: Lightbulb,
+        color: "text-yellow-500",
+        bgColor: "bg-yellow-500/10",
+    },
+    {
+        title: "Client Success",
+        description: "Your growth and success are our top priorities",
+        icon: Target,
+        color: "text-blue-500",
+        bgColor: "bg-blue-500/10",
+    },
+    {
+        title: "Integrity",
+        description: "We maintain the highest standards of professional ethics",
+        icon: Heart,
+        color: "text-red-500",
+        bgColor: "bg-red-500/10",
+    },
+    {
+        title: "Excellence",
+        description: "We strive for excellence in every project we undertake",
+        icon: Award,
+        color: "text-purple-500",
+        bgColor: "bg-purple-500/10",
+    },
+]
+
+export default function Company() {
     return (
-        <div className="min-h-screen pt-24 pb-16">
-            {/* Hero Section */}
-            <div className="container mx-auto px-4 mb-16">
-                <div className="max-w-3xl mx-auto text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-green-500 bg-clip-text text-transparent">
-                        Our Story
-                    </h1>
-                    <p className="text-xl text-muted-foreground">
-                        Building the future of technology solutions with innovation and expertise
-                    </p>
-                </div>
+        <div className="relative min-h-screen">
+            {/* Background gradients */}
+            <div className="pointer-events-none fixed inset-0">
+                <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
+                <div className="absolute right-0 top-0 h-[500px] w-[500px] bg-blue-500/10 blur-[100px]" />
+                <div className="absolute bottom-0 left-0 h-[500px] w-[500px] bg-purple-500/10 blur-[100px]" />
             </div>
 
-            {/* Main Content */}
-            <div className="container mx-auto px-4">
-                <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-                    <div>
-                        <h2 className="text-3xl font-bold mb-6">Who We Are</h2>
-                        <p className="text-muted-foreground mb-6">
-                            Tara Solutions is a leading technology consulting and development company dedicated to helping businesses thrive in the digital age. Founded with a vision to bridge the gap between technology and business success, we've grown into a trusted partner for organizations worldwide.
-                        </p>
-                        <p className="text-muted-foreground">
-                            Our journey began with a simple mission: to make technology accessible and beneficial for businesses of all sizes. Today, we continue to uphold this mission while pushing the boundaries of what's possible in the tech world.
-                        </p>
-                    </div>
-                    <div className="relative h-[400px] rounded-2xl overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-green-500/20" />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="text-center p-8">
-                                <div className="text-6xl font-bold text-primary mb-4">2018</div>
-                                <div className="text-xl text-muted-foreground">Year Founded</div>
+            <div className="relative z-10">
+                <div className="container mx-auto px-4 pt-24 pb-20">
+                    <div className="space-y-32">
+                        {/* Hero Section */}
+                        <div className="relative pt-32 pb-20 sm:pt-40 sm:pb-24">
+                            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
+                                    Our Story
+                                    <br />
+                                    <span className="bg-gradient-to-r from-primary to-green-500 bg-clip-text text-transparent">
+                                        Since 2020
+                                    </span>
+                                </h1>
+                                <p className="max-w-2xl mx-auto text-lg sm:text-xl text-muted-foreground mb-10">
+                                    From a small startup to a global technology solutions provider, we've been helping businesses transform and grow through innovative technology.
+                                </p>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                {/* Mission & Vision */}
-                <div className="grid md:grid-cols-2 gap-8 mb-16">
-                    <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-green-500/5 border">
-                        <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-                        <p className="text-muted-foreground">
-                            To empower businesses with innovative technology solutions that drive growth, efficiency, and success in the digital era.
-                        </p>
-                    </div>
-                    <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-green-500/5 border">
-                        <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-                        <p className="text-muted-foreground">
-                            To be the global leader in technology solutions, setting new standards for innovation and client success.
-                        </p>
-                    </div>
-                </div>
+                        {/* Mission Section */}
+                        <section className="container">
+                            <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-12">
+                                <div className="max-w-3xl mx-auto text-center">
+                                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">Our Mission</h2>
+                                    <p className="text-lg text-muted-foreground">
+                                        To empower businesses with cutting-edge technology solutions that drive innovation, efficiency, and growth. We believe in making technology accessible and beneficial for all, from startups to enterprises.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
 
-                {/* Values */}
-                <div className="mb-16">
-                    <h2 className="text-3xl font-bold mb-8 text-center">Our Core Values</h2>
-                    <div className="grid md:grid-cols-3 gap-8">
-                        <div className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-green-500/5 border">
-                            <h3 className="text-xl font-semibold mb-3">Innovation</h3>
-                            <p className="text-muted-foreground">
-                                We constantly push boundaries and explore new technologies to deliver cutting-edge solutions.
-                            </p>
-                        </div>
-                        <div className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-green-500/5 border">
-                            <h3 className="text-xl font-semibold mb-3">Excellence</h3>
-                            <p className="text-muted-foreground">
-                                We maintain the highest standards in everything we do, from code quality to client service.
-                            </p>
-                        </div>
-                        <div className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-green-500/5 border">
-                            <h3 className="text-xl font-semibold mb-3">Integrity</h3>
-                            <p className="text-muted-foreground">
-                                We operate with transparency and honesty, building trust with our clients and partners.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                        {/* Timeline Section */}
+                        <section className="container">
+                            <div className="text-center mb-16">
+                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Journey</h2>
+                                <p className="text-lg text-muted-foreground">Milestones that shaped our growth</p>
+                            </div>
+                            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                                {milestones.map((milestone) => (
+                                    <div key={milestone.year} className="group relative overflow-hidden rounded-2xl border bg-card p-6 transition-all hover:shadow-lg hover:shadow-primary/20">
+                                        <div className="mb-4">
+                                            <milestone.icon className="h-8 w-8 text-primary" />
+                                        </div>
+                                        <div className="text-2xl font-bold text-primary mb-2">{milestone.year}</div>
+                                        <h3 className="text-xl font-semibold mb-2">{milestone.title}</h3>
+                                        <p className="text-muted-foreground">{milestone.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
 
-                {/* CTA Section */}
-                <div className="text-center">
-                    <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>
-                    <p className="text-xl text-muted-foreground mb-8">
-                        Join us in shaping the future of technology
-                    </p>
-                    <a
-                        href="/contact"
-                        className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-to-r from-primary to-green-500 text-white font-medium hover:opacity-90 transition-opacity"
-                    >
-                        Get Started
-                    </a>
+                        {/* Values Section */}
+                        <section className="container">
+                            <div className="text-center mb-16">
+                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Values</h2>
+                                <p className="text-lg text-muted-foreground">The principles that guide everything we do</p>
+                            </div>
+                            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                                {values.map((value) => (
+                                    <div
+                                        key={value.title}
+                                        className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20"
+                                    >
+                                        <div className={`mb-6 inline-flex rounded-xl p-4 ${value.bgColor}`}>
+                                            <value.icon className={`h-8 w-8 ${value.color}`} />
+                                        </div>
+                                        <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
+                                        <p className="text-muted-foreground">{value.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* Stats Section */}
+                        <section className="container">
+                            <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-12">
+                                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                                    <div className="text-center">
+                                        <div className="text-4xl font-bold text-primary mb-2">500+</div>
+                                        <div className="text-muted-foreground">Projects Completed</div>
+                                    </div>
+                                    <div className="text-center">
+                                        <div className="text-4xl font-bold text-primary mb-2">50+</div>
+                                        <div className="text-muted-foreground">Expert Team Members</div>
+                                    </div>
+                                    <div className="text-center">
+                                        <div className="text-4xl font-bold text-primary mb-2">20+</div>
+                                        <div className="text-muted-foreground">Countries Served</div>
+                                    </div>
+                                    <div className="text-center">
+                                        <div className="text-4xl font-bold text-primary mb-2">99%</div>
+                                        <div className="text-muted-foreground">Client Satisfaction</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        {/* CTA Section */}
+                        <CTASection />
+                    </div>
                 </div>
             </div>
         </div>
