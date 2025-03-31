@@ -31,7 +31,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-to-r from-primary to-green-500 text-base font-medium hover:opacity-90 transition-opacity"
+                className="text-primary-foreground inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-to-r from-primary to-green-500 font-medium hover:opacity-90 transition-opacity"
               >
                 Start Your Project
                 <ArrowRight className="ml-2 h-5 w-5" />

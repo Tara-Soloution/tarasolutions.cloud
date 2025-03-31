@@ -281,7 +281,7 @@ export default function Navbar() {
               Our Work
             </Link>
             <Link href="/contact">
-              <Button className="w-full relative group px-6 py-2 bg-gradient-to-r from-primary to-green-500 hover:opacity-90">
+              <Button className="text-primary-foreground w-full relative group px-6 py-2 bg-gradient-to-r from-primary to-green-500 hover:opacity-90">
                 <span className="relative z-10">Get Started</span>
                 <div className="absolute inset-0 bg-white/20 blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
               </Button>
