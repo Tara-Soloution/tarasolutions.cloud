@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Metadata } from "next"
 import BackButton from "@/components/back-button"
 import { WaveIllustration } from "@/components/wave-illustration"
+import CTASection from "@/components/cta-section"
 
 export const metadata: Metadata = {
     title: "Web Development Solutions",
@@ -49,6 +50,8 @@ const features = [
         title: "Web Development",
         description: "Modern and responsive web applications built with cutting-edge technologies.",
         icon: Code,
+        color: "text-blue-500",
+        bgColor: "bg-blue-500/10",
         details: [
             "React & Next.js",
             "TypeScript",
@@ -60,6 +63,8 @@ const features = [
         title: "UI/UX Design",
         description: "Beautiful and intuitive user interfaces that enhance user experience.",
         icon: Palette,
+        color: "text-purple-500",
+        bgColor: "bg-purple-500/10",
         details: [
             "User Research",
             "Wireframing",
@@ -68,20 +73,11 @@ const features = [
         ]
     },
     {
-        title: "Mobile Development",
-        description: "Cross-platform mobile applications for iOS and Android.",
-        icon: Smartphone,
-        details: [
-            "React Native",
-            "Native Apps",
-            "PWA Support",
-            "Mobile Optimization"
-        ]
-    },
-    {
         title: "Backend Development",
         description: "Scalable and secure backend solutions for your applications.",
         icon: Server,
+        color: "text-green-500",
+        bgColor: "bg-green-500/10",
         details: [
             "Node.js",
             "Python",
@@ -93,6 +89,8 @@ const features = [
         title: "Performance Optimization",
         description: "Optimized performance for fast and efficient applications.",
         icon: Zap,
+        color: "text-orange-500",
+        bgColor: "bg-orange-500/10",
         details: [
             "Code Optimization",
             "Caching Strategies",
@@ -104,12 +102,90 @@ const features = [
         title: "Security & Compliance",
         description: "Enterprise-grade security for your web applications.",
         icon: Shield,
+        color: "text-red-500",
+        bgColor: "bg-red-500/10",
         details: [
             "SSL/TLS",
             "Authentication",
             "Authorization",
             "Data Protection"
         ]
+    },
+    {
+        title: "Analytics & Monitoring",
+        description: "Comprehensive analytics and monitoring solutions.",
+        icon: BarChart,
+        color: "text-indigo-500",
+        bgColor: "bg-indigo-500/10",
+        details: [
+            "Performance Metrics",
+            "User Analytics",
+            "Error Tracking",
+            "Real-time Monitoring"
+        ]
+    }
+]
+
+const techStack = [
+    {
+        category: "Frontend",
+        technologies: [
+            { name: "React", icon: "⚛️" },
+            { name: "Next.js", icon: "▲" },
+            { name: "TypeScript", icon: "📘" },
+            { name: "Tailwind CSS", icon: "🎨" },
+            { name: "Redux", icon: "🔄" },
+            { name: "GraphQL", icon: "📊" }
+        ]
+    },
+    {
+        category: "Backend",
+        technologies: [
+            { name: "Node.js", icon: "🟢" },
+            { name: "Python", icon: "🐍" },
+            { name: "PostgreSQL", icon: "🐘" },
+            { name: "MongoDB", icon: "🍃" },
+            { name: "Redis", icon: "🔴" },
+            { name: "Docker", icon: "🐳" }
+        ]
+    },
+    {
+        category: "DevOps",
+        technologies: [
+            { name: "AWS", icon: "☁️" },
+            { name: "GitHub", icon: "🐙" },
+            { name: "CI/CD", icon: "🔄" },
+            { name: "Kubernetes", icon: "⚓" },
+            { name: "Terraform", icon: "🏗️" },
+            { name: "Prometheus", icon: "📊" }
+        ]
+    }
+]
+
+const process = [
+    {
+        step: "01",
+        title: "Discovery & Planning",
+        description: "We analyze your requirements and create a detailed project plan.",
+        icon: Globe
+    },
+    {
+        step: "02",
+        title: "Design & Prototyping",
+        description: "We create beautiful designs and interactive prototypes.",
+        icon: Palette
+    },
+    {
+        step: "03",
+        title: "Development",
+        description: "We build your application using the latest technologies.",
+        icon: Code
+    },
+    {
+        step: "04",
+        title: "Testing & Launch",
+        description: "We thoroughly test and deploy your application.",
+        icon: Zap
     }
 ]
 
@@ -128,37 +204,40 @@ export default function WebPage() {
                     <BackButton href="/solutions" text="Back to Solutions" />
                     <div className="space-y-16">
                         {/* Hero Section */}
-                        <section className="container relative flex min-h-[40vh] max-w-screen-2xl flex-col items-center justify-center overflow-hidden rounded-3xl py-12 text-center md:py-16">
-                            <WaveIllustration className="absolute inset-0" />
-                            <div className="relative z-10 space-y-4">
-                                <h1 className="bg-gradient-to-br from-foreground from-30% via-foreground/90 to-foreground/70 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl lg:text-7xl">
+                        <section className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-3xl py-12 text-center md:py-16">
+                            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/10 to-primary/5" />
+                            <WaveIllustration className="absolute inset-0 w-full" />
+                            <div className="relative z-10 space-y-6">
+                                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-primary/10">
+                                    <Globe className="h-10 w-10 text-primary" />
+                                </div>
+                                <h1 className="bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl lg:text-7xl">
                                     Web Development
                                 </h1>
                                 <p className="mx-auto max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
                                     Create powerful web applications that drive business growth and user engagement.
                                 </p>
-                                <div className="flex flex-wrap justify-center gap-4">
-                                    <Link href="/contact">
-                                        <Button
-                                            size="lg"
-                                            variant="outline"
-                                            className="group relative overflow-hidden rounded-full bg-card transition-all hover:bg-accent hover:text-accent-foreground"
-                                        >
-                                            <span className="relative z-10 flex items-center">
-                                                <Globe className="mr-2 h-4 w-4 transition-transform group-hover:scale-110" />
-                                                Get Started
-                                            </span>
-                                            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-accent/0 via-accent/20 to-accent/0 opacity-0 transition-opacity group-hover:opacity-100" />
-                                        </Button>
-                                    </Link>
+                                <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                                     <Link href="/contact">
                                         <Button
                                             size="lg"
                                             className="group relative overflow-hidden rounded-full bg-primary transition-all hover:bg-primary/90"
                                         >
                                             <span className="relative z-10 flex items-center">
-                                                Contact Us
+                                                Start Your Project
                                                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                            </span>
+                                            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 opacity-0 transition-opacity group-hover:opacity-100" />
+                                        </Button>
+                                    </Link>
+                                    <Link href="#services">
+                                        <Button
+                                            variant="outline"
+                                            size="lg"
+                                            className="group relative overflow-hidden rounded-full"
+                                        >
+                                            <span className="relative z-10 flex items-center">
+                                                Explore Services
                                             </span>
                                             <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 opacity-0 transition-opacity group-hover:opacity-100" />
                                         </Button>
@@ -167,11 +246,37 @@ export default function WebPage() {
                             </div>
                         </section>
 
-                        {/* Features Grid */}
+                        {/* Process Section */}
                         <section className="container space-y-12 py-16 md:py-24">
                             <div className="mx-auto max-w-[58rem] text-center">
-                                <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-5xl">Our Web Services</h2>
-                                <p className="mt-4 text-muted-foreground sm:text-lg">
+                                <h2 className="bg-gradient-to-br from-foreground from-30% via-foreground/90 to-foreground/70 bg-clip-text text-3xl font-bold tracking-tight text-transparent sm:text-3xl md:text-5xl">Our Development Process</h2>
+                                <p className="mt-4 text-muted-foreground/80 sm:text-lg">
+                                    A systematic approach to delivering exceptional web applications
+                                </p>
+                            </div>
+                            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                                {process.map((step) => (
+                                    <div
+                                        key={step.step}
+                                        className="group relative overflow-hidden rounded-xl border bg-card p-8 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5"
+                                    >
+                                        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                                        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary/20">
+                                            <step.icon className="h-7 w-7 text-primary transition-transform group-hover:scale-110" />
+                                        </div>
+                                        <div className="mb-2 text-sm font-medium text-primary">Step {step.step}</div>
+                                        <h3 className="bg-gradient-to-br from-foreground from-30% via-foreground/90 to-foreground/70 bg-clip-text text-xl font-bold tracking-tight text-transparent transition-colors group-hover:text-primary">{step.title}</h3>
+                                        <p className="mt-3 text-base text-muted-foreground/80">{step.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* Features Grid */}
+                        <section id="services" className="container space-y-12 py-16 md:py-24">
+                            <div className="mx-auto max-w-[58rem] text-center">
+                                <h2 className="bg-gradient-to-br from-foreground from-30% via-foreground/90 to-foreground/70 bg-clip-text text-3xl font-bold tracking-tight text-transparent sm:text-3xl md:text-5xl">Our Web Services</h2>
+                                <p className="mt-4 text-muted-foreground/80 sm:text-lg">
                                     End-to-end web development solutions for modern digital experiences
                                 </p>
                             </div>
@@ -179,35 +284,65 @@ export default function WebPage() {
                                 {features.map((feature, index) => (
                                     <div
                                         key={index}
-                                        className="group relative overflow-hidden rounded-xl border bg-card p-8 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 hover:scale-[1.02]"
+                                        className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20"
                                     >
-                                        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-                                        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary/20">
-                                            <feature.icon className="h-7 w-7 text-primary transition-transform group-hover:scale-110" />
+                                        <div className={`mb-6 inline-flex rounded-xl p-4 ${feature.bgColor}`}>
+                                            <feature.icon className={`h-8 w-8 ${feature.color}`} />
                                         </div>
-                                        <h3 className="text-2xl font-bold transition-colors group-hover:text-primary">{feature.title}</h3>
-                                        <p className="mt-3 text-base text-muted-foreground">{feature.description}</p>
-                                        <ul className="mt-6 space-y-3">
-                                            {feature.details.map((detail, detailIndex) => (
-                                                <li
-                                                    key={detailIndex}
-                                                    className="flex items-center gap-3 text-base text-muted-foreground transition-colors group-hover:text-muted-foreground/80"
+                                        <h3 className="mb-3 text-2xl font-semibold">{feature.title}</h3>
+                                        <p className="mb-6 text-muted-foreground">{feature.description}</p>
+                                        <div className="mb-6 flex flex-wrap gap-2">
+                                            {feature.details.map((detail) => (
+                                                <span
+                                                    key={detail}
+                                                    className="rounded-full bg-accent/50 px-4 py-1.5 text-sm"
                                                 >
-                                                    <span className="h-1.5 w-1.5 rounded-full bg-primary transition-transform group-hover:scale-150" />
                                                     {detail}
-                                                </li>
+                                                </span>
                                             ))}
-                                        </ul>
+                                        </div>
                                     </div>
                                 ))}
                             </div>
                         </section>
 
-                        {/* Benefits Section */}
+                        {/* Technology Stack */}
+                        <section className="container space-y-12 py-16 md:py-24">
+                            <div className="mx-auto max-w-[58rem] text-center">
+                                <h2 className="bg-gradient-to-br from-foreground from-30% via-foreground/90 to-foreground/70 bg-clip-text text-3xl font-bold tracking-tight text-transparent sm:text-3xl md:text-5xl">Our Technology Stack</h2>
+                                <p className="mt-4 text-muted-foreground/80 sm:text-lg">
+                                    We use the latest technologies to build powerful web applications
+                                </p>
+                            </div>
+                            <div className="grid gap-8 md:grid-cols-3">
+                                {techStack.map((category) => (
+                                    <div
+                                        key={category.category}
+                                        className="group relative overflow-hidden rounded-xl border bg-card p-8 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5"
+                                    >
+                                        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                                        <h3 className="bg-gradient-to-br from-foreground from-30% via-foreground/90 to-foreground/70 bg-clip-text mb-6 text-xl font-bold tracking-tight text-transparent">{category.category}</h3>
+                                        <div className="grid grid-cols-2 gap-4">
+                                            {category.technologies.map((tech) => (
+                                                <div
+                                                    key={tech.name}
+                                                    className="flex items-center gap-2 rounded-lg bg-accent/50 p-3"
+                                                >
+                                                    <span className="text-xl">{tech.icon}</span>
+                                                    <span className="text-sm font-medium text-muted-foreground/80">{tech.name}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* Why Choose Us Section */}
                         <section className="container space-y-16 py-24 md:py-32">
                             <div className="mx-auto max-w-[58rem] text-center">
-                                <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-5xl">Why Choose Our Web Solutions?</h2>
-                                <p className="mt-4 text-muted-foreground sm:text-lg">
+                                <h2 className="bg-gradient-to-br from-foreground from-30% via-foreground/90 to-foreground/70 bg-clip-text text-3xl font-bold tracking-tight text-transparent sm:text-3xl md:text-5xl">Why Choose Our Web Solutions?</h2>
+                                <p className="mt-4 text-muted-foreground/80 sm:text-lg">
                                     Experience the benefits of our comprehensive web development solutions
                                 </p>
                             </div>
@@ -219,8 +354,8 @@ export default function WebPage() {
                                             <Layout className="h-6 w-6 text-primary" />
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-bold">Modern Design</h3>
-                                            <p className="text-muted-foreground">
+                                            <h3 className="bg-gradient-to-br from-foreground from-30% via-foreground/90 to-foreground/70 bg-clip-text text-xl font-bold tracking-tight text-transparent">Modern Design</h3>
+                                            <p className="text-muted-foreground/80">
                                                 Beautiful and responsive designs that work perfectly across all devices.
                                             </p>
                                         </div>
@@ -230,8 +365,8 @@ export default function WebPage() {
                                             <Code className="h-6 w-6 text-primary" />
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-bold">Clean Code</h3>
-                                            <p className="text-muted-foreground">
+                                            <h3 className="bg-gradient-to-br from-foreground from-30% via-foreground/90 to-foreground/70 bg-clip-text text-xl font-bold tracking-tight text-transparent">Clean Code</h3>
+                                            <p className="text-muted-foreground/80">
                                                 Well-structured and maintainable code following best practices.
                                             </p>
                                         </div>
@@ -241,8 +376,8 @@ export default function WebPage() {
                                             <BarChart className="h-6 w-6 text-primary" />
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-bold">Performance</h3>
-                                            <p className="text-muted-foreground">
+                                            <h3 className="bg-gradient-to-br from-foreground from-30% via-foreground/90 to-foreground/70 bg-clip-text text-xl font-bold tracking-tight text-transparent">Performance</h3>
+                                            <p className="text-muted-foreground/80">
                                                 Optimized performance for fast loading and smooth user experience.
                                             </p>
                                         </div>
@@ -271,28 +406,7 @@ export default function WebPage() {
                         </section>
 
                         {/* CTA Section */}
-                        <section className="container space-y-16 py-24 md:py-32">
-                            <div className="mx-auto max-w-[58rem] text-center">
-                                <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-5xl">Ready to Build Your Web Presence?</h2>
-                                <p className="mt-4 text-muted-foreground sm:text-lg">
-                                    Let's discuss how our web development solutions can help you achieve your goals
-                                </p>
-                            </div>
-                            <div className="flex justify-center">
-                                <Link href="/contact">
-                                    <Button
-                                        size="lg"
-                                        className="group relative overflow-hidden rounded-full bg-primary transition-all hover:bg-primary/90"
-                                    >
-                                        <span className="relative z-10 flex items-center">
-                                            Schedule a Consultation
-                                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                                        </span>
-                                        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 opacity-0 transition-opacity group-hover:opacity-100" />
-                                    </Button>
-                                </Link>
-                            </div>
-                        </section>
+                        <CTASection />
                     </div>
                 </div>
             </div>
