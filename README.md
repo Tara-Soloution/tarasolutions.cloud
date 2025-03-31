@@ -3,6 +3,7 @@
 A modern, responsive website built with Next.js 15, TypeScript, and Tailwind CSS. This project showcases a professional business website with various sections including About, Work, Solutions, Industries, and Contact pages.
 
 
+
 ## 🚀 Features
 
 - Modern and responsive design
