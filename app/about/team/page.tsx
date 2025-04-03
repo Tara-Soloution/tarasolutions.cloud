@@ -67,20 +67,19 @@ const leadership = [
         linkedin: "https://www.linkedin.com/in/abbas-ataie-72a4431b9/",
         twitter: "https://twitter.com/abbasataie",
         github: "https://github.com/abbasatayee",
-        email: "abbas.ataie.montazer@gmail.com",
+        email: "abbas.ataie@tarasolutions.cloud",
         expertise: ["Cloud Computing", "Microservices", "Technical Leadership"],
     },
     {
-        name: "Fatima Zahra",
-        role: "COO",
-        bio: "Operations specialist focused on building efficient, scalable business processes.",
-        image: getAvatarUrl("Fatima Zahra"),
-        linkedin: "https://linkedin.com/in/fatima-zahra",
-        twitter: "https://twitter.com/fatimazahra",
-        github: "https://github.com/fatimazahra",
-        email: "fatima@tarasolutions.cloud",
-        expertise: ["Operations", "Process Optimization", "Business Strategy"],
-    },
+        name: "Hakima Merzayee",
+        role: "Frontend Lead",
+        bio: "Full-stack software engineer with expertise in modern web technologies and a passion for building scalable applications.",
+        image: "/team/hakima-avatar.jpg",
+        linkedin: "https://www.linkedin.com/in/hakima-merzayee/",
+        github: "https://github.com/hakima",
+        email: "hakima.merzayee3@gmail.com",
+        expertise: ["Frontend Development", "Full Stack", "Technical Leadership"],
+    }
 ]
 
 const departments = [
@@ -201,9 +200,9 @@ export default function Team() {
                             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                                 {leadership.map((leader) => (
                                     <div key={leader.name}>
-                                        {leader.name === "Ghulam Abbas Ataie" ? (
+                                        {leader.name === "Ghulam Abbas Ataie" || leader.name === "Hakima Merzayee" ? (
                                             <Link
-                                                href="/about/team/abbas"
+                                                href={`/about/team/${leader.name === "Ghulam Abbas Ataie" ? "abbas" : "hakima"}`}
                                                 className="block group/card transition-all duration-300 hover:scale-[1.02]"
                                             >
                                                 <div className="relative overflow-hidden rounded-2xl border bg-card p-8 transition-all group-hover/card:shadow-xl group-hover/card:shadow-primary/20 group-hover/card:border-primary/50">
