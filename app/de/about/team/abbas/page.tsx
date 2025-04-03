@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         description: "Lernen Sie Ghulam Abbas Ataie kennen, CTO & Mitgründer bei Tara Solutions. Erfahrener Software-Ingenieur mit Expertise in Cloud Computing und Microservices-Architektur.",
         images: [
             {
-                url: "/team/abbas-avatar.png",
+                url: "/team/abbas-avatar.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Ghulam Abbas Ataie",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Ghulam Abbas Ataie | CTO & Mitgründer | Tara Solutions",
         description: "Lernen Sie Ghulam Abbas Ataie kennen, CTO & Mitgründer bei Tara Solutions. Erfahrener Software-Ingenieur mit Expertise in Cloud Computing und Microservices-Architektur.",
-        images: ["/team/abbas-avatar.png"],
+        images: ["/team/abbas-avatar.jpg"],
     },
     alternates: {
         canonical: "https://tarasolutions.cloud/de/about/team/abbas",
@@ -222,7 +222,7 @@ export default function AbbasProfile() {
                             <div className="flex flex-col items-center text-center mb-16">
                                 <div className="relative h-48 w-48 mb-8 rounded-full overflow-hidden ring-4 ring-primary/20">
                                     <Image
-                                        src="/team/abbas-avatar.png"
+                                        src="/team/abbas-avatar.jpg"
                                         alt="Ghulam Abbas Ataie"
                                         fill
                                         className="object-cover"

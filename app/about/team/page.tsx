@@ -63,7 +63,7 @@ const leadership = [
         name: "Ghulam Abbas Ataie",
         role: "CTO & Co-Founder",
         bio: "Results-driven Software Engineer with 5+ years of expertise in cloud computing and microservices architecture.",
-        image: "/team/abbas-avatar.png",
+        image: "/team/abbas-avatar.jpg",
         linkedin: "https://www.linkedin.com/in/abbas-ataie-72a4431b9/",
         twitter: "https://twitter.com/abbasataie",
         github: "https://github.com/abbasatayee",
