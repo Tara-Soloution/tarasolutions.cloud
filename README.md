@@ -4,7 +4,6 @@ A modern, responsive website built with Next.js 15, TypeScript, and Tailwind CSS
 
 ## 🚀 Features
 
-
 - Modern and responsive design
 - Server-side rendering with Next.js 15
 - TypeScript for type safety
