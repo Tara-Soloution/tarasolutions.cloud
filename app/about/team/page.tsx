@@ -52,7 +52,7 @@ const leadership = [
         name: "Rustam Ali Hussaini",
         role: "CEO & Co-Founder",
         bio: "Visionary leader with extensive experience in cloud architecture and business strategy.",
-        image: getAvatarUrl("Rustam Hussaini"),
+        image: "/team/rustam-avatar.png",
         linkedin: "https://www.linkedin.com/in/rustam-hussaini-b717101b9/",
         twitter: "https://twitter.com/rustamhussaini",
         github: "https://github.com/rustamhussaini",
@@ -199,70 +199,40 @@ export default function Team() {
                             </div>
                             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                                 {leadership.map((leader) => (
-                                    <div key={leader.name}>
-                                        {leader.name === "Ghulam Abbas Ataie" || leader.name === "Hakima Merzayee" ? (
-                                            <Link
-                                                href={`/about/team/${leader.name === "Ghulam Abbas Ataie" ? "abbas" : "hakima"}`}
-                                                className="block group/card transition-all duration-300 hover:scale-[1.02]"
-                                            >
-                                                <div className="relative overflow-hidden rounded-2xl border bg-card p-8 transition-all group-hover/card:shadow-xl group-hover/card:shadow-primary/20 group-hover/card:border-primary/50">
-                                                    {/* Hover effect overlay */}
-                                                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity" />
+                                    <div key={leader.name} className="h-[500px]">
+                                        <Link
+                                            href={`/about/team/${leader.name === "Rustam Ali Hussaini" ? "rustam" : leader.name === "Ghulam Abbas Ataie" ? "abbas" : "hakima"}`}
+                                            className="block h-full group/card transition-all duration-300 hover:scale-[1.02]"
+                                        >
+                                            <div className="relative overflow-hidden rounded-2xl border bg-card p-8 transition-all group-hover/card:shadow-xl group-hover/card:shadow-primary/20 group-hover/card:border-primary/50 h-full flex flex-col">
+                                                {/* Hover effect overlay */}
+                                                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity" />
 
-                                                    <div className="relative">
-                                                        <div className="relative h-48 w-48 mx-auto mb-6 rounded-full overflow-hidden ring-2 ring-primary/20 group-hover/card:ring-primary/40">
-                                                            <Image
-                                                                src={leader.image}
-                                                                alt={leader.name}
-                                                                fill
-                                                                className="object-cover"
-                                                            />
-                                                        </div>
-                                                        <h3 className="text-2xl font-semibold text-center mb-2">{leader.name}</h3>
-                                                        <p className="text-primary text-center mb-4">{leader.role}</p>
-                                                        <p className="text-muted-foreground text-center mb-6">{leader.bio}</p>
-                                                        <div className="flex justify-center space-x-4">
-                                                            <Button variant="ghost" size="icon" className="pointer-events-none opacity-70">
-                                                                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                                                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-.88-.016-2.005-1.22-2.005-1.22 0-1.41.952-1.41 1.94v5.669h-3v-11h2.84v1.58h.04c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.866z" />
-                                                                </svg>
-                                                            </Button>
-                                                            <Button variant="ghost" size="icon" className="pointer-events-none opacity-70">
-                                                                <Mail className="h-5 w-5" />
-                                                            </Button>
-                                                        </div>
+                                                <div className="relative flex-1 flex flex-col">
+                                                    <div className="relative h-48 w-48 mx-auto mb-6 rounded-full overflow-hidden ring-2 ring-primary/20 group-hover/card:ring-primary/40">
+                                                        <Image
+                                                            src={leader.image}
+                                                            alt={leader.name}
+                                                            fill
+                                                            className="object-cover"
+                                                        />
                                                     </div>
-                                                </div>
-                                            </Link>
-                                        ) : (
-                                            <div className="relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20">
-                                                <div className="relative h-48 w-48 mx-auto mb-6 rounded-full overflow-hidden">
-                                                    <Image
-                                                        src={leader.image}
-                                                        alt={leader.name}
-                                                        fill
-                                                        className="object-cover"
-                                                    />
-                                                </div>
-                                                <h3 className="text-2xl font-semibold text-center mb-2">{leader.name}</h3>
-                                                <p className="text-primary text-center mb-4">{leader.role}</p>
-                                                <p className="text-muted-foreground text-center mb-6">{leader.bio}</p>
-                                                <div className="flex justify-center space-x-4">
-                                                    <Link href={leader.linkedin} target="_blank" rel="noopener noreferrer">
-                                                        <Button variant="ghost" size="icon">
+                                                    <h3 className="text-2xl font-semibold text-center mb-2">{leader.name}</h3>
+                                                    <p className="text-primary text-center mb-4">{leader.role}</p>
+                                                    <p className="text-muted-foreground text-center mb-6 flex-1">{leader.bio}</p>
+                                                    <div className="flex justify-center space-x-4 mt-auto">
+                                                        <Button variant="ghost" size="icon" className="pointer-events-none opacity-70">
                                                             <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                                                                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-.88-.016-2.005-1.22-2.005-1.22 0-1.41.952-1.41 1.94v5.669h-3v-11h2.84v1.58h.04c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.866z" />
                                                             </svg>
                                                         </Button>
-                                                    </Link>
-                                                    <Link href={`mailto:${leader.email}`}>
-                                                        <Button variant="ghost" size="icon">
+                                                        <Button variant="ghost" size="icon" className="pointer-events-none opacity-70">
                                                             <Mail className="h-5 w-5" />
                                                         </Button>
-                                                    </Link>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        )}
+                                        </Link>
                                     </div>
                                 ))}
                             </div>
