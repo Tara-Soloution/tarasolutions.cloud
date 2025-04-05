@@ -7,20 +7,19 @@ import { Button } from "@/components/ui/button"
 import CTASection from '@/components/cta-section'
 
 export const metadata: Metadata = {
-    title: "Ghulam Abbas Ataie | CTO & Mitgründer | Tara Solutions",
-    description: "Lernen Sie Ghulam Abbas Ataie kennen, CTO & Mitgründer bei Tara Solutions. Erfahrener Software-Ingenieur mit Expertise in Cloud Computing und Microservices-Architektur.",
+    title: "Ghulam Abbas Ataie | CTO | Tara Solutions",
+    description: "Lernen Sie Ghulam Abbas Ataie kennen, CTO bei Tara Solutions. Erfahrener Software-Ingenieur mit Expertise in Cloud Computing und Microservices-Architektur.",
     keywords: [
         "Ghulam Abbas Ataie",
         "CTO",
-        "Mitgründer",
         "Tara Solutions",
         "Cloud Computing",
         "Microservices",
         "Softwareentwicklung"
     ],
     openGraph: {
-        title: "Ghulam Abbas Ataie | CTO & Mitgründer | Tara Solutions",
-        description: "Lernen Sie Ghulam Abbas Ataie kennen, CTO & Mitgründer bei Tara Solutions. Erfahrener Software-Ingenieur mit Expertise in Cloud Computing und Microservices-Architektur.",
+        title: "Ghulam Abbas Ataie | CTO | Tara Solutions",
+        description: "Lernen Sie Ghulam Abbas Ataie kennen, CTO bei Tara Solutions. Erfahrener Software-Ingenieur mit Expertise in Cloud Computing und Microservices-Architektur.",
         images: [
             {
                 url: "/team/abbas-avatar.jpg",
@@ -32,8 +31,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Ghulam Abbas Ataie | CTO & Mitgründer | Tara Solutions",
-        description: "Lernen Sie Ghulam Abbas Ataie kennen, CTO & Mitgründer bei Tara Solutions. Erfahrener Software-Ingenieur mit Expertise in Cloud Computing und Microservices-Architektur.",
+        title: "Ghulam Abbas Ataie | CTO | Tara Solutions",
+        description: "Lernen Sie Ghulam Abbas Ataie kennen, CTO bei Tara Solutions. Erfahrener Software-Ingenieur mit Expertise in Cloud Computing und Microservices-Architektur.",
         images: ["/team/abbas-avatar.jpg"],
     },
     alternates: {
@@ -44,7 +43,7 @@ export const metadata: Metadata = {
 const workExperience = [
     {
         company: "Tara Solutions Inc.",
-        role: "CTO & Mitgründer",
+        role: "CTO",
         period: "Mai 2024 - Heute",
         location: "Remote",
         highlight: "Führend in technischer Innovation und strategischer Entwicklung",
@@ -231,7 +230,7 @@ export default function AbbasProfile() {
                                 <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-4">
                                     Ghulam Abbas Ataie
                                 </h1>
-                                <p className="text-xl text-primary mb-6">CTO & Mitgründer</p>
+                                <p className="text-xl text-primary mb-6">CTO</p>
                                 <p className="max-w-2xl text-lg text-muted-foreground mb-8">
                                     Erfahrener Software-Ingenieur mit über 5 Jahren Expertise in Cloud Computing und Microservices-Architektur.
                                     Spezialisiert auf die Entwicklung skalierbarer und innovativer Technologielösungen.

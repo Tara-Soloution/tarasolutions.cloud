@@ -7,22 +7,19 @@ import { Button } from "@/components/ui/button"
 import CTASection from '@/components/cta-section'
 
 export const metadata: Metadata = {
-    title: "Ghulam Abbas Ataie | CTO & Co-Founder | Tara Solutions",
-    description: "Learn more about Abbas Ataie, CTO & Co-Founder at Tara Solutions. Results-driven Software Engineer with expertise in cloud computing and digital transformation.",
+    title: "Ghulam Abbas Ataie | CTO | Tara Solutions",
+    description: "Meet Ghulam Abbas Ataie, CTO at Tara Solutions. Experienced Software Engineer with expertise in cloud computing and microservices architecture.",
     keywords: [
         "Ghulam Abbas Ataie",
-        "Abbas Ataie",
         "CTO",
-        "Co-Founder",
         "Tara Solutions",
-        "cloud computing",
-        "digital transformation",
-        "tech leadership",
-        "software engineering"
+        "Cloud Computing",
+        "Microservices",
+        "Software Development"
     ],
     openGraph: {
-        title: "Ghulam Abbas Ataie | CTO & Co-Founder | Tara Solutions",
-        description: "Learn more about Abbas Ataie, CTO & Co-Founder at Tara Solutions. Results-driven Software Engineer with expertise in cloud computing and digital transformation.",
+        title: "Ghulam Abbas Ataie | CTO | Tara Solutions",
+        description: "Meet Ghulam Abbas Ataie, CTO at Tara Solutions. Experienced Software Engineer with expertise in cloud computing and microservices architecture.",
         images: [
             {
                 url: "/team/abbas-avatar.jpg",
@@ -34,8 +31,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Ghulam Abbas Ataie | CTO & Co-Founder | Tara Solutions",
-        description: "Learn more about Abbas Ataie, CTO & Co-Founder at Tara Solutions. Results-driven Software Engineer with expertise in cloud computing and digital transformation.",
+        title: "Ghulam Abbas Ataie | CTO | Tara Solutions",
+        description: "Meet Ghulam Abbas Ataie, CTO at Tara Solutions. Experienced Software Engineer with expertise in cloud computing and microservices architecture.",
         images: ["/team/abbas-avatar.jpg"],
     },
     alternates: {
@@ -46,18 +43,18 @@ export const metadata: Metadata = {
 const workExperience = [
     {
         company: "Tara Solutions Inc.",
-        role: "CTO & Co-Founder",
-        period: "January 2024 - Present",
+        role: "CTO",
+        period: "May 2024 - Present",
         location: "Remote",
-        highlight: "Architecting the future of cloud solutions",
+        highlight: "Leading technical innovation and strategic development",
         description: [
-            "Developing cutting-edge web and mobile applications using Node.js, React.js, Nomad, TypeScript, React Native, Kafka, Next.js, and RabbitMQ",
-            "Partnership & Collaboration with Cloud Station LLC FZ (Dubai) to enhance cross-platform functionalities and integrate enterprise cloud solutions",
-            "Leading the technical team, ensuring code quality, scalability, and best practices",
-            "Managing and assigning tasks to developers to ensure efficient execution",
-            "Supporting the architecture and strategic planning of microservices and cloud infrastructures"
+            "Developing and implementing technical vision and strategy",
+            "Leading technical team and fostering innovation",
+            "Developing scalable cloud infrastructures",
+            "Implementing cutting-edge technologies and best practices",
+            "Strategic partnerships and technical alliances"
         ],
-        technologies: ["Node.js", "React.js", "TypeScript", "Kafka", "RabbitMQ", "Microservices"]
+        technologies: ["Cloud Computing", "Microservices", "Technical Leadership", "Innovation"]
     },
     {
         company: "Listoli LLC, USA",
@@ -279,7 +276,7 @@ export default function AbbasProfile() {
                                 <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-4">
                                     Ghulam Abbas Ataie
                                 </h1>
-                                <p className="text-xl text-primary mb-6">CTO & Co-Founder</p>
+                                <p className="text-xl text-primary mb-6">CTO</p>
                                 <p className="max-w-2xl text-lg text-muted-foreground mb-8">
                                     Results-driven Software Engineer with 5+ years of expertise in modern web technologies.
                                     Specializing in scalable cloud solutions and microservices architecture.
