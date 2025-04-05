@@ -3,8 +3,8 @@ import { Mail, Linkedin, Github, Twitter, Award, Code, Brain, Globe, BookOpen, T
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
-import { Timeline, TimelineItem } from "@/components/ui/timeline"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
+import { Timeline, TimelineItem } from "@/components/ui/timeline"
 
 export const metadata: Metadata = {
     title: "Rustam Ali Hussaini | CEO | Tara Solutions",
