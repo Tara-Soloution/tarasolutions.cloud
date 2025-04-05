@@ -19,6 +19,7 @@ A modern, responsive website built with Next.js 15, TypeScript, and Tailwind CSS
 
 ## 🛠️ Tech Stack
 
+
 - **Framework:** Next.js 15
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
