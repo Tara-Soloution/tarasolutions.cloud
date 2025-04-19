@@ -1,15 +1,10 @@
 import Link from "next/link"
 import Image from 'next/image'
 import { Metadata } from "next"
-import { Users, UserCircle, Globe, Award, Brain, Rocket, Mail, Code, Cloud } from "lucide-react"
+import { Users, Globe, Award, Rocket, Mail, Heart, Lightbulb, Shield, Target, Clock, Star, Zap } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import CTASection from '@/components/cta-section'
-
-// Function to generate avatar URL
-const getAvatarUrl = (name: string, size: number = 200) => {
-    return `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&size=${size}&background=random&color=fff&bold=true&font-size=0.5`
-}
 
 export const metadata: Metadata = {
     title: "Our Team | Tara Solutions",
@@ -79,52 +74,48 @@ const leadership = [
         github: "https://github.com/hakima",
         email: "hakima.merzayee3@gmail.com",
         expertise: ["Frontend Development", "Full Stack", "Technical Leadership"],
+    },
+    {
+        name: "Mohammad Mahdi Alizada",
+        role: "Backend Lead",
+        bio: "Full Stack Developer with 4 years of experience in creating innovative and efficient web solutions.",
+        image: "/team/mahdi-avatar.jpg",
+        linkedin: "https://www.linkedin.com/in/mohammad-mahdi-alizada-3a57b2274",
+        github: "https://github.com/mahdializada",
+        email: "mahdializada761@gmail.com",
+        expertise: ["Backend Development", "Full Stack", "Database Design"],
     }
 ]
 
-const departments = [
+const values = [
     {
-        name: "Engineering",
-        lead: "Mohammad Hassan",
-        role: "Head of Engineering",
-        description: "Building scalable and innovative solutions",
-        icon: Code,
+        title: "Innovation",
+        description: "We constantly push boundaries and explore new technologies to deliver cutting-edge solutions.",
+        icon: Lightbulb,
+        color: "text-yellow-500",
+        bgColor: "bg-yellow-500/10"
+    },
+    {
+        title: "Excellence",
+        description: "We strive for perfection in every project, ensuring the highest quality standards.",
+        icon: Star,
         color: "text-blue-500",
-        bgColor: "bg-blue-500/10",
-        members: [
-            { name: "Zahidullah", role: "Senior Full Stack Developer", expertise: ["React", "Node.js", "AWS"], image: getAvatarUrl("Zahidullah") },
-            { name: "Sara", role: "Cloud Architect", expertise: ["AWS", "Azure", "GCP"], image: getAvatarUrl("Sara") },
-            { name: "Khalid", role: "DevOps Engineer", expertise: ["Kubernetes", "Docker", "CI/CD"], image: getAvatarUrl("Khalid") },
-        ],
+        bgColor: "bg-blue-500/10"
     },
     {
-        name: "Product",
-        lead: "Laila",
-        role: "Head of Product",
-        description: "Creating exceptional user experiences",
-        icon: Brain,
-        color: "text-purple-500",
-        bgColor: "bg-purple-500/10",
-        members: [
-            { name: "Omar", role: "Product Manager", expertise: ["Product Strategy", "User Research"], image: getAvatarUrl("Omar") },
-            { name: "Yasmin", role: "UX Designer", expertise: ["UI/UX", "Design Systems"], image: getAvatarUrl("Yasmin") },
-            { name: "Karim", role: "Product Analyst", expertise: ["Data Analysis", "Metrics"], image: getAvatarUrl("Karim") },
-        ],
+        title: "Collaboration",
+        description: "We believe in the power of teamwork and open communication to achieve great results.",
+        icon: Heart,
+        color: "text-red-500",
+        bgColor: "bg-red-500/10"
     },
     {
-        name: "Cloud Solutions",
-        lead: "Rahim",
-        role: "Head of Cloud Solutions",
-        description: "Delivering enterprise-grade cloud solutions",
-        icon: Cloud,
+        title: "Integrity",
+        description: "We maintain the highest ethical standards in all our business practices.",
+        icon: Shield,
         color: "text-green-500",
-        bgColor: "bg-green-500/10",
-        members: [
-            { name: "Maryam", role: "Cloud Architect", expertise: ["Cloud Architecture", "Security"], image: getAvatarUrl("Maryam") },
-            { name: "Nasir", role: "Solutions Engineer", expertise: ["Solution Design", "Integration"], image: getAvatarUrl("Nasir") },
-            { name: "Zainab", role: "Cloud Security Specialist", expertise: ["Security", "Compliance"], image: getAvatarUrl("Zainab") },
-        ],
-    },
+        bgColor: "bg-green-500/10"
+    }
 ]
 
 const teamStats = [
@@ -160,6 +151,46 @@ const teamStats = [
         color: "text-purple-500",
         bgColor: "bg-purple-500/10",
     },
+    {
+        title: "Success Rate",
+        value: "100%",
+        description: "Client satisfaction",
+        icon: Target,
+        color: "text-red-500",
+        bgColor: "bg-red-500/10",
+    },
+    {
+        title: "Response Time",
+        value: "<24h",
+        description: "Average support",
+        icon: Clock,
+        color: "text-indigo-500",
+        bgColor: "bg-indigo-500/10",
+    }
+]
+
+const culture = [
+    {
+        title: "Remote-First",
+        description: "We embrace remote work and provide the tools and support needed for effective collaboration across time zones.",
+        icon: Globe,
+        color: "text-blue-500",
+        bgColor: "bg-blue-500/10"
+    },
+    {
+        title: "Continuous Learning",
+        description: "We encourage and support ongoing education and professional development for all team members.",
+        icon: Zap,
+        color: "text-yellow-500",
+        bgColor: "bg-yellow-500/10"
+    },
+    {
+        title: "Work-Life Balance",
+        description: "We promote a healthy balance between work and personal life, with flexible schedules and wellness initiatives.",
+        icon: Heart,
+        color: "text-green-500",
+        bgColor: "bg-green-500/10"
+    }
 ]
 
 export default function Team() {
@@ -197,11 +228,11 @@ export default function Team() {
                                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Leadership Team</h2>
                                 <p className="text-lg text-muted-foreground">Guiding our vision and strategy</p>
                             </div>
-                            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                            <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                                 {leadership.map((leader) => (
                                     <div key={leader.name} className="h-[500px]">
                                         <Link
-                                            href={`/about/team/${leader.name === "Rustam Ali Hussaini" ? "rustam" : leader.name === "Ghulam Abbas Ataie" ? "abbas" : "hakima"}`}
+                                            href={`/about/team/${leader.name === "Rustam Ali Hussaini" ? "rustam" : leader.name === "Ghulam Abbas Ataie" ? "abbas" : leader.name === "Hakima Merzayee" ? "hakima" : "mahdi"}`}
                                             className="block h-full group/card transition-all duration-300 hover:scale-[1.02]"
                                         >
                                             <div className="relative overflow-hidden rounded-2xl border bg-card p-8 transition-all group-hover/card:shadow-xl group-hover/card:shadow-primary/20 group-hover/card:border-primary/50 h-full flex flex-col">
@@ -209,7 +240,7 @@ export default function Team() {
                                                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity" />
 
                                                 <div className="relative flex-1 flex flex-col">
-                                                    <div className="relative h-48 w-48 mx-auto mb-6 rounded-full overflow-hidden ring-2 ring-primary/20 group-hover/card:ring-primary/40">
+                                                    <div className="relative h-40 w-40 mx-auto mb-6 rounded-full overflow-hidden ring-2 ring-primary/20 group-hover/card:ring-primary/40">
                                                         <Image
                                                             src={leader.image}
                                                             alt={leader.name}
@@ -217,7 +248,7 @@ export default function Team() {
                                                             className="object-cover"
                                                         />
                                                     </div>
-                                                    <h3 className="text-2xl font-semibold text-center mb-2">{leader.name}</h3>
+                                                    <h3 className="text-xl font-semibold text-center mb-2">{leader.name}</h3>
                                                     <p className="text-primary text-center mb-4">{leader.role}</p>
                                                     <p className="text-muted-foreground text-center mb-6 flex-1">{leader.bio}</p>
                                                     <div className="flex justify-center space-x-4 mt-auto">
@@ -238,39 +269,45 @@ export default function Team() {
                             </div>
                         </section>
 
-                        {/* Department Tree Section */}
+                        {/* Values Section */}
                         <section className="container">
                             <div className="text-center mb-16">
-                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Organization</h2>
-                                <p className="text-lg text-muted-foreground">Meet our talented departments</p>
+                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Values</h2>
+                                <p className="text-lg text-muted-foreground">The principles that guide our work</p>
                             </div>
-                            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                                {departments.map((dept) => (
+                            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                                {values.map((value) => (
                                     <div
-                                        key={dept.name}
+                                        key={value.title}
                                         className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20"
                                     >
-                                        <h3 className="text-2xl font-semibold mb-6">{dept.name}</h3>
-                                        <div className="mb-8">
-                                            <div className="flex items-center mb-4">
-                                                <UserCircle className="h-8 w-8 text-primary mr-3" />
-                                                <div>
-                                                    <div className="font-semibold">{dept.lead}</div>
-                                                    <div className="text-sm text-muted-foreground">{dept.role}</div>
-                                                </div>
-                                            </div>
-                                            <div className="space-y-3">
-                                                {dept.members.map((member) => (
-                                                    <div key={member.name} className="flex items-center">
-                                                        <div className="h-2 w-2 rounded-full bg-primary mr-3" />
-                                                        <div>
-                                                            <div className="font-medium">{member.name}</div>
-                                                            <div className="text-sm text-muted-foreground">{member.role}</div>
-                                                        </div>
-                                                    </div>
-                                                ))}
-                                            </div>
+                                        <div className={`mb-6 inline-flex rounded-xl p-4 ${value.bgColor}`}>
+                                            <value.icon className={`h-8 w-8 ${value.color}`} />
                                         </div>
+                                        <h3 className="text-xl font-semibold mb-4">{value.title}</h3>
+                                        <p className="text-muted-foreground">{value.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* Culture Section */}
+                        <section className="container">
+                            <div className="text-center mb-16">
+                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Culture</h2>
+                                <p className="text-lg text-muted-foreground">What makes us unique</p>
+                            </div>
+                            <div className="grid gap-8 md:grid-cols-3">
+                                {culture.map((item) => (
+                                    <div
+                                        key={item.title}
+                                        className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20"
+                                    >
+                                        <div className={`mb-6 inline-flex rounded-xl p-4 ${item.bgColor}`}>
+                                            <item.icon className={`h-8 w-8 ${item.color}`} />
+                                        </div>
+                                        <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
+                                        <p className="text-muted-foreground">{item.description}</p>
                                     </div>
                                 ))}
                             </div>
@@ -282,7 +319,7 @@ export default function Team() {
                                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Team Stats</h2>
                                 <p className="text-lg text-muted-foreground">Numbers that define us</p>
                             </div>
-                            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                                 {teamStats.map((stat) => (
                                     <div
                                         key={stat.title}
