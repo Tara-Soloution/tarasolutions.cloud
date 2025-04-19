@@ -44,7 +44,7 @@ const workExperience = [
     {
         company: "Tara Solutions Inc.",
         role: "CTO",
-        period: "May 2024 - Present",
+        period: "January 2023 - Present",
         location: "Remote",
         highlight: "Leading technical innovation and strategic development",
         description: [
