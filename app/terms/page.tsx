@@ -80,10 +80,10 @@ export default function Terms() {
             </div>
 
             <div className="relative z-10">
-                <div className="container mx-auto px-4 pt-24 pb-20">
+                <div className="pt-24 pb-20">
                     <div className="space-y-32">
                         {/* Hero Section */}
-                        <div className="relative pt-32 pb-20 sm:pt-40 sm:pb-24">
+                        <div className="container mx-auto px-4 py-16 relative pt-32 pb-20 sm:pt-40 sm:pb-24">
                             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                                 <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
                                     Terms of Service
@@ -99,7 +99,7 @@ export default function Terms() {
                         </div>
 
                         {/* Features Section */}
-                        <section className="container">
+                        <section className="container mx-auto px-4 py-16">
                             <div className="text-center mb-16">
                                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Key Terms Overview</h2>
                                 <p className="text-lg text-muted-foreground">Understanding our service agreement</p>
@@ -121,7 +121,7 @@ export default function Terms() {
                         </section>
 
                         {/* Content Sections */}
-                        <section className="container">
+                        <section className="container mx-auto px-4 py-16">
                             <div className="max-w-4xl mx-auto space-y-12">
                                 <div className="text-center mb-16">
                                     <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Detailed Terms</h2>
@@ -167,7 +167,7 @@ export default function Terms() {
                         </section>
 
                         {/* Contact Section */}
-                        <section className="container">
+                        <section className="container mx-auto px-4 py-16">
                             <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-12 text-center">
                                 <div className="max-w-2xl mx-auto">
                                     <div className="inline-flex rounded-xl p-4 bg-primary/10 mb-6">

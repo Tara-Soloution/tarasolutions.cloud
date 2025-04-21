@@ -106,10 +106,10 @@ export default function TestimonialsPage() {
             </div>
 
             <div className="relative z-10">
-                <div className="container mx-auto px-4 pt-24 pb-20">
+                <div className="pt-24 pb-20">
                     <div className="space-y-32">
                         {/* Hero Section */}
-                        <div className="relative pt-32 pb-20 sm:pt-40 sm:pb-24">
+                        <div className="container mx-auto px-4 py-16 relative pt-32 pb-20 sm:pt-40 sm:pb-24">
                             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                                 <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
                                     Client Testimonials
@@ -125,7 +125,7 @@ export default function TestimonialsPage() {
                         </div>
 
                         {/* Stats Section */}
-                        <section className="container">
+                        <section className="container mx-auto px-4 py-16">
                             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                                 {stats.map((stat) => (
                                     <div key={stat.title} className="group relative overflow-hidden rounded-2xl border bg-card p-6 transition-all hover:shadow-lg hover:shadow-primary/20">
@@ -141,7 +141,7 @@ export default function TestimonialsPage() {
                         </section>
 
                         {/* Testimonials Grid */}
-                        <section className="container">
+                        <section className="container mx-auto px-4 py-16">
                             <div className="text-center mb-16">
                                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Client Success Stories</h2>
                                 <p className="text-lg text-muted-foreground">Real feedback from our valued clients</p>
@@ -194,7 +194,7 @@ export default function TestimonialsPage() {
                         </section>
 
                         {/* Industries Section */}
-                        <section className="container">
+                        <section className="container mx-auto px-4 py-16">
                             <div className="text-center mb-16">
                                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Industries We Serve</h2>
                                 <p className="text-lg text-muted-foreground">Trusted by leading companies across sectors</p>
