@@ -50,19 +50,19 @@ export default function Home() {
               software development, we're your partner in growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <Link
                 href="/contact"
                 className="text-primary-foreground inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-to-r from-primary to-green-500 font-medium hover:opacity-90 transition-opacity"
               >
                 Start Your Project
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/solutions"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-lg border border-primary/20 text-base font-medium hover:bg-primary/5 transition-colors"
               >
                 Explore Solutions
-              </a>
+              </Link>
             </div>
           </div>
         </div>
