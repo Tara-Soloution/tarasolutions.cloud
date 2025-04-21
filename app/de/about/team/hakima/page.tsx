@@ -21,22 +21,22 @@ import { Button } from "@/components/ui/button";
 import CTASection from "@/components/cta-section";
 
 export const metadata: Metadata = {
-  title: "Hakima Merzayee | Frontend Lead | Tara Solutions",
+  title: "Hakima Merzayee | Senior Frontend-Entwicklerin | Tara Solutions",
   description:
-    "Lernen Sie Hakima Merzayee kennen, Frontend Lead bei Tara Solutions. Erfahrene Full-Stack-Entwicklerin mit Expertise in modernen Webtechnologien.",
+    "Lernen Sie Hakima Merzayee kennen, Senior Frontend-Entwicklerin bei Tara Solutions. Erfahrene Full-Stack-Entwicklerin mit Expertise in modernen Webtechnologien.",
   keywords: [
     "Hakima Merzayee",
-    "Frontend Lead",
+    "Senior Frontend-Entwicklerin",
+    "Full Stack Engineer",
     "Tara Solutions",
-    "Full Stack",
     "Webentwicklung",
     "React",
     "TypeScript",
   ],
   openGraph: {
-    title: "Hakima Merzayee | Frontend Lead | Tara Solutions",
+    title: "Hakima Merzayee | Senior Frontend-Entwicklerin | Tara Solutions",
     description:
-      "Lernen Sie Hakima Merzayee kennen, Frontend Lead bei Tara Solutions. Erfahrene Full-Stack-Entwicklerin mit Expertise in modernen Webtechnologien.",
+      "Lernen Sie Hakima Merzayee kennen, Senior Frontend-Entwicklerin bei Tara Solutions. Erfahrene Full-Stack-Entwicklerin mit Expertise in modernen Webtechnologien.",
     images: [
       {
         url: "/team/hakima-avatar.jpg",
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hakima Merzayee | Frontend Lead | Tara Solutions",
+    title: "Hakima Merzayee | Senior Frontend-Entwicklerin | Tara Solutions",
     description:
-      "Lernen Sie Hakima Merzayee kennen, Frontend Lead bei Tara Solutions. Erfahrene Full-Stack-Entwicklerin mit Expertise in modernen Webtechnologien.",
+      "Lernen Sie Hakima Merzayee kennen, Senior Frontend-Entwicklerin bei Tara Solutions. Erfahrene Full-Stack-Entwicklerin mit Expertise in modernen Webtechnologien.",
     images: ["/team/hakima-avatar.jpg"],
   },
   alternates: {
@@ -61,107 +61,88 @@ export const metadata: Metadata = {
 const workExperience = [
   {
     company: "Tara Solutions Inc.",
-    role: "Frontend Lead",
-    period: "März 2024 - Heute",
+    role: "Frontend Web-Entwicklerin",
+    period: "Mai 2024 - Heute",
     location: "Remote",
-    highlight: "Führend in Frontend-Entwicklung und UI/UX-Design",
+    highlight: "Entwicklung und Wartung von responsiven Webanwendungen",
     description: [
-      "Leitung des Frontend-Entwicklungsteams",
-      "Entwicklung und Implementierung von UI/UX-Strategien",
-      "Entwicklung skalierbarer Frontend-Architekturen",
-      "Implementierung modernster Webtechnologien",
-      "Mentoring und technische Führung",
+      "Entwicklung und Wartung von responsiven Webanwendungen mit React.js und Next.js",
+      "Zusammenarbeit mit UI/UX-Designern & Backend-Teams zur Optimierung der Benutzererfahrung",
+      "Implementierung von State Management & Performance-Optimierung mit Redux und Context API",
+      "Entwicklung von wiederverwendbaren UI-Komponenten und Custom Hooks",
     ],
-    technologies: [
-      "React",
-      "TypeScript",
-      "UI/UX",
-      "Frontend-Architektur",
-      "Teamführung",
-    ],
+    technologies: ["React.js", "Next.js", "Redux", "Context API", "UI/UX"],
   },
   {
     company: "Listoli LLC, USA",
-    role: "Senior Frontend Developer",
-    period: "Januar 2023 - Februar 2024",
+    role: "Full-Stack Entwicklerin",
+    period: "Februar 2023 - April 2024",
     location: "Remote",
-    highlight: "Entwicklung moderner Webanwendungen",
+    highlight: "Entwicklung von modernen Webanwendungen",
     description: [
-      "Entwicklung und Wartung von Frontend-Systemen",
-      "Implementierung von UI-Komponenten",
-      "Optimierung der Benutzererfahrung",
-      "Entwicklung von Frontend-Architekturen",
-      "Code-Review und Qualitätssicherung",
+      "Entwicklung von responsiven Benutzeroberflächen mit modernen React-Patterns",
+      "Implementierung von OAuth2 und JWT-basierter Authentifizierung",
+      "Durchführung von Unit- und Integration-Tests mit Jest und React Testing Library",
+      "Optimierung der Anwendungsleistung durch Code-Splitting und Lazy Loading",
+    ],
+    technologies: ["React.js", "Node.js", "Jest", "OAuth2", "JWT"],
+  },
+  {
+    company: "Smart Fariqi (Teebalhoor)",
+    role: "Full-Stack Entwicklerin",
+    period: "April 2022 - April 2023",
+    location: "Kabul",
+    highlight: "Entwicklung von Enterprise-Lösungen",
+    description: [
+      "Entwicklung von wiederverwendbaren Frontend-Komponenten",
+      "Implementierung von RESTful APIs und Echtzeit-Funktionalität",
+      "Integration von Datenbank-Systemen und Optimierung der Datenbankabfragen",
+      "Entwicklung und Wartung von Microservices-Architekturen mit Docker und Kubernetes",
     ],
     technologies: [
-      "React",
-      "TypeScript",
-      "UI/UX",
-      "Frontend-Architektur",
-      "Testing",
+      "React.js",
+      "Node.js",
+      "Docker",
+      "Kubernetes",
+      "RESTful APIs",
     ],
   },
   {
-    company: "Click.af",
-    role: "Frontend Developer",
-    period: "März 2022 - Dezember 2022",
+    company: "Bytekent Technology Company",
+    role: "Technische Managerin",
+    period: "Januar 2020 - Januar 2021",
     location: "Kabul",
-    highlight: "Entwicklung von E-Commerce-Frontends",
+    highlight: "Leitung von Entwicklungsprojekten",
     description: [
-      "Entwicklung von E-Commerce-Benutzeroberflächen",
-      "Implementierung von Zahlungssystemen",
-      "Optimierung der Benutzererfahrung",
-      "Entwicklung von Frontend-Komponenten",
-      "Integration von Drittanbieter-Services",
+      "Leitung von Projektplanungssitzungen und Implementierung agiler Entwicklungsmethoden",
+      "Optimierung von Entwicklungsprozessen durch effiziente Arbeitsabläufe",
+      "Erfolgreiche Lieferung von 5+ Großprojekten durch effektives Risikomanagement",
+      "Verbesserung der Team-Produktivität um 30% durch automatisierte Workflows",
     ],
     technologies: [
-      "React",
-      "UI/UX",
-      "E-Commerce",
-      "Frontend-Entwicklung",
-      "API-Integration",
+      "Agile",
+      "Projektmanagement",
+      "Teamführung",
+      "Prozessoptimierung",
+      "Risikomanagement",
     ],
   },
   {
-    company: "BlueBit Networking Services",
-    role: "Frontend Developer",
-    period: "Januar 2021 - Februar 2022",
+    company: "Bassoft IT Services Company",
+    role: "Web-Entwicklerin",
+    period: "April 2018 - Dezember 2019",
     location: "Kabul",
-    highlight: "Entwicklung von Netzwerkmanagement-Tools",
+    highlight: "Entwicklung von Desktop-Anwendungen und Websites",
     description: [
-      "Entwicklung von Netzwerkmanagement-Benutzeroberflächen",
-      "Implementierung von Monitoring-Dashboards",
-      "Entwicklung von Frontend-Komponenten",
-      "Integration von Netzwerkprotokollen",
-      "Optimierung der Benutzererfahrung",
+      "Entwicklung von Desktop-Anwendungen und Websites",
+      "Analyse und Design von Datenbanken",
+      "Durchführung von Softwareprüfungen und -kontrollen",
     ],
     technologies: [
-      "React",
-      "UI/UX",
-      "Netzwerktechnik",
-      "Frontend-Entwicklung",
-      "Dashboard-Design",
-    ],
-  },
-  {
-    company: "IAP",
-    role: "Frontend Developer",
-    period: "Juni 2020 - Dezember 2020",
-    location: "Kabul",
-    highlight: "Entwicklung von Geschäftsanwendungen",
-    description: [
-      "Entwicklung von Geschäftsanwendungs-Benutzeroberflächen",
-      "Implementierung von Frontend-Komponenten",
-      "Entwicklung von Benutzeroberflächen",
-      "Integration von Geschäftsprozessen",
-      "Wartung und Support",
-    ],
-    technologies: [
-      "React",
-      "UI/UX",
-      "Geschäftsanwendungen",
-      "Frontend-Entwicklung",
-      "API-Integration",
+      "Web Development",
+      "Database Design",
+      "Software Testing",
+      "Quality Assurance",
     ],
   },
 ];
@@ -171,68 +152,77 @@ const skills = {
     icon: "🎨",
     title: "Frontend-Entwicklung",
     description: "Entwicklung moderner Benutzeroberflächen",
-    skills: ["React.js", "Next.js", "TypeScript", "UI/UX", "Responsive Design"],
+    skills: [
+      "React.js",
+      "Next.js",
+      "Vue.js",
+      "JavaScript",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+    ],
     color: "from-blue-500 to-cyan-500",
   },
   backend: {
     icon: "⚙️",
     title: "Backend-Entwicklung",
     description: "Entwicklung robuster Serverlösungen",
-    skills: ["Node.js", "Express", "RESTful APIs", "GraphQL", "MongoDB"],
+    skills: ["PHP", "Laravel", "Node.js", "Express.js", "RESTful APIs"],
     color: "from-green-500 to-emerald-500",
   },
-  testing: {
-    icon: "🧪",
-    title: "Testing & Qualität",
-    description: "Qualitätssicherung und Tests",
-    skills: [
-      "Jest",
-      "React Testing Library",
-      "Cypress",
-      "E2E Testing",
-      "Unit Testing",
-    ],
+  database: {
+    icon: "🗄️",
+    title: "Datenbanken",
+    description: "Datenbankmanagement und Optimierung",
+    skills: ["MySQL", "PostgreSQL", "MongoDB"],
     color: "from-purple-500 to-pink-500",
   },
   tools: {
     icon: "🛠️",
-    title: "Tools & Technologien",
+    title: "Tools & Methoden",
     description: "Entwicklungs- und Produktivitätstools",
-    skills: ["Git", "Docker", "VS Code", "Figma", "Jira"],
+    skills: ["Git", "Docker", "Testing", "CI/CD", "Agile"],
     color: "from-orange-500 to-red-500",
   },
 };
 
 const projects = [
   {
-    name: "E-Commerce Platform",
-    description: "Moderne E-Commerce-Lösung",
+    name: "Hautkrankheiten-Erkennungssystem",
+    description:
+      "KI-gestütztes Deep Learning-System zur Erkennung von Hautkrankheiten",
     highlights: [
-      "Responsive Design und optimierte Benutzererfahrung",
-      "Hochperformante Frontend-Architektur",
-      "Integration von Zahlungssystemen",
-      "Echtzeit-Inventarmanagement",
+      "Präzise Erkennung von 5 spezifischen Hautkrankheiten",
+      "Verwendung von CNN für Bildanalyse",
+      "Deep Learning-basierte Lösung",
     ],
-    technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Redux"],
+    technologies: ["Deep Learning", "Python", "TensorFlow"],
   },
   {
-    name: "Netzwerkmanagement Dashboard",
-    description: "Umfassendes Netzwerkmanagement-Tool",
+    name: "Enterprise Management Suite",
+    description: "Umfassende Enterprise-Management-Plattform",
     highlights: [
-      "Echtzeit-Netzwerkmonitoring",
-      "Interaktive Visualisierungen",
-      "Benutzerfreundliche Oberfläche",
-      "Anpassbare Dashboards",
+      "Integrierte Module für Benutzer-, Datei-, Produkt-, und Aufgabenverwaltung",
+      "Skalierbare Architektur",
+      "Moderne Benutzeroberfläche",
     ],
-    technologies: ["React", "D3.js", "WebSocket", "Material-UI", "Chart.js"],
+    technologies: ["React.js", "Node.js", "Laravel"],
   },
 ];
 
 const education = [
   {
+    school: "University of Europe for Applied Sciences",
+    degree: "Master in Datenwissenschaft",
+    period: "März 2025 - Heute",
+    location: "Remote",
+    description:
+      "Hochqualifiziertes Masterprogramm mit Fokus auf modernste Technologien und Methoden. Kernfächer: Data Science, Data Engineering, Data Analytics, Machine Learning. Spezialisierung: Cloud Computing, Decision Support Systems.",
+  },
+  {
     school: "Kabul Polytechnic University",
     degree: "Bachelor in Informatik",
-    period: "2018 - 2022",
+    period: "März 2016 - August 2019",
     location: "Kabul",
     description:
       "Grundlegende Ausbildung in Informatik und Softwareentwicklung.",
@@ -241,20 +231,15 @@ const education = [
 
 const languages = [
   { name: "Dari", level: "Muttersprache", icon: "🌟" },
-  { name: "Englisch", level: "B2 (Fortgeschritten)", icon: "🌍" },
-  { name: "Deutsch", level: "A2 (Mittelstufe)", icon: "🇩🇪" },
+  { name: "Englisch", level: "B2", icon: "🌍" },
+  { name: "Deutsch", level: "A1", icon: "🇩🇪" },
 ];
 
 const awards = [
   {
-    title: "Best Frontend Developer",
-    description: "Tara Solutions 2023",
+    title: "Duolingo English Test",
+    description: "Punktzahl: 105/120",
     icon: "🏆",
-  },
-  {
-    title: "Duolingo English Proficiency",
-    description: "Score: 120/120",
-    icon: "🎯",
   },
 ];
 
@@ -272,7 +257,7 @@ export default function HakimaProfile() {
         <div className="pt-24 pb-20">
           <div className="space-y-32">
             {/* Hero Section */}
-            <div className="container mx-auto px-4 ">
+            <div className="container mx-auto px-4">
               <div className="relative pt-32 pb-20 sm:pt-40 sm:pb-24">
                 <div className="flex flex-col items-center text-center mb-16">
                   <div className="relative h-48 w-48 mb-8 rounded-full overflow-hidden ring-4 ring-primary/20">
@@ -286,12 +271,15 @@ export default function HakimaProfile() {
                   <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-4">
                     Hakima Merzayee
                   </h1>
-                  <p className="text-xl text-primary mb-6">Frontend Lead</p>
+                  <p className="text-xl text-primary mb-6">
+                    Senior Frontend-Entwicklerin | Full Stack Engineer
+                  </p>
                   <p className="max-w-2xl text-lg text-muted-foreground mb-8">
-                    Erfahrene Full-Stack-Entwicklerin mit über 4 Jahren
-                    Expertise in modernen Webtechnologien. Spezialisiert auf die
-                    Entwicklung skalierbarer und benutzerfreundlicher
-                    Webanwendungen.
+                    Erfahrene Full-Stack-Entwicklerin mit fundierter Expertise
+                    in Frontend- und Backend-Entwicklung. Spezialisiert auf
+                    React.js, Next.js, PHP/Laravel und Node.js. Nachgewiesene
+                    Erfolge in der Entwicklung skalierbarer Webanwendungen und
+                    der Implementierung von benutzerfreundlichen Schnittstellen.
                   </p>
                   <div className="flex flex-wrap justify-center gap-4 mb-8">
                     <div className="flex items-center space-x-2 text-muted-foreground">
@@ -300,11 +288,11 @@ export default function HakimaProfile() {
                     </div>
                     <div className="flex items-center space-x-2 text-muted-foreground">
                       <Phone className="h-4 w-4" />
-                      <span>+93 700000000</span>
+                      <span>+989932818276</span>
                     </div>
                     <div className="flex items-center space-x-2 text-muted-foreground">
                       <MapPin className="h-4 w-4" />
-                      <span>Kabul, Afghanistan</span>
+                      <span>Tehran, Qarchak, Iran</span>
                     </div>
                   </div>
                   <div className="flex space-x-4">
@@ -320,7 +308,10 @@ export default function HakimaProfile() {
                         <Linkedin className="h-5 w-5" />
                       </Button>
                     </Link>
-                    <Link href="https://github.com/hakima" target="_blank">
+                    <Link
+                      href="https://github.com/hakimamerzayee"
+                      target="_blank"
+                    >
                       <Button
                         variant="ghost"
                         size="icon"
