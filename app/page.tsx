@@ -1,6 +1,22 @@
-import { ArrowRight, CheckCircle2, Code2, Globe2, Shield, Zap, Users, Cloud, Code, Smartphone, Star, Award, Target, Clock } from "lucide-react"
-import CTASection from "@/components/cta-section"
-import Link from "next/link"
+import {
+  ArrowRight,
+  CheckCircle2,
+  Code2,
+  Globe2,
+  Shield,
+  Zap,
+  Users,
+  Cloud,
+  Code,
+  Smartphone,
+  Star,
+  Award,
+  Target,
+  Clock,
+  Server,
+} from "lucide-react";
+import CTASection from "@/components/cta-section";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -17,7 +33,9 @@ export default function Home() {
         <div id="home" className="relative pt-32 pb-32 sm:pt-40 sm:pb-40">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary mb-8">
-              <span className="text-sm font-medium">Trusted by 10+ Global Clients</span>
+              <span className="text-sm font-medium">
+                Trusted by 10+ Global Clients
+              </span>
             </div>
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
               Empowering Digital
@@ -27,7 +45,9 @@ export default function Home() {
               </span>
             </h1>
             <p className="max-w-2xl mx-auto text-lg sm:text-xl text-muted-foreground mb-10">
-              We craft innovative technology solutions that help businesses thrive in the digital age. From cloud infrastructure to custom software development, we're your partner in growth.
+              We craft innovative technology solutions that help businesses
+              thrive in the digital age. From cloud infrastructure to custom
+              software development, we're your partner in growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -72,9 +92,12 @@ export default function Home() {
         {/* Features Section */}
         <section className="container mx-auto px-4 py-24">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Why Businesses Choose Us</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              Why Businesses Choose Us
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              We combine technical expertise with business acumen to deliver exceptional results
+              We combine technical expertise with business acumen to deliver
+              exceptional results
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -84,7 +107,8 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Proven Excellence</h3>
               <p className="text-muted-foreground">
-                Award-winning solutions that consistently exceed client expectations
+                Award-winning solutions that consistently exceed client
+                expectations
               </p>
             </div>
             <div className="group p-6 rounded-2xl border bg-card hover:shadow-xl transition-all duration-300">
@@ -109,7 +133,9 @@ export default function Home() {
               <div className="p-3 w-fit rounded-xl bg-orange-500/10 mb-4">
                 <Star className="h-6 w-6 text-orange-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Client Satisfaction</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                Client Satisfaction
+              </h3>
               <p className="text-muted-foreground">
                 Dedicated support ensuring your complete satisfaction
               </p>
@@ -134,12 +160,15 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-semibold mb-3">Cloud Solutions</h3>
                 <p className="text-muted-foreground mb-6">
-                  Harness the power of cloud computing with our scalable and secure infrastructure solutions.
+                  Harness the power of cloud computing with our scalable and
+                  secure infrastructure solutions.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center space-x-3">
                     <CheckCircle2 className="h-4 w-4 text-blue-500" />
-                    <span className="text-sm">Cloud Migration & Integration</span>
+                    <span className="text-sm">
+                      Cloud Migration & Integration
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle2 className="h-4 w-4 text-blue-500" />
@@ -157,7 +186,9 @@ export default function Home() {
                 <div className="mt-auto">
                   <Link href="/solutions/cloud">
                     <div className="flex items-center justify-center w-full px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500/10 to-blue-600/10 hover:from-blue-500/20 hover:to-blue-600/20 transition-all duration-300 group">
-                      <span className="text-primary font-medium group-hover:text-blue-600 transition-colors">Learn More</span>
+                      <span className="text-primary font-medium group-hover:text-blue-600 transition-colors">
+                        Learn More
+                      </span>
                       <ArrowRight className="ml-2 h-4 w-4 text-primary group-hover:text-blue-600 transition-all group-hover:translate-x-1" />
                     </div>
                   </Link>
@@ -173,7 +204,8 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-semibold mb-3">Web Development</h3>
                 <p className="text-muted-foreground mb-6">
-                  Create powerful web applications that drive business growth and user engagement.
+                  Create powerful web applications that drive business growth
+                  and user engagement.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center space-x-3">
@@ -196,7 +228,9 @@ export default function Home() {
                 <div className="mt-auto">
                   <Link href="/solutions/web">
                     <div className="flex items-center justify-center w-full px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500/10 to-purple-600/10 hover:from-purple-500/20 hover:to-purple-600/20 transition-all duration-300 group">
-                      <span className="text-primary font-medium group-hover:text-purple-600 transition-colors">Learn More</span>
+                      <span className="text-primary font-medium group-hover:text-purple-600 transition-colors">
+                        Learn More
+                      </span>
                       <ArrowRight className="ml-2 h-4 w-4 text-primary group-hover:text-purple-600 transition-all group-hover:translate-x-1" />
                     </div>
                   </Link>
@@ -210,9 +244,12 @@ export default function Home() {
                 <div className="mb-6 p-3 w-fit rounded-xl bg-green-500/10 group-hover:bg-green-500/20 transition-colors duration-300">
                   <Smartphone className="h-8 w-8 text-green-500" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-3">Mobile Development</h3>
+                <h3 className="text-2xl font-semibold mb-3">
+                  Mobile Development
+                </h3>
                 <p className="text-muted-foreground mb-6">
-                  Build powerful mobile applications that deliver exceptional user experiences across iOS and Android platforms.
+                  Build powerful mobile applications that deliver exceptional
+                  user experiences across iOS and Android platforms.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center space-x-3">
@@ -235,7 +272,149 @@ export default function Home() {
                 <div className="mt-auto">
                   <Link href="/solutions/mobile">
                     <div className="flex items-center justify-center w-full px-6 py-3 rounded-xl bg-gradient-to-r from-green-500/10 to-green-600/10 hover:from-green-500/20 hover:to-green-600/20 transition-all duration-300 group">
-                      <span className="text-primary font-medium group-hover:text-green-600 transition-colors">Learn More</span>
+                      <span className="text-primary font-medium group-hover:text-green-600 transition-colors">
+                        Learn More
+                      </span>
+                      <ArrowRight className="ml-2 h-4 w-4 text-primary group-hover:text-green-600 transition-all group-hover:translate-x-1" />
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Hosting Section */}
+        <section id="hosting" className="container mx-auto px-4 py-24">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-4">Premium Web Hosting</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Fast, secure, and reliable web hosting with AI-powered tools and
+              unmetered resources
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="group relative p-8 rounded-2xl border bg-card hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-green-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative">
+                <div className="mb-6 p-3 w-fit rounded-xl bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors duration-300">
+                  <Server className="h-8 w-8 text-blue-500" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-3">Stellar</h3>
+                <p className="text-muted-foreground mb-6">
+                  Perfect for starting your online journey
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-4 w-4 text-blue-500" />
+                    <span className="text-sm">3 Websites</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-4 w-4 text-blue-500" />
+                    <span className="text-sm">20 GB SSD</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-4 w-4 text-blue-500" />
+                    <span className="text-sm">30 Mailboxes</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-4 w-4 text-blue-500" />
+                    <span className="text-sm">AI Website Builder</span>
+                  </div>
+                </div>
+                <div className="mt-6">
+                  <Link href="/hosting">
+                    <div className="flex items-center justify-center w-full px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500/10 to-blue-600/10 hover:from-blue-500/20 hover:to-blue-600/20 transition-all duration-300 group">
+                      <span className="text-primary font-medium group-hover:text-blue-600 transition-colors">
+                        Learn More
+                      </span>
+                      <ArrowRight className="ml-2 h-4 w-4 text-primary group-hover:text-blue-600 transition-all group-hover:translate-x-1" />
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative p-8 rounded-2xl border bg-card hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-primary shadow-lg shadow-primary/20 scale-[1.02]">
+              <div className="absolute -top-5 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-[#84fab0] to-[#8fd3f4] px-10 py-2 text-sm font-medium text-primary-foreground backdrop-blur-sm z-10">
+                Most Popular
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative">
+                <div className="mb-6 p-3 w-fit rounded-xl bg-purple-500/10 group-hover:bg-purple-500/20 transition-colors duration-300">
+                  <Zap className="h-8 w-8 text-purple-500" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-3">Stellar Plus</h3>
+                <p className="text-muted-foreground mb-6">
+                  Most popular choice for growing websites
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-4 w-4 text-purple-500" />
+                    <span className="text-sm">Unlimited websites</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-4 w-4 text-purple-500" />
+                    <span className="text-sm">Unmetered SSD</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-4 w-4 text-purple-500" />
+                    <span className="text-sm">Unlimited mailboxes</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-4 w-4 text-purple-500" />
+                    <span className="text-sm">AutoBackup & Cloud Storage</span>
+                  </div>
+                </div>
+                <div className="mt-6">
+                  <Link href="/hosting">
+                    <div className="flex items-center justify-center w-full px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500/10 to-purple-600/10 hover:from-purple-500/20 hover:to-purple-600/20 transition-all duration-300 group">
+                      <span className="text-primary font-medium group-hover:text-purple-600 transition-colors">
+                        Learn More
+                      </span>
+                      <ArrowRight className="ml-2 h-4 w-4 text-primary group-hover:text-purple-600 transition-all group-hover:translate-x-1" />
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative p-8 rounded-2xl border bg-card hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative">
+                <div className="mb-6 p-3 w-fit rounded-xl bg-green-500/10 group-hover:bg-green-500/20 transition-colors duration-300">
+                  <Shield className="h-8 w-8 text-green-500" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-3">
+                  Stellar Business
+                </h3>
+                <p className="text-muted-foreground mb-6">
+                  Advanced features for business websites
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-4 w-4 text-green-500" />
+                    <span className="text-sm">Unlimited websites</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-4 w-4 text-green-500" />
+                    <span className="text-sm">50 GB SSD</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-4 w-4 text-green-500" />
+                    <span className="text-sm">Unlimited mailboxes</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-4 w-4 text-green-500" />
+                    <span className="text-sm">Priority Support</span>
+                  </div>
+                </div>
+                <div className="mt-6">
+                  <Link href="/hosting">
+                    <div className="flex items-center justify-center w-full px-6 py-3 rounded-xl bg-gradient-to-r from-green-500/10 to-green-600/10 hover:from-green-500/20 hover:to-green-600/20 transition-all duration-300 group">
+                      <span className="text-primary font-medium group-hover:text-green-600 transition-colors">
+                        Learn More
+                      </span>
                       <ArrowRight className="ml-2 h-4 w-4 text-primary group-hover:text-green-600 transition-all group-hover:translate-x-1" />
                     </div>
                   </Link>
@@ -250,7 +429,8 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Why Choose Us</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              We deliver excellence through our commitment to quality and innovation
+              We deliver excellence through our commitment to quality and
+              innovation
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -264,7 +444,8 @@ export default function Home() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Expert Team</h3>
                     <p className="text-muted-foreground">
-                      Our team of experienced developers and designers brings years of expertise to every project.
+                      Our team of experienced developers and designers brings
+                      years of expertise to every project.
                     </p>
                   </div>
                 </div>
@@ -277,9 +458,12 @@ export default function Home() {
                     <Shield className="h-6 w-6 text-purple-500" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Quality Assurance</h3>
+                    <h3 className="text-xl font-semibold mb-2">
+                      Quality Assurance
+                    </h3>
                     <p className="text-muted-foreground">
-                      Rigorous testing and quality control processes ensure reliable and bug-free solutions.
+                      Rigorous testing and quality control processes ensure
+                      reliable and bug-free solutions.
                     </p>
                   </div>
                 </div>
@@ -294,7 +478,8 @@ export default function Home() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>
                     <p className="text-muted-foreground">
-                      Round-the-clock technical support to help you with any issues or questions.
+                      Round-the-clock technical support to help you with any
+                      issues or questions.
                     </p>
                   </div>
                 </div>
@@ -309,9 +494,12 @@ export default function Home() {
                     <Code2 className="h-6 w-6 text-orange-500" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Innovative Solutions</h3>
+                    <h3 className="text-xl font-semibold mb-2">
+                      Innovative Solutions
+                    </h3>
                     <p className="text-muted-foreground">
-                      We stay ahead of the curve with the latest technologies and best practices.
+                      We stay ahead of the curve with the latest technologies
+                      and best practices.
                     </p>
                   </div>
                 </div>
@@ -326,7 +514,8 @@ export default function Home() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Global Reach</h3>
                     <p className="text-muted-foreground">
-                      Serving clients worldwide with our distributed team and global presence.
+                      Serving clients worldwide with our distributed team and
+                      global presence.
                     </p>
                   </div>
                 </div>
@@ -339,9 +528,12 @@ export default function Home() {
                     <CheckCircle2 className="h-6 w-6 text-indigo-500" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Proven Track Record</h3>
+                    <h3 className="text-xl font-semibold mb-2">
+                      Proven Track Record
+                    </h3>
                     <p className="text-muted-foreground">
-                      Successfully delivered hundreds of projects across various industries.
+                      Successfully delivered hundreds of projects across various
+                      industries.
                     </p>
                   </div>
                 </div>
@@ -354,6 +546,5 @@ export default function Home() {
         <CTASection />
       </div>
     </div>
-  )
+  );
 }
-
