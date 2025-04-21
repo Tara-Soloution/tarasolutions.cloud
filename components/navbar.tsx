@@ -32,8 +32,13 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
+            {/* Hosting Link */}
+            <Link href="/hosting" className="text-muted-foreground hover:text-primary transition-colors">
+              Hosting
+            </Link>
             {/* Solutions Dropdown */}
             <div className="relative group">
+              
               <Link href="/solutions" className="flex items-center space-x-1 text-muted-foreground hover:text-primary transition-colors">
                 <span>Solutions</span>
                 <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform duration-300" />
@@ -239,6 +244,8 @@ export default function Navbar() {
               </div>
             </div>
 
+            
+
             <Link href="/contact">
               <Button className="relative group px-6 py-2 bg-gradient-to-r from-primary to-green-500 hover:opacity-90">
                 <span className="relative z-10">Get Started</span>
@@ -268,6 +275,9 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 space-y-4">
+            <Link href="/hosting" className="block text-muted-foreground hover:text-primary transition-colors">
+              Hosting
+            </Link>
             <Link href="/solutions" className="block text-muted-foreground hover:text-primary transition-colors">
               Solutions
             </Link>
@@ -280,6 +290,7 @@ export default function Navbar() {
             <Link href="/work" className="block text-muted-foreground hover:text-primary transition-colors">
               Our Work
             </Link>
+            
             <Link href="/contact">
               <Button className="text-primary-foreground w-full relative group px-6 py-2 bg-gradient-to-r from-primary to-green-500 hover:opacity-90">
                 <span className="relative z-10">Get Started</span>
