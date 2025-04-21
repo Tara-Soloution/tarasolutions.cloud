@@ -48,7 +48,7 @@ export default function Home() {
         </div>
 
         {/* Stats Section */}
-        <section id="stats" className="container mx-auto px-4 py-24">
+        <section id="stats" className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center space-y-2 group cursor-pointer hover:scale-105 transition-transform duration-300">
               <div className="text-4xl font-bold text-primary">10+</div>

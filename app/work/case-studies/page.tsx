@@ -115,10 +115,10 @@ export default function CaseStudiesPage() {
       </div>
 
       <div className="relative z-10">
-        <div className="container mx-auto px-4 pt-24 pb-20">
+        <div className="pt-24 pb-20">
           <div className="space-y-32">
             {/* Hero Section */}
-            <div className="relative pt-32 pb-20 sm:pt-40 sm:pb-24">
+            <div className="container mx-auto px-4 py-16 relative pt-32 pb-20 sm:pt-40 sm:pb-24">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
                   Case Studies
@@ -135,7 +135,7 @@ export default function CaseStudiesPage() {
             </div>
 
             {/* Metrics Section */}
-            <section className="container">
+            <section className=" container mx-auto px-4 py-16">
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                 {metrics.map((metric) => (
                   <div
@@ -160,7 +160,7 @@ export default function CaseStudiesPage() {
             </section>
 
             {/* Case Studies Grid */}
-            <section className="container">
+            <section className="container mx-auto px-4 py-16">
               <div className="text-center mb-16">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
                   Featured Case Studies

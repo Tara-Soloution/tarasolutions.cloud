@@ -111,10 +111,10 @@ export default function Work() {
             </div>
 
             <div className="relative z-10">
-                <div className="container mx-auto px-4 pt-24 pb-20">
+                <div className="pt-24 pb-20">
                     <div className="space-y-32">
                         {/* Hero Section */}
-                        <div className="relative pt-32 pb-20 sm:pt-40 sm:pb-24">
+                        <div className="container mx-auto px-4 relative pt-32 pb-20 sm:pt-40 sm:pb-24">
                             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                                 <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
                                     Our Work
@@ -130,7 +130,7 @@ export default function Work() {
                         </div>
 
                         {/* Benefits Section */}
-                        <section className="container">
+                        <section className="container mx-auto px-4 py-16">
                             <div className="text-center mb-16">
                                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Why Choose Our Work?</h2>
                                 <p className="text-lg text-muted-foreground">Experience the difference of our proven approach</p>
@@ -149,7 +149,7 @@ export default function Work() {
                         </section>
 
                         {/* Work Categories Section */}
-                        <section className="container">
+                        <section className="container mx-auto px-4 py-16">
                             <div className="text-center mb-16">
                                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Explore Our Work</h2>
                                 <p className="text-lg text-muted-foreground">Discover our diverse portfolio of successful projects</p>
@@ -186,7 +186,7 @@ export default function Work() {
                         </section>
 
                         {/* Stats Section */}
-                        <section className="container">
+                        <section className="container mx-auto px-4 py-16">
                             <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-12">
                                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                                     <div className="text-center">
