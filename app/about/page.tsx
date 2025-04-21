@@ -330,8 +330,9 @@ export default function About() {
                 </p>
               </div>
               <div className="relative">
+                {/* Timeline line */}
                 <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border transform -translate-x-1/2" />
-                <div className="space-y-12">
+                <div className="space-y-8 md:space-y-12">
                   {milestones.map((milestone, index) => (
                     <div key={milestone.year} className="relative">
                       <div
@@ -340,21 +341,33 @@ export default function About() {
                         }`}
                       >
                         <div
-                          className={`w-1/2 ${
-                            index % 2 === 0 ? "pr-8" : "pl-8"
+                          className={`w-full md:w-1/2 ${
+                            index % 2 === 0 ? "md:pr-8" : "md:pl-8"
                           }`}
                         >
-                          <div className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20">
-                            <div className="absolute right-0 top-0 h-4 w-4 bg-primary rounded-full transform translate-x-1/2 -translate-y-1/2" />
-                            <div className="text-sm font-semibold text-primary mb-2">
-                              {milestone.year}
+                          <div className="group relative overflow-hidden rounded-2xl border bg-card p-6 md:p-8 transition-all hover:shadow-lg hover:shadow-primary/20">
+                            {/* Timeline dot */}
+                            <div
+                              className={`absolute top-0 h-4 w-4 bg-primary rounded-full transform -translate-y-1/2 ${
+                                index % 2 === 0
+                                  ? "right-0 translate-x-1/2"
+                                  : "left-0 -translate-x-1/2"
+                              }`}
+                            />
+                            {/* Mobile timeline indicator */}
+                            <div className="md:hidden absolute -left-4 top-6 h-full w-0.5 bg-border" />
+                            <div className="md:hidden absolute -left-5 top-6 h-3 w-3 rounded-full bg-primary" />
+                            <div className="flex flex-col md:block">
+                              <div className="text-sm font-semibold text-primary mb-2">
+                                {milestone.year}
+                              </div>
+                              <h3 className="text-xl font-semibold mb-2">
+                                {milestone.title}
+                              </h3>
+                              <p className="text-muted-foreground">
+                                {milestone.description}
+                              </p>
                             </div>
-                            <h3 className="text-xl font-semibold mb-2">
-                              {milestone.title}
-                            </h3>
-                            <p className="text-muted-foreground">
-                              {milestone.description}
-                            </p>
                           </div>
                         </div>
                       </div>
