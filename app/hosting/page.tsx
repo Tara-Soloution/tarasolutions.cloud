@@ -175,10 +175,10 @@ export default function HostingPage() {
             </div>
 
             <div className="relative z-10">
-                <div className="container mx-auto px-4 pt-24 pb-20">
+                <div className="mx-auto px-4 pt-24 pb-20">
                     <div className="space-y-32">
                         {/* Hero Section */}
-                        <div className="relative pt-32 pb-20 sm:pt-40 sm:pb-24">
+                        <div className="container mx-auto px-4 py-16 relative pt-32 pb-20 sm:pt-40 sm:pb-24">
                             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                                 <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
                                     Web Hosting That
@@ -202,7 +202,7 @@ export default function HostingPage() {
                         </div>
 
                         {/* Hosting Plans Section */}
-                        <section className="container">
+                        <section className="container mx-auto px-4 py-16">
                             <div className="text-center mb-16">
                                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Choose Your Hosting Plan</h2>
                                 <p className="text-lg text-muted-foreground">Scalable solutions for every stage of your growth</p>
@@ -265,7 +265,7 @@ export default function HostingPage() {
                         </section>
 
                         {/* Benefits Section */}
-                        <section className="container">
+                        <section className="container mx-auto px-4 py-16">
                             <div className="text-center mb-16">
                                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Why Choose Our Hosting?</h2>
                                 <p className="text-lg text-muted-foreground">Experience the power of reliable web hosting</p>
@@ -284,7 +284,7 @@ export default function HostingPage() {
                         </section>
 
                         {/* Features Section */}
-                        <section className="container">
+                        <section className="container mx-auto px-4 py-16">
                             <div className="text-center mb-16">
                                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Core Features</h2>
                                 <p className="text-lg text-muted-foreground">Built with excellence and reliability in mind</p>
@@ -306,7 +306,7 @@ export default function HostingPage() {
                         </section>
 
                         {/* Stats Section */}
-                        <section className="container">
+                        <section className="container mx-auto px-4 py-16">
                             <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-12">
                                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                                     <div className="text-center">
