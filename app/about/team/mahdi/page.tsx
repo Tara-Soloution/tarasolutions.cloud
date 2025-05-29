@@ -3,17 +3,25 @@ import Image from "next/image";
 import { Metadata } from "next";
 import {
   Mail,
-  Github,
-  Linkedin,
-  Code,
-  BookOpen,
-  Award,
-  Building,
-  Calendar,
   Phone,
   MapPin,
-  GraduationCap,
+  Facebook,
+  Linkedin,
+  Github,
+  Calendar,
+  Globe,
+  Languages,
+  Code,
+  Database,
+  Server,
+  Terminal,
+  ChevronLeft,
+  Building,
+  Award,
   Rocket,
+  BookOpen,
+  GraduationCap,
+  ExternalLink,
   Check,
 } from "lucide-react";
 
@@ -21,139 +29,232 @@ import { Button } from "@/components/ui/button";
 import CTASection from "@/components/cta-section";
 
 export const metadata: Metadata = {
-  title: "Hakima Merzayee | Frontend Lead | Tara Solutions",
+  title: "Mohammad Mahdi Alizada | Backend Lead | Tara Solutions",
   description:
-    "Learn more about Hakima Merzayee, Frontend Lead at Tara Solutions. Full-stack software engineer with expertise in modern web technologies.",
+    "Full Stack Developer with 5 years of experience in building innovative and efficient web solutions. Currently serving as Backend Lead at Tara Solutions.",
   keywords: [
-    "Hakima Merzayee",
-    "Frontend Lead",
+    "Full Stack Developer",
+    "Backend Lead",
+    "Laravel",
+    "React",
+    "Node.js",
+    "Elixir",
+    "Web Development",
+    "Software Engineer",
     "Tara Solutions",
-    "Full Stack Engineer",
-    "React.js",
-    "Next.js",
-    "Software Development",
   ],
   openGraph: {
-    title: "Hakima Merzayee | Frontend Lead | Tara Solutions",
+    title: "Mohammad Mahdi Alizada | Backend Lead | Tara Solutions",
     description:
-      "Learn more about Hakima Merzayee, Frontend Lead at Tara Solutions. Full-stack software engineer with expertise in modern web technologies.",
+      "Full Stack Developer with 5 years of experience in building innovative and efficient web solutions. Currently serving as Backend Lead at Tara Solutions.",
     images: [
       {
-        url: "/team/hakima-avatar.jpg",
+        url: "/team/mahdi-avatar.jpg",
         width: 1200,
         height: 630,
-        alt: "Hakima Merzayee",
+        alt: "Mohammad Mahdi Alizada",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hakima Merzayee | Frontend Lead | Tara Solutions",
+    title: "Mohammad Mahdi Alizada | Backend Lead | Tara Solutions",
     description:
-      "Learn more about Hakima Merzayee, Frontend Lead at Tara Solutions. Full-stack software engineer with expertise in modern web technologies.",
-    images: ["/team/hakima-avatar.png"],
+      "Full Stack Developer with 5 years of experience in building innovative and efficient web solutions. Currently serving as Backend Lead at Tara Solutions.",
+    images: ["/team/mahdi-avatar.jpg"],
   },
   alternates: {
-    canonical: "https://tarasolutions.cloud/about/team/hakima",
+    canonical: "https://tarasolutions.cloud/about/team/mahdi",
   },
 };
 
 const workExperience = [
   {
-    company: "Tara Solutions Inc.",
-    role: "Frontend Lead",
-    period: "May 2024 - Present",
-    location: "Remote",
-    highlight: "Leading frontend development initiatives",
-    description: [
-      "Developing and maintaining web applications with modern technologies",
-      "Collaborating with UI/UX designers & backend teams for seamless integration",
-      "Implementing state management & performance optimization strategies",
-      "Writing clean, scalable, and testable code",
-      "Leading frontend architecture decisions",
+    company: "Tooti Sabz",
+    role: "Backend Developer",
+    period: "15/07/2024 – CURRENT",
+    location: "Kabul, Afghanistan",
+    highlights: [
+      "Database Analysis and Design",
+      "API & Backend Logic Development",
+      "Database Interaction",
+      "Testing and Quality Assurance",
+      "Chat Service Implementation",
+      "DevOps and Containerization",
+      "Collaboration and Integration",
+      "Tooti Admin Panel Management System",
     ],
+    description:
+      "As a Backend Developer at Tooti Sabz Company, I was responsible for architecting and implementing the backend systems that power the Tooti application. My work focused on ensuring high performance, scalability, and maintainability of the system.",
     technologies: [
+      "Laravel",
+      "React.js",
+      "MySQL/PostgreSQL",
+      "Docker",
+      "Redis",
+      "WebSockets",
+      "Laravel Echo",
+      "Pusher",
+      "Elixir",
+      "REST APIs",
+      "Git",
+      "PHPUnit",
+      "JWT/Sanctum",
+    ],
+    reference: {
+      name: "Mohammad Alim",
+      role: "HR",
+      email: "hr@tootisabz.tech",
+    },
+  },
+  {
+    company: "Tara Solutions",
+    role: "Full Stack Developer",
+    period: "01/01/2024 – CURRENT",
+    location: "Kabul, Afghanistan",
+    highlights: [
+      "Frontend Architecture and Component Design",
+      "Backend & API Development",
+      "Real-Time Functionality Implementation",
+      "Database Design and Management",
+      "Project Management & Team Collaboration",
+    ],
+    description:
+      "At Tara Solutions, I worked as a Full Stack Developer and also took on Project Management responsibilities for several key projects. I led the full development lifecycle, from planning and architecture to deployment and maintenance.",
+    technologies: [
+      "Node.js",
+      "Express.js",
+      "Laravel",
       "React.js",
       "Next.js",
-      "TypeScript",
-      "State Management",
-      "Testing",
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+      "REST APIs",
+      "Socket.io",
+      "WebSockets",
+      "Git",
+      "JWT",
     ],
+    reference: {
+      name: "Habib Mostafa",
+      role: "HR",
+      email: "hr@tarasolutions.cloud",
+    },
   },
   {
-    company: "Listoli LLC, USA",
-    role: "Full-Stack Engineer",
-    period: "February 2023 - April 2024",
-    location: "Remote",
-    highlight: "End-to-end application development",
-    description: [
-      "Developed and maintained responsive user interfaces",
-      "Built APIs for seamless front-end and back-end communication",
-      "Implemented secure user authentication and authorization",
-      "Conducted unit and smoke tests to ensure code reliability",
-      "Debugged and resolved issues for optimal application performance",
+    company: "Smart Friqi",
+    role: "Full Stack Developer",
+    period: "01/02/2022 – 01/02/2024",
+    location: "Kabul, Afghanistan",
+    highlights: [
+      "Designing and Building Reusable Frontend Components",
+      "Developing RESTful APIs with Laravel",
+      "Adding Real-Time Functionality to Web Applications",
+      "Full Development Lifecycle & Collaboration",
     ],
+    description:
+      "As a Full Stack Developer at Smart Friqi, I was responsible for end-to-end development of web applications using Laravel on the backend and Vue.js on the frontend.",
     technologies: [
-      "React.js",
-      "Node.js",
-      "API Development",
-      "Testing",
-      "Authentication",
+      "Laravel",
+      "Vue.js",
+      "MySQL/PostgreSQL",
+      "JavaScript",
+      "HTML5/CSS3",
+      "Tailwind CSS",
+      "Pusher",
+      "WebSockets",
+      "REST APIs",
+      "Git",
+      "JWT/Sanctum",
     ],
+    reference: {
+      name: "Rahmatullah Sadid",
+      role: "HR",
+      email: "hr@smartfriqi.org",
+    },
   },
   {
-    company: "Smart Fariqi",
-    role: "Full-Stack Developer",
-    period: "April 2022 - April 2023",
-    location: "Kabul",
-    highlight: "Full-stack system development",
-    description: [
-      "Designed and developed reusable front-end components",
-      "Developed RESTful APIs for seamless system integration",
-      "Implemented real-time functionality in web applications",
-      "Designed and analyzed databases",
-      "Conducted testing and quality control",
+    company: "Techland Organization",
+    role: "Web Developer and Web Designer",
+    period: "01/01/2020 – 15/08/2021",
+    location: "Kabul, Afghanistan",
+    highlights: [
+      "Designing and creating reusable Frontend components",
+      "Developing Rest Full APIs",
+      "Adding Real-time functionality to web applications",
     ],
-    technologies: [
-      "React.js",
-      "API Development",
-      "Real-time Systems",
-      "Database Design",
-    ],
+    description:
+      "Worked as a Web Developer and Web Designer, focusing on creating responsive and efficient web applications.",
+    technologies: ["Laravel", "Vue.js", "MySQL", "JavaScript", "HTML/CSS"],
+    reference: {
+      name: "Sayed Mahdi Mosavi",
+      role: "CEO",
+      email: "sayedmahdi87@gmail.com",
+    },
+  },
+];
+
+const education = [
+  {
+    degree: "Bachelor in Computer Science",
+    institution: "Kabul Polytechnic University",
+    period: "2018 – 2023",
+    location: "Kabul, Afghanistan",
+    website: "https://kpu.edu.af/en",
   },
   {
-    company: "ByteKent Technology Company",
-    role: "Technical Manager",
-    period: "January 2020 - January 2021",
-    location: "Kabul",
-    highlight: "Technical leadership and project management",
-    description: [
-      "Led project planning sessions and managed overall progress",
-      "Adapted workflows and coordinated tasks to meet project needs",
-      "Designed and developed software projects",
-      "Ensured timely project delivery",
-      "Managed technical team and resources",
-    ],
-    technologies: ["Project Management", "Software Design", "Team Leadership"],
+    degree: "Secondary School",
+    institution: "AbdulRahim-e-shaheed high school",
+    period: "2005 – 2017",
+    location: "Kabul, Afghanistan",
+  },
+];
+
+const projects = [
+  {
+    name: "Tooti Application Chat Service",
+    period: "15/02/2025 – CURRENT",
+    description:
+      "Developed the chat service for the Tooti application using Elixir and the Phoenix framework. It is capable of handling over 100 million requests, similar to the WhatsApp chat application.",
+    technologies: ["Elixir", "Phoenix", "WebSockets"],
   },
   {
-    company: "BasSoft IT Services",
-    role: "Web Developer",
-    period: "April 2018 - December 2019",
-    location: "Kabul",
-    highlight: "Full-stack web development",
-    description: [
-      "Designed and developed projects (Desktop applications, websites)",
-      "Analyzed, designed, and developed databases",
-      "Performed software testing and quality control",
-      "Collaborated with cross-functional teams",
-      "Implemented responsive web designs",
-    ],
-    technologies: [
-      "Web Development",
-      "Database Design",
-      "Desktop Applications",
-    ],
+    name: "Tooti Social Application Platform",
+    period: "15/07/2024 – CURRENT",
+    description:
+      "A social application platform built with Laravel for the backend.",
+    link: "https://inkd.in/ebiSG5Si",
+    technologies: ["Laravel", "React.js", "MySQL"],
+  },
+  {
+    name: "Tooti Dashboard Admin Panel",
+    period: "15/07/2024 – CURRENT",
+    description:
+      "MIS and Chat support management system built with Laravel for the backend and React JS for the frontend.",
+    technologies: ["Laravel", "React.js", "MySQL"],
+  },
+  {
+    name: "Tara Solutions Website",
+    period: "2024",
+    description:
+      "Designed and developed a modern, fully responsive corporate website for Tara Solutions, showcasing the company's offerings with a clean design and high performance.",
+    link: "https://www.tarasolutions.cloud",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Radix UI", "shadcn/ui"],
+  },
+  {
+    name: "DAWEO MIS System",
+    period: "20/03/2024 – 20/05/2024",
+    description:
+      "Management Information System for Danner Afghanistan for Women Empowerment Organization, covering user management, psychological patients, vocational trainings, and more.",
+    technologies: ["Laravel", "React.js", "MySQL"],
+  },
+  {
+    name: "Shahre-Kodak ERP",
+    period: "10/05/2023 – 10/11/2023",
+    description:
+      "Complete ERP system for a chain store including HR Management, Stock Management, Product Management, Sales Management, and Store Management.",
+    technologies: ["Laravel", "React.js", "MySQL"],
   },
 ];
 
@@ -161,96 +262,52 @@ const skills = {
   frontend: {
     icon: "🎨",
     title: "Frontend Development",
-    description: "Building responsive and intuitive interfaces",
-    skills: ["React.js", "Next.js", "Vue.js", "JavaScript", "TypeScript"],
-    color: "from-blue-500 to-cyan-500",
+    description: "Creating responsive and intuitive user interfaces",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TailwindCSS",
+      "Next.js",
+      "Vue.js",
+      "React.js",
+      "Nuxt.js",
+    ],
   },
   backend: {
     icon: "⚙️",
     title: "Backend Development",
-    description: "Creating robust server-side solutions",
-    skills: ["PHP", "Laravel", "Node.js", "RESTful APIs", "SQL"],
-    color: "from-green-500 to-emerald-500",
+    description: "Building scalable and robust server solutions",
+    skills: ["PHP", "Laravel", "Node.js", "Python", "Filamentphp", "Elixir"],
   },
-  testing: {
-    icon: "🎯",
-    title: "Testing & Quality",
-    description: "Ensuring code reliability and performance",
-    skills: [
-      "Unit Testing",
-      "Integration Testing",
-      "E2E Testing",
-      "Test Automation",
-    ],
-    color: "from-purple-500 to-pink-500",
+  database: {
+    icon: "🗄️",
+    title: "Database",
+    description: "Managing and optimizing data systems",
+    skills: ["MySQL", "PostgreSQL", "Redis", "MongoDB"],
   },
-  tools: {
+  general: {
     icon: "🛠️",
-    title: "Tools & Technologies",
-    description: "Essential development tools",
-    skills: ["Git", "MySQL", "PostgreSQL", "Bootstrap", "CSS"],
-    color: "from-orange-500 to-red-500",
+    title: "General Skills",
+    description: "Essential tools and practices",
+    skills: ["Git", "Github", "Docker", "TALL Stack"],
   },
 };
 
-const projects = [
-  {
-    name: "Skin Disease Detection",
-    description: "AI-powered system for detecting skin diseases",
-    highlights: [
-      "Built using Deep Learning to detect 5 specific diseases",
-      "Implemented image processing algorithms",
-      "Created user-friendly interface for medical professionals",
-      "Integrated with medical databases",
-    ],
-    technologies: ["Deep Learning", "Python", "Image Processing", "UI/UX"],
-  },
-  {
-    name: "Enterprise Management Suite",
-    description: "Comprehensive business management solution",
-    highlights: [
-      "Real-time User Management System",
-      "File Management System",
-      "Product Management System",
-      "Task Management System",
-      "Real-time Chat Application",
-      "Advertisement Management System",
-    ],
-    technologies: ["React.js", "Node.js", "Real-time", "Database Design"],
-  },
-];
-
-const education = [
-  {
-    school: "Kabul Polytechnic University",
-    degree: "Bachelor's in Computer Science",
-    period: "March 2016 - August 2019",
-    location: "Kabul",
-    description:
-      "Comprehensive study of computer science fundamentals and software engineering principles.",
-  },
-];
-
 const languages = [
-  { name: "Dari", level: "Native", icon: "🌟" },
+  {
+    name: "Persian",
+    level: "Native",
+    icon: "🇮🇷",
+  },
   {
     name: "English",
-    level: "B2 (Upper Intermediate)",
-    icon: "🌍",
-    score: "Duolingo Score: 105",
-  },
-  { name: "German", level: "A1 (Beginner)", icon: "🇩🇪" },
-];
-
-const awards = [
-  {
-    title: "Duolingo English Proficiency",
-    description: "Score: 105",
-    icon: "🎯",
+    level: "C1 (Listening), B2 (Reading, Speaking), B1 (Writing)",
+    icon: "🇬🇧",
   },
 ];
 
-export default function HakimaProfile() {
+export default function MahdiProfile() {
   return (
     <div className="relative min-h-screen">
       {/* Background gradients */}
@@ -269,38 +326,39 @@ export default function HakimaProfile() {
                 <div className="flex flex-col items-center text-center mb-16">
                   <div className="relative h-48 w-48 mb-8 rounded-full overflow-hidden ring-4 ring-primary/20">
                     <Image
-                      src="/team/hakima-avatar.jpg"
-                      alt="Hakima Merzayee"
+                      src="/team/mahdi-avatar.jpg"
+                      alt="Mohammad Mahdi Alizada"
                       fill
                       className="object-cover"
                     />
                   </div>
                   <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-4">
-                    Hakima Merzayee
+                    Mohammad Mahdi Alizada
                   </h1>
-                  <p className="text-xl text-primary mb-6">Frontend Lead</p>
+                  <p className="text-xl text-primary mb-6">Backend Lead</p>
                   <p className="max-w-2xl text-lg text-muted-foreground mb-8">
-                    Full-stack software engineer with expertise in modern web
-                    technologies, passionate about building scalable and
-                    maintainable applications. Currently based in Tehran, Iran.
+                    Full Stack Developer with 5 years of experience in building
+                    innovative and efficient web solutions. Specializing in
+                    backend development and database architecture. Currently
+                    based in Kabul, Afghanistan.
                   </p>
                   <div className="flex flex-wrap justify-center gap-4 mb-8">
                     <div className="flex items-center space-x-2 text-muted-foreground">
                       <Mail className="h-4 w-4" />
-                      <span>hakima.merzayee3@gmail.com</span>
+                      <span>mahdializada761@gmail.com</span>
                     </div>
                     <div className="flex items-center space-x-2 text-muted-foreground">
                       <Phone className="h-4 w-4" />
-                      <span>+98 9912906146</span>
+                      <span>+93 700985918</span>
                     </div>
                     <div className="flex items-center space-x-2 text-muted-foreground">
                       <MapPin className="h-4 w-4" />
-                      <span>Tehran, Iran (Qarchak)</span>
+                      <span>Kabul, Afghanistan</span>
                     </div>
                   </div>
                   <div className="flex space-x-4">
                     <Link
-                      href="https://www.linkedin.com/in/hakima-merzayee/"
+                      href="https://www.linkedin.com/in/mohammad-mahdi-alizada-3a57b2274"
                       target="_blank"
                     >
                       <Button
@@ -311,7 +369,10 @@ export default function HakimaProfile() {
                         <Linkedin className="h-5 w-5" />
                       </Button>
                     </Link>
-                    <Link href="https://github.com/hakima" target="_blank">
+                    <Link
+                      href="https://github.com/mahdializada"
+                      target="_blank"
+                    >
                       <Button
                         variant="ghost"
                         size="icon"
@@ -320,7 +381,19 @@ export default function HakimaProfile() {
                         <Github className="h-5 w-5" />
                       </Button>
                     </Link>
-                    <Link href="mailto:hakima.merzayee3@gmail.com">
+                    <Link
+                      href="https://www.facebook.com/mahdi.alizada.71"
+                      target="_blank"
+                    >
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="hover:text-blue-500"
+                      >
+                        <Facebook className="h-5 w-5" />
+                      </Button>
+                    </Link>
+                    <Link href="mailto:mahdializada761@gmail.com">
                       <Button
                         variant="ghost"
                         size="icon"
@@ -340,22 +413,15 @@ export default function HakimaProfile() {
                 <div className="relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full" />
                   <div className="relative">
-                    <h3 className="text-4xl font-bold mb-2">6+</h3>
+                    <h3 className="text-4xl font-bold mb-2">5+</h3>
                     <p className="text-muted-foreground">Years Experience</p>
                   </div>
                 </div>
                 <div className="relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full" />
                   <div className="relative">
-                    <h3 className="text-4xl font-bold mb-2">15+</h3>
+                    <h3 className="text-4xl font-bold mb-2">20+</h3>
                     <p className="text-muted-foreground">Projects Completed</p>
-                  </div>
-                </div>
-                <div className="relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full" />
-                  <div className="relative">
-                    <h3 className="text-4xl font-bold mb-2">5+</h3>
-                    <p className="text-muted-foreground">Companies Served</p>
                   </div>
                 </div>
                 <div className="relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20">
@@ -365,61 +431,13 @@ export default function HakimaProfile() {
                     <p className="text-muted-foreground">Technologies</p>
                   </div>
                 </div>
-              </div>
-            </section>
-
-            {/* Skills Section */}
-            <section className="container mx-auto px-4">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-12 flex items-center">
-                <Code className="mr-4 h-8 w-8 text-primary" />
-                Technical Expertise
-              </h2>
-              <div className="grid gap-8 md:grid-cols-2">
-                {Object.entries(skills).map(([key, category]) => (
-                  <div
-                    key={key}
-                    className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-xl hover:shadow-primary/20"
-                  >
-                    {/* Background gradient */}
-                    <div
-                      className={`absolute inset-0 opacity-5 bg-gradient-to-br ${category.color}`}
-                    />
-
-                    {/* Content */}
-                    <div className="relative">
-                      <div className="flex items-center mb-6">
-                        <span className="text-4xl mr-4">{category.icon}</span>
-                        <div>
-                          <h3 className="text-xl font-semibold">
-                            {category.title}
-                          </h3>
-                          <p className="text-sm text-muted-foreground">
-                            {category.description}
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="space-y-3">
-                        {category.skills.map((skill) => (
-                          <div
-                            key={skill}
-                            className={`
-                                                            relative overflow-hidden rounded-lg p-3
-                                                            bg-gradient-to-r ${category.color} group-hover:shadow-lg
-                                                            opacity-90 hover:opacity-100 transition-all
-                                                            transform hover:scale-105 hover:rotate-1
-                                                        `}
-                          >
-                            <div className="absolute inset-0 bg-black opacity-75" />
-                            <div className="relative">
-                              <p className="font-medium text-white">{skill}</p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                <div className="relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full" />
+                  <div className="relative">
+                    <h3 className="text-4xl font-bold mb-2">3</h3>
+                    <p className="text-muted-foreground">Languages</p>
                   </div>
-                ))}
+                </div>
               </div>
             </section>
 
@@ -463,11 +481,11 @@ export default function HakimaProfile() {
                           </div>
 
                           <p className="text-lg font-medium text-primary/80 mb-6 italic border-l-4 border-primary/20 pl-4">
-                            "{job.highlight}"
+                            "{job.description}"
                           </p>
 
                           <ul className="list-none space-y-3 text-muted-foreground mb-6">
-                            {job.description.map((item, i) => (
+                            {job.highlights.map((highlight, i) => (
                               <li
                                 key={i}
                                 className="flex items-start group/item hover:text-primary transition-colors"
@@ -475,7 +493,7 @@ export default function HakimaProfile() {
                                 <span className="mr-3 mt-1.5">
                                   <div className="h-1.5 w-1.5 rounded-full bg-primary group-hover/item:scale-125 transition-transform" />
                                 </span>
-                                {item}
+                                {highlight}
                               </li>
                             ))}
                           </ul>
@@ -510,6 +528,47 @@ export default function HakimaProfile() {
               </div>
             </section>
 
+            {/* Education Section */}
+            <section className="container mx-auto px-4">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-12 flex items-center">
+                <GraduationCap className="mr-4 h-8 w-8 text-primary" />
+                Education
+              </h2>
+              <div className="grid gap-8 md:grid-cols-2">
+                {education.map((edu) => (
+                  <div
+                    key={edu.institution}
+                    className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-xl hover:shadow-primary/20"
+                  >
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-primary/5 via-primary/3 to-transparent rounded-bl-full" />
+
+                    <div className="relative">
+                      <h3 className="text-xl font-semibold mb-2">
+                        {edu.degree}
+                      </h3>
+                      <p className="text-primary mb-2">{edu.institution}</p>
+                      <div className="flex items-center text-muted-foreground mb-4">
+                        <Calendar className="h-4 w-4 mr-2" />
+                        <span>{edu.period}</span>
+                        <span className="mx-2">•</span>
+                        <span>{edu.location}</span>
+                      </div>
+                      {edu.website && (
+                        <Link
+                          href={edu.website}
+                          target="_blank"
+                          className="inline-flex items-center mt-4 text-primary hover:underline"
+                        >
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          Visit Website
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
             {/* Projects Section */}
             <section className="container mx-auto px-4">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-12 flex items-center">
@@ -525,24 +584,22 @@ export default function HakimaProfile() {
                     <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-primary/5 via-primary/3 to-transparent rounded-bl-full" />
 
                     <div className="relative">
-                      <h3 className="text-xl font-semibold mb-4">
-                        {project.name}
-                      </h3>
+                      <div className="flex items-center justify-between mb-4">
+                        <h3 className="text-xl font-semibold">
+                          {project.name}
+                        </h3>
+                        {project.link && (
+                          <Link href={project.link} target="_blank">
+                            <Button variant="ghost" size="icon">
+                              <ExternalLink className="h-5 w-5" />
+                            </Button>
+                          </Link>
+                        )}
+                      </div>
+
                       <p className="text-muted-foreground mb-4">
                         {project.description}
                       </p>
-
-                      <ul className="space-y-2 mb-6">
-                        {project.highlights.map((highlight, index) => (
-                          <li
-                            key={index}
-                            className="flex items-center text-sm text-muted-foreground"
-                          >
-                            <Check className="h-4 w-4 mr-2 text-primary" />
-                            {highlight}
-                          </li>
-                        ))}
-                      </ul>
 
                       <div className="flex flex-wrap gap-2">
                         {project.technologies.map((tech) => (
@@ -560,32 +617,46 @@ export default function HakimaProfile() {
               </div>
             </section>
 
-            {/* Education Section */}
+            {/* Skills Section */}
             <section className="container mx-auto px-4">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-12 flex items-center">
-                <GraduationCap className="mr-4 h-8 w-8 text-primary" />
-                Education
+                <Code className="mr-4 h-8 w-8 text-primary" />
+                Technical Expertise
               </h2>
-              <div className="grid gap-8 md:grid-cols-1">
-                {education.map((edu) => (
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                {Object.entries(skills).map(([key, category]) => (
                   <div
-                    key={edu.school}
+                    key={key}
                     className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-xl hover:shadow-primary/20"
                   >
                     <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-primary/5 via-primary/3 to-transparent rounded-bl-full" />
 
                     <div className="relative">
-                      <h3 className="text-xl font-semibold mb-2">
-                        {edu.school}
-                      </h3>
-                      <p className="text-primary mb-2">{edu.degree}</p>
-                      <div className="flex items-center text-muted-foreground mb-4">
-                        <Calendar className="h-4 w-4 mr-2" />
-                        <span>{edu.period}</span>
-                        <span className="mx-2">•</span>
-                        <span>{edu.location}</span>
+                      <div className="flex items-center mb-6">
+                        <span className="text-4xl mr-4">{category.icon}</span>
+                        <div>
+                          <h3 className="text-xl font-semibold">
+                            {category.title}
+                          </h3>
+                          <p className="text-sm text-muted-foreground">
+                            {category.description}
+                          </p>
+                        </div>
                       </div>
-                      <p className="text-muted-foreground">{edu.description}</p>
+
+                      <div className="space-y-3">
+                        {category.skills.map((skill) => (
+                          <div
+                            key={skill}
+                            className="relative overflow-hidden rounded-lg p-3 bg-primary/5 group-hover:shadow-lg opacity-90 hover:opacity-100 transition-all transform hover:scale-105 hover:rotate-1"
+                          >
+                            <div className="absolute inset-0 bg-black opacity-75" />
+                            <div className="relative">
+                              <p className="font-medium text-white">{skill}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -609,37 +680,6 @@ export default function HakimaProfile() {
                       <div>
                         <h3 className="text-xl font-semibold">{lang.name}</h3>
                         <p className="text-primary">{lang.level}</p>
-                      </div>
-                    </div>
-                    {lang.score && (
-                      <p className="text-sm text-muted-foreground">
-                        {lang.score}
-                      </p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Awards Section */}
-            <section className="container mx-auto px-4">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-12 flex items-center">
-                <Award className="mr-4 h-8 w-8 text-primary" />
-                Awards & Achievements
-              </h2>
-              <div className="grid gap-8 md:grid-cols-3">
-                {awards.map((award) => (
-                  <div
-                    key={award.title}
-                    className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-xl hover:shadow-primary/20"
-                  >
-                    <div className="flex items-center mb-4">
-                      <span className="text-4xl mr-4">{award.icon}</span>
-                      <div>
-                        <h3 className="text-xl font-semibold">{award.title}</h3>
-                        <p className="text-muted-foreground">
-                          {award.description}
-                        </p>
                       </div>
                     </div>
                   </div>
