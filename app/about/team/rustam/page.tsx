@@ -236,7 +236,7 @@ export default function RustamProfile() {
                                         </a>
                                     </Button>
                                     <Button variant="ghost" size="icon" asChild>
-                                        <a href="https://twitter.com/rustamhussaini" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://x.com/RustamA64427484" target="_blank" rel="noopener noreferrer">
                                             <Twitter className="h-5 w-5" />
                                         </a>
                                     </Button>
