@@ -18,12 +18,12 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Timeline, TimelineItem } from "@/components/ui/timeline";
 
 export const metadata: Metadata = {
-  title: "Rustam Ali Hussaini | CEO | Tara Solutions",
+  title: "Rustam Ali Hussaini | CTO | Tara Solutions",
   description:
     "Visionary leader and technical expert with extensive experience in cloud architecture, business strategy, and full-stack development. CEO of Tara Solutions.",
   keywords: [
     "Rustam Ali Hussaini",
-    "CEO",
+    "CTO",
     "Tara Solutions",
     "Cloud Architecture",
     "Business Strategy",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "Innovation",
   ],
   openGraph: {
-    title: "Rustam Ali Hussaini | CEO | Tara Solutions",
+    title: "Rustam Ali Hussaini | CTO | Tara Solutions",
     description:
       "Visionary leader and technical expert with extensive experience in cloud architecture, business strategy, and full-stack development. CEO of Tara Solutions.",
     images: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rustam Ali Hussaini | CEO | Tara Solutions",
+    title: "Rustam Ali Hussaini | CTO | Tara Solutions",
     description:
       "Visionary leader and technical expert with extensive experience in cloud architecture, business strategy, and full-stack development. CEO of Tara Solutions.",
     images: ["/team/rustam-avatar.png"],
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 
 const workExperience = [
   {
-    role: "CEO",
+    role: "CTO",
     company: "Tara Solutions",
     period: "December 2023 - Present",
     location: "Kabul, Afghanistan",
@@ -218,7 +218,7 @@ const education = [
 ];
 
 const languages = [
-  { name: "Dari", level: "Native" },
+  { name: "Persian/Dari", level: "Native" },
   { name: "English", level: "Advanced" },
 ];
 
@@ -285,7 +285,7 @@ export default function RustamProfile() {
                   Rustam Ali Hussaini
                 </h1>
                 <p className="text-2xl sm:text-3xl font-semibold text-primary mb-6">
-                  CEO | Tara Solutions
+                  CTO | Tara Solutions
                 </p>
                 <p className="max-w-2xl mx-auto text-lg sm:text-xl text-muted-foreground mb-8">
                   Visionary leader with extensive experience in cloud

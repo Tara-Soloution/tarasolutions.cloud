@@ -23,283 +23,278 @@ import { Button } from "@/components/ui/button";
 import CTASection from "@/components/cta-section";
 
 export const metadata: Metadata = {
-  title: "Abbas Ataie | CTO | Tara Solutions",
+  title: "Hussain Hedayati | Software Engineer | Tara Solutions",
   description:
-    "Meet Ghulam Abbas Ataie, CTO at Tara Solutions. Experienced Software Engineer with expertise in cloud computing and microservices architecture.",
+    "Meet Hussain Hedayati, Software Engineer at Tara Solutions. Master's in Computer Science with 4+ years of full-stack development experience in Laravel, Vue.js, PHP, Python, and Machine Learning.",
   keywords: [
-    "Ghulam Abbas Ataie",
-    "CTO",
+    "Hussain Hedayati",
+    "Software Engineer",
     "Tara Solutions",
-    "Cloud Computing",
-    "Microservices",
-    "Software Development",
+    "Laravel Developer",
+    "Vue.js Developer",
+    "Machine Learning Engineer",
+    "Full Stack Developer",
+    "PHP Developer",
   ],
   openGraph: {
-    title: "Ghulam Abbas Ataie | CTO | Tara Solutions",
+    title: "Hussain Hedayati | Software Engineer | Tara Solutions",
     description:
-      "Meet Ghulam Abbas Ataie, CTO at Tara Solutions. Experienced Software Engineer with expertise in cloud computing and microservices architecture.",
+      "Meet Hussain Hedayati, Software Engineer at Tara Solutions. Master's in Computer Science with 4+ years of full-stack development experience in Laravel, Vue.js, PHP, Python, and Machine Learning.",
     images: [
       {
-        url: "/team/abbas-avatar.jpg",
+        url: "/team/hussain-avatar.jpg",
         width: 1200,
         height: 630,
-        alt: "Ghulam Abbas Ataie",
+        alt: "Hussain Hedayati",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ghulam Abbas Ataie | CTO | Tara Solutions",
+    title: "Hussain Hedayati | Software Engineer | Tara Solutions",
     description:
-      "Meet Ghulam Abbas Ataie, CTO at Tara Solutions. Experienced Software Engineer with expertise in cloud computing and microservices architecture.",
-    images: ["/team/abbas-avatar.jpg"],
+      "Meet Hussain Hedayati, Software Engineer at Tara Solutions. Master's in Computer Science with 4+ years of full-stack development experience in Laravel, Vue.js, PHP, Python, and Machine Learning.",
+    images: ["/team/hussain-avatar.jpg"],
   },
   alternates: {
-    canonical: "https://tarasolutions.cloud/about/team/abbas",
+    canonical: "https://tarasolutions.cloud/about/team/husain",
   },
 };
 
 const workExperience = [
   {
-    company: "Tara Solutions Inc.",
-    role: "CEO & Co-Founder",
-    period: "January 2023 - Present",
-    location: "Remote",
-    highlight: "Leading technical innovation and strategic development",
+    company: "Upper Company",
+    role: "Full Stack Developer - Team Lead",
+    period: "Oct 2023 – Apr 2025",
+    location: "Mashhad, Iran",
+    highlight:
+      "Leading full-stack development with focus on robust APIs and clean UI",
     description: [
-      "Developing and implementing technical vision and strategy",
-      "Leading technical team and fostering innovation",
-      "Developing scalable cloud infrastructures",
-      "Implementing cutting-edge technologies and best practices",
-      "Strategic partnerships and technical alliances",
+      "Software development across backend and frontend with focus on robust APIs and clean UI",
+      "Database design and deployment using CI/CD and containerized workflows",
+      "Delivered user-friendly interfaces with Laravel, Vue.js, HTML5, CSS, and Bootstrap",
+      "Led team development processes and mentored junior developers",
+      "Implemented best practices for code quality and deployment automation",
     ],
     technologies: [
-      "Cloud Computing",
-      "Microservices",
-      "Technical Leadership",
-      "Innovation",
+      "Laravel",
+      "Vue.js",
+      "PHP",
+      "HTML5/CSS",
+      "Bootstrap",
+      "CI/CD",
+      "Docker",
     ],
   },
   {
-    company: "Listoli LLC, USA",
-    role: "Full-Stack Independent Contractor",
-    period: "October 2022 - December 2023",
-    location: "Remote",
-    highlight: "Enterprise-grade solutions architect",
+    company: "Tara Solutions",
+    role: "Independent Contractor - Full Stack Developer",
+    period: "Oct 2023 – Dec 2024",
+    location: "Remote (Kabul-based client)",
+    highlight:
+      "Delivered full-stack features and fixes on tight timelines with consistent quality",
     description: [
-      "Designed and optimized high-performance PostgreSQL databases for authentication, e-commerce, and content management systems",
-      "Developed RESTful APIs and microservices using NestJS, React, and Next.js",
-      "Automated CI/CD pipelines with GitHub Actions and Google Cloud Platform (GCP)",
-      "Improved development efficiency and reduced deployment times",
-      "Ensured scalability and data integrity across all systems",
+      "Delivered full-stack features and fixes on tight timelines with consistent quality",
+      "Built and improved web apps using PHP/Laravel, Vue.js, and RESTful APIs",
+      "Collaborated async with stakeholders; shipped reliable releases via Git and CI/CD",
+      "Maintained high code quality standards while meeting aggressive deadlines",
+      "Provided technical consultation and implementation guidance",
+    ],
+    technologies: ["PHP", "Laravel", "Vue.js", "RESTful APIs", "Git", "CI/CD"],
+  },
+  {
+    company: "Naikbeen Control Panel",
+    role: "Databus Developer - Internship",
+    period: "Apr 2023 – Jul 2023",
+    location: "Kabul, Afghanistan",
+    highlight:
+      "Customized and maintained multiple websites for performance and UX",
+    description: [
+      "Customized and maintained multiple websites for performance and UX",
+      "Enhanced front-end with HTML, CSS, JavaScript; improved responsiveness",
+      "Managed server-side logic and database integration; handled deployments",
+      "Gained hands-on experience with web development lifecycle",
+      "Contributed to improving user experience across multiple client projects",
     ],
     technologies: [
-      "NestJS",
-      "React",
-      "Next.js",
-      "PostgreSQL",
-      "GCP",
-      "GitHub Actions",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Database Integration",
+      "Web Deployment",
     ],
   },
   {
-    company: "Click.af",
-    role: "Full-Stack Developer",
-    period: "June 2021 - September 2022",
-    location: "Kabul",
-    highlight: "Leading e-commerce innovator",
+    company: "Code9ine Company",
+    role: "Junior Back-end Developer",
+    period: "Jan 2022 – Dec 2022",
+    location: "Kabul, Afghanistan",
+    highlight: "Developed and maintained backend features using Laravel",
     description: [
-      "Developed and managed web and mobile applications using React.js, Node.js, Next.js, React Native, CS-Cart, and Java",
-      "Built and integrated Vendor API for efficient order, payment, and return management",
-      "Implemented mobile and web applications for vendor management",
-      "Enhanced platform functionality and user experience",
-      "Contributed to Afghanistan's premier e-commerce platform",
+      "Developed and maintained backend features using Laravel",
+      "Implemented database queries and optimized backend logic for performance",
+      "Supported debugging, bug fixing, and backend feature enhancements",
+      "Collaborated with frontend developers to ensure seamless integration",
+      "Contributed to code reviews and technical documentation",
     ],
     technologies: [
-      "React.js",
-      "Node.js",
-      "Next.js",
-      "React Native",
-      "Java",
-      "CS-Cart",
+      "Laravel",
+      "PHP",
+      "MySQL",
+      "Backend Development",
+      "Database Optimization",
     ],
-  },
-  {
-    company: "BlueBit Networking Services",
-    role: "Full-Stack Developer",
-    period: "February 2021 - July 2021",
-    location: "Kabul",
-    highlight: "Solo developer for critical systems",
-    description: [
-      "Led development of high-traffic web applications using Python, Django, React Native, MySQL, and React.js",
-      "Developed Petition Management System for the Ministry of Defense of Afghanistan",
-      "Streamlined petition processing and improved workflow efficiency",
-      "Managed complete development lifecycle independently",
-      "Implemented robust security measures for sensitive data",
-    ],
-    technologies: ["Python", "Django", "React Native", "MySQL", "React.js"],
-  },
-  {
-    company: "IAP",
-    role: "Junior Web Developer",
-    period: "February 2020 - April 2020",
-    location: "Kabul",
-    highlight: "Foundation in enterprise development",
-    description: [
-      "Developed MOEC Socio-Economic Provincial Profiles Digitalization System",
-      "Collaborated with Tetra Tech for implementation and data accuracy",
-      "Built dynamic web applications using PHP Laravel, MySQL, Vue.js",
-      "Provided support and maintenance for existing platforms",
-      "Gained extensive experience in software development practices",
-    ],
-    technologies: ["PHP Laravel", "MySQL", "Vue.js", "JavaScript", "HTML/CSS"],
   },
 ];
 
 const education = [
   {
-    school: "University of Europe for Applied Sciences",
-    degree: "Master's in Data Science",
-    period: "March 2025 - Present",
+    school: "GISMA University of Applied Sciences GmbH",
+    degree: "Master in Computer Science",
+    period: "Oct 2024 – Sep 2025",
     location: "Germany",
-    link: "https://ue-germany.de",
     description:
-      "Pursuing advanced studies in Data Science to enhance expertise in AI and machine learning.",
+      "Advanced studies in Computer Science with focus on Machine Learning and Data Science. Thesis: 'Fake News Detection Using Machine Learning (DL)' - Achieved 98% accuracy with best balanced F1 and recall in project results. Core Subjects: Computer Programming (Python, C++), Advanced Programming (Java), Machine Learning, Advanced Database, Advanced Mathematics, Data Science. Research: 'Leveraging Generative AI for Requirement Gathering in Software Startups'.",
   },
   {
-    school: "Kabul Polytechnic University",
-    degree: "Bachelor's in Computer Science",
-    period: "March 2016 - August 2019",
-    location: "Kabul",
-    highlight: "Graduated with Second Position",
+    school: "Balkh University",
+    degree: "Bachelor in Computer Science",
+    period: "2017 – 2022",
+    location: "Afghanistan",
     description:
-      "Achieved second position in the graduating class, demonstrating strong academic performance and technical expertise.",
+      "Comprehensive Computer Science education covering fundamental and advanced programming concepts. Core Subjects: Basic/Advanced Computer Programming (Java, PHP), Basic/Advanced Database, Mathematics, Networks. Practical Projects: University Library Management System using Laravel.",
   },
 ];
 
 const projects = [
   {
-    name: "Cloud Station",
-    url: "https://www.cloud-station.io",
-    description: "Enterprise-grade cloud services platform with global reach",
+    name: "Fake News Detection Using Machine Learning",
+    description:
+      "Master's thesis project implementing deep learning for fake news detection",
     highlights: [
-      "Architected and developed scalable cloud platform",
-      "Implemented microservices architecture",
-      "Integrated advanced security measures",
-      "Optimized performance for global user base",
-    ],
-    technologies: ["React.js", "Next.js", "Node.js", "Kafka", "Nats"],
-  },
-  {
-    name: "Tara Solutions Website",
-    url: "https://www.tarasolutions.cloud",
-    description: "Official website showcasing our services and expertise",
-    highlights: [
-      "Modern, responsive design",
-      "Optimized performance metrics",
-      "Enhanced user experience",
-      "Secure contact and inquiry system",
-    ],
-    technologies: ["Next.js", "React", "TypeScript", "TailwindCSS"],
-  },
-  {
-    name: "Ahsen Elite",
-    url: "https://ahsenelite.com",
-    description: "Full-featured e-commerce platform",
-    highlights: [
-      "Secure payment processing",
-      "Order management system",
-      "Mobile-first design",
-      "Real-time inventory tracking",
-    ],
-    technologies: ["React.js", "React Native", "Next.js", "Node.js"],
-  },
-  {
-    name: "Plant Disease Detection Machine",
-    description: "AI-powered system for agricultural disease detection",
-    highlights: [
-      "Deep Learning image classification",
-      "Raspberry Pi integration",
-      "Real-time disease diagnosis",
-      "Instant remedy suggestions",
+      "Achieved 98% accuracy in fake news detection",
+      "Best balanced F1 and recall scores in project results",
+      "Implemented using Deep Learning techniques",
+      "Comprehensive evaluation and testing methodology",
     ],
     technologies: [
       "Python",
+      "PyTorch",
+      "scikit-learn",
+      "Machine Learning",
       "Deep Learning",
-      "Raspberry Pi",
-      "Computer Vision",
+    ],
+  },
+  {
+    name: "University Library Management System",
+    description: "Full-stack web application for university library management",
+    highlights: [
+      "Complete library management functionality",
+      "User authentication and role-based access",
+      "Book inventory and borrowing system",
+      "Responsive web interface",
+    ],
+    technologies: ["Laravel", "PHP", "MySQL", "HTML", "CSS", "JavaScript"],
+  },
+  {
+    name: "E-commerce Platform Development",
+    description: "Full-stack e-commerce solutions with modern architecture",
+    highlights: [
+      "Robust API development with Laravel",
+      "Modern frontend with Vue.js",
+      "Database design and optimization",
+      "CI/CD deployment pipelines",
+    ],
+    technologies: [
+      "Laravel",
+      "Vue.js",
+      "PHP",
+      "MySQL",
+      "RESTful APIs",
+      "Docker",
     ],
   },
 ];
 
 const skills = {
-  frontend: {
-    icon: "🎨",
-    title: "Frontend Development",
-    description: "Creating responsive and intuitive user interfaces",
-    skills: ["React.js", "Next.js", "TypeScript", "React Native"],
+  programming: {
+    icon: "💻",
+    title: "Programming Languages",
+    description: "Proficient in multiple programming languages",
+    skills: ["PHP", "JavaScript", "Python", "Java", "SQL"],
     color: "from-blue-500 to-cyan-500",
   },
-  backend: {
+  frameworks: {
     icon: "⚙️",
-    title: "Backend Architecture",
-    description: "Building scalable and robust server solutions",
-    skills: ["Node.js", "NestJS", "Express.js", "Microservices"],
+    title: "Frameworks & Libraries",
+    description: "Modern frameworks and development tools",
+    skills: [
+      "Laravel",
+      "Vue.js",
+      "Flask",
+      "Bootstrap",
+      "Tailwind CSS",
+      "jQuery",
+    ],
     color: "from-green-500 to-emerald-500",
+  },
+  ml: {
+    icon: "🤖",
+    title: "Machine Learning & Data",
+    description: "AI and data science technologies",
+    skills: ["scikit-learn", "PyTorch", "NumPy", "Pandas"],
+    color: "from-purple-500 to-pink-500",
   },
   database: {
     icon: "🗄️",
-    title: "Database & Storage",
-    description: "Managing and optimizing data systems",
-    skills: ["PostgreSQL", "MongoDB", "MySQL", "Redis"],
+    title: "Databases & Storage",
+    description: "Database management and optimization",
+    skills: ["MySQL", "MongoDB"],
     color: "from-amber-500 to-orange-500",
   },
-  cloud: {
+  devops: {
     icon: "☁️",
     title: "Cloud & DevOps",
-    description: "Orchestrating cloud infrastructure",
-    skills: ["Docker", "Nomad", "GitOps", "CI/CD"],
-    color: "from-purple-500 to-pink-500",
-  },
-  messaging: {
-    icon: "📡",
-    title: "Message Queuing",
-    description: "Implementing distributed systems",
-    skills: ["Kafka", "RabbitMQ", "Nats", "Message Brokers"],
-    color: "from-indigo-500 to-violet-500",
+    description: "Cloud infrastructure and deployment",
+    skills: ["Docker", "Git", "CI/CD", "DevOps", "cPanel", "DirectAdmin"],
+    color: "from-indigo-500 to-purple-500",
   },
 };
 
 const languages = [
   { name: "Persian/Dari", level: "Native", icon: "🌟" },
-  {
-    name: "English",
-    level: "Fluent (C1)",
-    icon: "🌍",
-    score: "Duolingo Score: 120/160",
-  },
+  { name: "English", level: "Fluent (C1)", icon: "🌍" },
   { name: "German", level: "Basic (A2)", icon: "🇩🇪" },
 ];
 
 const awards = [
   {
-    title: "Asia Kabul Regional ACM/ICPC Contest 2018",
-    description: "Ranked 3rd out of 40 teams",
+    title: "Machine Learning Excellence",
+    description:
+      "Achieved 98% accuracy in Fake News Detection project with best balanced F1 and recall scores",
     icon: "🏆",
   },
   {
-    title: "Duolingo English Test",
-    description: "Score: 120 out of 160",
-    icon: "🎯",
+    title: "Academic Research",
+    description:
+      "Research on 'Leveraging Generative AI for Requirement Gathering in Software Startups'",
+    icon: "🔬",
   },
   {
-    title: "Academic Excellence",
-    description: "Graduated 2nd in class at Kabul Polytechnic University",
-    icon: "🎓",
+    title: "Full-Stack Development",
+    description:
+      "4+ years of experience delivering robust web applications and e-commerce platforms",
+    icon: "💻",
+  },
+  {
+    title: "Team Leadership",
+    description:
+      "Led development teams and mentored junior developers in multiple organizations",
+    icon: "👥",
   },
 ];
 
-export default function AbbasProfile() {
+export default function HusainProfile() {
   return (
     <div className="relative min-h-screen">
       {/* Background gradients */}
@@ -318,39 +313,36 @@ export default function AbbasProfile() {
                 <div className="flex flex-col items-center text-center mb-16">
                   <div className="relative h-48 w-48 mb-8 rounded-full overflow-hidden ring-4 ring-primary/20">
                     <Image
-                      src="/team/abbas-avatar.jpg"
-                      alt="Abbas Ataie"
+                      src="/team/hussain-avatar.jpg"
+                      alt="Hussain Hedayati"
                       fill
                       className="object-cover"
                     />
                   </div>
                   <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-4">
-                    Abbas Ataie
+                    Hussain Hedayati
                   </h1>
-                  <p className="text-xl text-primary mb-6">CEO & Co-Founder</p>
+                  <p className="text-xl text-primary mb-6">Software Engineer</p>
                   <p className="max-w-2xl text-lg text-muted-foreground mb-8">
-                    Results-driven Software Engineer with 5+ years of expertise
-                    in modern web technologies. Specializing in scalable cloud
-                    solutions and microservices architecture. Currently based in
-                    Berlin, Germany.
+                    Software Engineer with a Master's in Computer Science and 4+
+                    years of full-stack development experience. Skilled in
+                    Laravel, Vue.js, PHP, Python, and JavaScript. Strong
+                    background in e-commerce platforms, web applications, and
+                    machine learning projects.
                   </p>
                   <div className="flex flex-wrap justify-center gap-4 mb-8">
                     <div className="flex items-center space-x-2 text-muted-foreground">
-                      <Mail className="h-4 w-4" />
-                      <span>abbas.ataie@tarasolutions.cloud</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-muted-foreground">
                       <Phone className="h-4 w-4" />
-                      <span>+49 15784246219</span>
+                      <span>+49 176 561 303 13</span>
                     </div>
                     <div className="flex items-center space-x-2 text-muted-foreground">
-                      <MapPin className="h-4 w-4" />
-                      <span>Berlin, Germany</span>
+                      <Mail className="h-4 w-4" />
+                      <span>hedayati1488@gmail.com</span>
                     </div>
                   </div>
                   <div className="flex space-x-4">
                     <Link
-                      href="https://www.linkedin.com/in/abbas-ataie-72a4431b9/"
+                      href="https://linkedin.com/in/hedayati1488/"
                       target="_blank"
                     >
                       <Button
@@ -361,7 +353,7 @@ export default function AbbasProfile() {
                         <Linkedin className="h-5 w-5" />
                       </Button>
                     </Link>
-                    <Link href="https://github.com/abbasatayee" target="_blank">
+                    <Link href="https://github.com/hussain1488" target="_blank">
                       <Button
                         variant="ghost"
                         size="icon"
@@ -370,16 +362,16 @@ export default function AbbasProfile() {
                         <Github className="h-5 w-5" />
                       </Button>
                     </Link>
-                    <Link href="https://twitter.com/abbasataie" target="_blank">
+                    <Link href="https://www.hedayat.me" target="_blank">
                       <Button
                         variant="ghost"
                         size="icon"
-                        className="hover:text-sky-500"
+                        className="hover:text-green-500"
                       >
-                        <Twitter className="h-5 w-5" />
+                        <ExternalLink className="h-5 w-5" />
                       </Button>
                     </Link>
-                    <Link href="mailto:abbas.ataie.montazer@gmail.com">
+                    <Link href="mailto:hedayati1488@gmail.com">
                       <Button
                         variant="ghost"
                         size="icon"
@@ -399,29 +391,29 @@ export default function AbbasProfile() {
                 <div className="relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full" />
                   <div className="relative">
-                    <h3 className="text-4xl font-bold mb-2">5+</h3>
+                    <h3 className="text-4xl font-bold mb-2">4+</h3>
                     <p className="text-muted-foreground">Years Experience</p>
                   </div>
                 </div>
                 <div className="relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full" />
                   <div className="relative">
-                    <h3 className="text-4xl font-bold mb-2">20+</h3>
+                    <h3 className="text-4xl font-bold mb-2">15+</h3>
                     <p className="text-muted-foreground">Projects Completed</p>
                   </div>
                 </div>
                 <div className="relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full" />
                   <div className="relative">
-                    <h3 className="text-4xl font-bold mb-2">3</h3>
-                    <p className="text-muted-foreground">Countries Worked</p>
+                    <h3 className="text-4xl font-bold mb-2">20+</h3>
+                    <p className="text-muted-foreground">Technologies</p>
                   </div>
                 </div>
                 <div className="relative overflow-hidden rounded-2xl border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/20">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full" />
                   <div className="relative">
-                    <h3 className="text-4xl font-bold mb-2">15+</h3>
-                    <p className="text-muted-foreground">Technologies</p>
+                    <h3 className="text-4xl font-bold mb-2">100%</h3>
+                    <p className="text-muted-foreground">Client Satisfaction</p>
                   </div>
                 </div>
               </div>
@@ -575,7 +567,7 @@ export default function AbbasProfile() {
                 <Rocket className="mr-4 h-8 w-8 text-primary" />
                 Featured Projects
               </h2>
-              <div className="grid gap-8 md:grid-cols-2">
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {projects.map((project) => (
                   <div
                     key={project.name}
@@ -588,13 +580,6 @@ export default function AbbasProfile() {
                         <h3 className="text-xl font-semibold">
                           {project.name}
                         </h3>
-                        {project.url && (
-                          <Link href={project.url} target="_blank">
-                            <Button variant="ghost" size="icon">
-                              <ExternalLink className="h-5 w-5" />
-                            </Button>
-                          </Link>
-                        )}
                       </div>
 
                       <p className="text-muted-foreground mb-4">
@@ -654,22 +639,7 @@ export default function AbbasProfile() {
                         <span className="mx-2">•</span>
                         <span>{edu.location}</span>
                       </div>
-                      {edu.highlight && (
-                        <p className="text-lg font-medium text-primary/80 mb-4 italic border-l-4 border-primary/20 pl-4">
-                          {edu.highlight}
-                        </p>
-                      )}
                       <p className="text-muted-foreground">{edu.description}</p>
-                      {edu.link && (
-                        <Link
-                          href={edu.link}
-                          target="_blank"
-                          className="inline-flex items-center mt-4 text-primary hover:underline"
-                        >
-                          <ExternalLink className="h-4 w-4 mr-2" />
-                          Visit Website
-                        </Link>
-                      )}
                     </div>
                   </div>
                 ))}
@@ -695,11 +665,6 @@ export default function AbbasProfile() {
                         <p className="text-primary">{lang.level}</p>
                       </div>
                     </div>
-                    {lang.score && (
-                      <p className="text-sm text-muted-foreground">
-                        {lang.score}
-                      </p>
-                    )}
                   </div>
                 ))}
               </div>
@@ -711,7 +676,7 @@ export default function AbbasProfile() {
                 <Award className="mr-4 h-8 w-8 text-primary" />
                 Awards & Achievements
               </h2>
-              <div className="grid gap-8 md:grid-cols-3">
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                 {awards.map((award) => (
                   <div
                     key={award.title}

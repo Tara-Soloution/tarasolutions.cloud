@@ -60,19 +60,8 @@ export const metadata: Metadata = {
 
 const leadership = [
   {
-    name: "Rustam Ali Hussaini",
+    name: "Abbas Ataie",
     role: "CEO & Co-Founder",
-    bio: "Visionary leader with extensive experience in cloud architecture and business strategy.",
-    image: "/team/rustam-avatar.png",
-    linkedin: "https://www.linkedin.com/in/rustam-hussaini-b717101b9/",
-    twitter: "https://twitter.com/rustamhussaini",
-    github: "https://github.com/rustamhussaini",
-    email: "rustam@tarasolutions.cloud",
-    expertise: ["Business Strategy", "Cloud Architecture", "Innovation"],
-  },
-  {
-    name: "Ghulam Abbas Ataie",
-    role: "CTO",
     bio: "Results-driven Software Engineer with 5+ years of expertise in cloud computing and microservices architecture.",
     image: "/team/abbas-avatar.jpg",
     linkedin: "https://www.linkedin.com/in/abbas-ataie-72a4431b9/",
@@ -81,6 +70,18 @@ const leadership = [
     email: "abbas.ataie@tarasolutions.cloud",
     expertise: ["Cloud Computing", "Microservices", "Technical Leadership"],
   },
+  {
+    name: "Rustam Ali Hussaini",
+    role: "CTO",
+    bio: "Visionary leader with extensive experience in cloud architecture and business strategy.",
+    image: "/team/rustam-avatar.png",
+    linkedin: "https://www.linkedin.com/in/rustam-hussaini-b717101b9/",
+    twitter: "https://twitter.com/rustamhussaini",
+    github: "https://github.com/rustamhussaini",
+    email: "rustam@tarasolutions.cloud",
+    expertise: ["Business Strategy", "Cloud Architecture", "Innovation"],
+  },
+
   {
     name: "Hakima Merzayee",
     role: "Frontend Lead",
@@ -100,6 +101,16 @@ const leadership = [
     github: "https://github.com/mahdializada",
     email: "mahdializada761@gmail.com",
     expertise: ["Backend Development", "Full Stack", "Database Design"],
+  },
+  {
+    name: "Husain Hedayati",
+    role: "Senior Developer",
+    bio: "Experienced software developer with expertise in modern web technologies and cloud solutions.",
+    image: "/team/hussain-avatar.jpg",
+    linkedin: "#",
+    github: "#",
+    email: "husain@tarasolutions.cloud",
+    expertise: ["Software Development", "Web Technologies", "Cloud Solutions"],
   },
 ];
 
@@ -141,7 +152,7 @@ const values = [
 const teamStats = [
   {
     title: "Team Size",
-    value: "10+",
+    value: "11+",
     description: "Expert professionals",
     icon: Users,
     color: "text-blue-500",
@@ -265,11 +276,13 @@ export default function Team() {
                       href={`/about/team/${
                         leader.name === "Rustam Ali Hussaini"
                           ? "rustam"
-                          : leader.name === "Ghulam Abbas Ataie"
+                          : leader.name === "Abbas Ataie"
                           ? "abbas"
                           : leader.name === "Hakima Merzayee"
                           ? "hakima"
-                          : "mahdi"
+                          : leader.name === "Mohammad Mahdi Alizada"
+                          ? "mahdi"
+                          : "husain"
                       }`}
                       className="block h-full group/card transition-all duration-300 hover:scale-[1.02]"
                     >
